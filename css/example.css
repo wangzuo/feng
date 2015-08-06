@@ -1,0 +1,54 @@
+.m-example {
+  border: 1px solid #eee;
+}
+
+.m-example .preview {
+  margin-bottom: 20px;
+  padding: 20px 13px;
+}
+
+.m-example .tabs {}
+
+.example-grid .container {
+  background-color: #eee;
+}
+
+.example-grid .row {
+  background-color: #ddd;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.example-grid .col {
+  height: 30px;
+  border-radius: 3px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.example-buttons .u-btn {
+  margin-bottom: 12px;
+}
+
+.example-buttons .u-btn:not(:last-child) {
+  margin-right: 12px;
+}
+
+.example-buttons .u-btn-blk {
+  margin-right: 0;
+}
+
+.example-button-groups .u-btn-group {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.example-tabs-fixed {
+  height: 200px;
+}
+
+.example-labels .u-label:not(:last-child) {
+  margin-right: 10px;
+}

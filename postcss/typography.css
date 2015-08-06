@@ -1,0 +1,51 @@
+@import '_variables';
+
+body {
+  font-family: var(--body-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-size: 13px;
+  color: var(--body-font-color);
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+hr {
+  background: #eeeeee;
+  border: none;
+  height: 1px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse;
+
+  td,
+  th {
+    padding: 0;
+    line-height: 33px;
+  }
+}
+
+pre,
+code {
+  font-family: var(--code-font-family);
+  font-size: 12px;
+}

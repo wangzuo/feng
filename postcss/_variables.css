@@ -1,0 +1,25 @@
+:root {
+  --color-white: #ffffff;
+  --color-blue: #1385e5;
+  --color-green: #27ae60;
+  --color-red: #e74c3c;
+  --color-yellow: #f1c40f;
+  --color-gray: #bdc3c7;
+  --color-black: #333333;
+
+  --container-width: 940px;
+  --column-width: 60;
+  --gutter-width: 10px;
+  --columns: 12;
+
+  --body-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --body-font-color: #333333;
+  --code-font-family: Menlo;
+  --link-color: #1385e5;
+
+  --button-border-radius: 3px;
+
+  --color-white: #ffffff;
+  --card-leadtext-color: #dddddd;
+  --card-info-color: #cccccc;
+}

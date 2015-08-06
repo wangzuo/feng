@@ -1,0 +1,24 @@
+.u-nav a {
+
+    display: inline-block;
+}
+
+.u-nav a.active, .u-nav a.is-active {
+
+    font-weight: bold;
+}
+
+.u-nav a:not(last-child) {
+
+    margin-right: 15px;
+}
+
+.u-nav-y a {
+
+    display: block;
+}
+
+.u-nav-y a:not(:last-child) {
+
+    margin-bottom: 10px;
+}

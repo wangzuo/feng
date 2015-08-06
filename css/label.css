@@ -1,0 +1,25 @@
+.u-label {
+  background-color: #ffffff;
+  font-size: 11px;
+  line-height: 1.0;
+  border-radius: 5px 5px;
+  padding: 2px 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.u-label-blue {
+  background-color: #1385e5;
+}
+
+.u-label-green {
+  background-color: #27ae60;
+}
+
+.u-label-red {
+  background-color: #e74c3c;
+}
+
+.u-label-yellow {
+  background-color: #f1c40f;
+}

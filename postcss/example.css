@@ -1,0 +1,65 @@
+.m-example {
+  border: 1px solid #eee;
+
+  .preview {
+    margin-bottom: 20px;
+    padding: 20px 13px;
+  }
+
+  .tabs {
+  }
+}
+
+.example-grid {
+  .container {
+    background-color: #eee;
+  }
+
+  .row {
+    background-color: #ddd;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .col {
+    height: 30px;
+    border-radius: 3px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+  }
+}
+
+.example-buttons {
+  .u-btn {
+    margin-bottom: 12px;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  .u-btn-blk {
+    margin-right: 0;
+  }
+}
+
+.example-button-groups {
+  .u-btn-group {
+    display: block;
+    margin-bottom: 12px;
+  }
+}
+
+.example-tabs-fixed {
+  height: 200px;
+}
+
+.example-labels {
+  .u-label {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import '_variables';
+
+@custom-media --desktop (min-width: 992px);
+@custom-media --tablet (max-width: 992px) and (min-width: 700px);
+@custom-media --mobile (max-width: 700px);
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%
+}
+
+@define-mixin clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear:both;
+  }
+}
+
+@define-mixin column $x {
+  position: relative;
+  display: inline;
+  float: left;
+  width: calc(1 / var(--columns) * $x * 100%);
+  padding-left: calc(var(--gutter-width) / 2);
+  padding-right: calc(var(--gutter-width) / 2);
+}
+
+@define-mixin column-d $x {
+  .g-$(x) {
+    @mixin column $x;
+  }
+}
+
+@define-mixin column-t $x {
+  .g-t-$(x) {
+    @mixin column $x;
+  }
+}
+
+@define-mixin column-m $x {
+  .g-m-$(x) {
+    @mixin column $x;
+  }
+}
+
+body {
+  width: 100%;
+  @mixin clearfix;
+}
+
+.g-c,
+.g-container {
+  position: relative;
+  margin: 0 auto;
+  padding-left: calc(var(--gutter-width / 2));
+  padding-right: calc(var(--gutter-width / 2));
+  width: var(--container-width);
+  max-width: 100%;
+  @mixin clearfix;
+}
+
+.g-r,
+.g-row {
+  margin-left: calc(var(--gutter-width) / 2);
+  margin-right: calc(var(--gutter-width) / 2);
+  @mixin clearfix;
+}
+
+@media (--desktop) {
+  @for $i from 1 to 12 {
+    @mixin column-d $i;
+  }
+ .g-0 { display: none; }
+}
+
+@media (--tablet) {
+  .g-container { width: 100% };
+
+  @for $i from 1 to 12 {
+    @mixin column-t $i;
+  }
+ .g-t-0 { display: none; }
+}
+
+@media (--mobile) {
+  .g-container { width: 100% };
+  @for $i from 1 to 12 {
+    @mixin column-m $i;
+  }
+ .g-m-0 { display: none; }
+}

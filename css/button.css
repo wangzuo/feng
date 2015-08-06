@@ -1,0 +1,132 @@
+.u-btn {
+  position: relative;
+  display: inline-block;
+  padding: 7px 9px;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #bdc3c7;
+  border-radius: 3px;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.u-btn:hover, .u-btn.is-hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.u-btn:active, .u-btn.is-active {
+  background-color: #ccc;
+}
+
+.u-btn:disabled, .u-btn.disabled {
+  opacity: .6;
+}
+
+.u-btn-lg {
+  padding: 11px 13px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.u-btn-xlg {
+  padding: 21px 27px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.u-btn-blue {
+  color: #fff;
+  background-color: #1385e5;
+  border: 1px solid #1385e5;
+}
+
+.u-btn-blue:active, .u-btn-blue.is-active {
+  color: #fff;
+  background-color: #3071a9;
+  border: 1px solid #3071a9;
+}
+
+.u-btn-red {
+  color: #fff;
+  background-color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.u-btn-red:active, .u-btn-red.is-active {
+  color: #fff;
+  background-color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.u-btn-green {
+  color: #ffffff;
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+
+.u-btn-green:hover, .u-btn-green.is-hover {}
+
+.u-btn-green:active, .u-btn-green.is-active {
+  color: #ffffff;
+  background-color: #27ae60;
+  border: 1px solid #27ae60;
+}
+
+.u-btn-yellow {
+  color: #333333;
+  background-color: #f1c40f;
+  border: 1px solid #f1c40f;
+}
+
+/*
+.u-btn-gray {
+  color: #ffffff;
+  background-color: var(--color-gray);
+  border: 1px solid var(--color-gray);
+}*/
+
+.u-btn-black {
+  color: #fff;
+  background-color: #333333;
+  border: 1px solid #333333;
+}
+
+.u-btn-blk {
+  display: block;
+  width: 100%;
+}
+
+.u-btn-icon::before {
+  margin-right: 5px;
+}
+
+.u-btn-group .u-btn {
+  border-radius: 0;
+}
+
+.u-btn-group .u-btn:not(:last-child) {
+  border-right: 0;
+}
+
+.u-btn-group .u-btn:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.u-btn-group .u-btn:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}

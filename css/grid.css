@@ -1,0 +1,373 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%
+}
+
+body {
+  width: 100%;
+  zoom: 1;
+}
+
+body:before, body:after {
+  content: "";
+  display: table;
+}
+
+body:after {
+  clear: both;
+}
+
+.g-c,
+.g-container {
+  position: relative;
+  margin: 0 auto;
+  padding-left: calc( / 2);
+  padding-left: 10px;
+  padding-right: calc( / 2);
+  padding-right: 10px;
+  width: 940px;
+  max-width: 100%;
+  zoom: 1;
+}
+
+.g-c:before, .g-c:after, .g-container:before, .g-container:after {
+  content: "";
+  display: table;
+}
+
+.g-c:after, .g-container:after {
+  clear: both;
+}
+
+.g-r,
+.g-row {
+  margin-left: 5px;
+  margin-right: 5px;
+  zoom: 1;
+}
+
+.g-r:before, .g-r:after, .g-row:before, .g-row:after {
+  content: "";
+  display: table;
+}
+
+.g-r:after, .g-row:after {
+  clear: both;
+}
+
+@media (min-width: 992px) {
+  .g-1 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 8.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-2 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 16.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-3 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-4 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 33.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-5 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 41.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-6 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-7 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 58.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-8 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 66.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-9 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 75%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-10 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 83.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-11 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 91.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-12 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+ .g-0 { display: none; }
+}
+
+@media (max-width: 992px) and (min-width: 700px) {
+  .g-container { width: 100% }
+
+  .g-t-1 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 8.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-2 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 16.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-3 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-4 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 33.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-5 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 41.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-6 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-7 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 58.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-8 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 66.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-9 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 75%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-10 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 83.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-11 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 91.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .g-t-12 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+ .g-t-0 { display: none; }
+}
+
+@media (max-width: 700px) {
+  .g-container { width: 100% }
+  .g-m-1 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 8.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-2 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 16.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-3 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-4 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 33.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-5 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 41.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-6 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-7 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 58.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-8 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 66.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-9 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 75%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-10 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 83.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-11 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 91.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .g-m-12 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+ .g-m-0 { display: none; }
+}

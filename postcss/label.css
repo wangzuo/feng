@@ -1,0 +1,27 @@
+@import '_variables';
+
+.u-label {
+  background-color: var(--color-white);
+  font-size: 11px;
+  line-height: 1.0;
+  border-radius: 5px 5px;
+  padding: 2px 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.u-label-blue {
+  background-color: var(--color-blue);
+}
+
+.u-label-green {
+  background-color: var(--color-green);
+}
+
+.u-label-red {
+  background-color: var(--color-red);
+}
+
+.u-label-yellow {
+  background-color: var(--color-yellow);
+}

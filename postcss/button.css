@@ -1,0 +1,143 @@
+@import '_variables';
+
+.u-btn {
+  position: relative;
+  display: inline-block;
+  padding: 7px 9px;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--button-border-radius);
+  outline: 0;
+  user-select: none;
+
+  &:hover,
+  &.is-hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  &:active,
+  &.is-active {
+    background-color: #ccc;
+  }
+
+  &:disabled,
+  &.disabled {
+    opacity: .6;
+  }
+}
+
+.u-btn-lg {
+  padding: 11px 13px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.u-btn-xlg {
+  padding: 21px 27px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.u-btn-blue {
+  color: #fff;
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+
+  &:active,
+  &.is-active {
+    color: #fff;
+    background-color: #3071a9;
+    border: 1px solid #3071a9;
+  }
+}
+
+.u-btn-red {
+  color: #fff;
+  background-color: var(--color-red);
+  border: 1px solid var(--color-red);
+
+  &:active,
+  &.is-active {
+    color: #fff;
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+  }
+}
+
+.u-btn-green {
+  color: #ffffff;
+  background-color: var(--color-green);
+  border-color: var(--color-green);
+
+  &:hover,
+  &.is-hover {
+  }
+
+  &:active,
+  &.is-active {
+    color: #ffffff;
+    background-color: var(--color-green);
+    border: 1px solid var(--color-green);
+  }
+}
+
+.u-btn-yellow {
+  color: #333333;
+  background-color: var(--color-yellow);
+  border: 1px solid var(--color-yellow);
+}
+
+/*
+.u-btn-gray {
+  color: #ffffff;
+  background-color: var(--color-gray);
+  border: 1px solid var(--color-gray);
+}*/
+
+.u-btn-black {
+  color: #fff;
+  background-color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+.u-btn-blk {
+  display: block;
+  width: 100%;
+}
+
+.u-btn-icon {
+  &::before {
+    margin-right: 5px;
+  }
+}
+
+.u-btn-group {
+  .u-btn {
+    border-radius: 0;
+
+    &:not(:last-child) {
+      border-right: 0;
+    }
+  }
+
+  .u-btn:first-child {
+    border-top-left-radius: var(--button-border-radius);
+    border-bottom-left-radius: var(--button-border-radius);
+  }
+
+  .u-btn:last-child {
+    border-top-right-radius: var(--button-border-radius);
+    border-bottom-right-radius: var(--button-border-radius);
+  }
+}

@@ -1,0 +1,69 @@
+@import '_variables';
+
+:root {
+  --tabs-nav-height: 34px;
+}
+
+.u-tabs {
+  position: relative;
+
+  .tabs-nav {
+    background-color: var(--color-gray);
+    overflow: hidden;
+  }
+
+  .tab {
+    float: left;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    cursor: pointer;
+
+    &:hover {
+      /*background-color: lighten(@color-blue, 10%);*/
+      background-color: var(--color-blue);
+      color: #fff;
+    }
+
+    &.is-active {
+      background-color: var(--color-blue);
+      color: #fff;
+    }
+  }
+
+  .tabs-content {
+    height: 100%;
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.u-tabs-fixed {
+  height: 100%;
+
+  .tabs-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--tabs-nav-height);
+  }
+
+  .tabs-contents {
+    position: absolute;
+    top: var(--tabs-nav-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+  }
+
+  .tabs-content {
+    height: 100%;
+  }
+}

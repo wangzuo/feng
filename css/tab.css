@@ -1,0 +1,63 @@
+.u-tabs {
+  position: relative;
+}
+
+.u-tabs .tabs-nav {
+  background-color: #bdc3c7;
+  overflow: hidden;
+}
+
+.u-tabs .tab {
+  float: left;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.u-tabs .tab:hover {
+  /*background-color: lighten(@color-blue, 10%);*/
+  background-color: #1385e5;
+  color: #fff;
+}
+
+.u-tabs .tab.is-active {
+  background-color: #1385e5;
+  color: #fff;
+}
+
+.u-tabs .tabs-content {
+  height: 100%;
+  display: none;
+}
+
+.u-tabs .tabs-content.is-active {
+  display: block;
+}
+
+.u-tabs-fixed {
+  height: 100%;
+}
+
+.u-tabs-fixed .tabs-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 34px;
+}
+
+.u-tabs-fixed .tabs-contents {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.u-tabs-fixed .tabs-content {
+  height: 100%;
+}

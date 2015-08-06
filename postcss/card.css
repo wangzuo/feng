@@ -1,0 +1,102 @@
+@import '_variables';
+
+.u-card {
+  position: relative;
+  width: 600px;
+  height: 400px;
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom,rgba(255,255,255,0),rgba(0,0,0,.7));
+    background-repeat: no-repeat;
+    transition: opacity 200ms ease-in;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  /**
+   * object-fit instead of (background-size: cover)
+   * background image no responsive support
+   * <img/> tag has better accessibility
+   */
+  .img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+ .text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 14px 10px 10px;
+    color: var(--color-white);
+  }
+
+  .title {
+    color: var(--color-white);
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-shadow: .5px 1px 1px #111;
+    word-wrap: break-word;
+  }
+
+  .leadtext {
+    margin: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    color: var(--card-leadtext-color);
+    max-height: 36px;
+    overflow: hidden;
+  }
+
+  .link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .info {
+    color: var(--card-info-color);
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  .avatar,
+  .author {
+    margin-right: 7px;
+  }
+
+  .label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 6px 5px;
+    color: var(--color-white);
+    background-color: #91426c;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,92 @@
+.u-card {
+  position: relative;
+  width: 600px;
+  height: 400px;
+
+  /**
+   * object-fit instead of (background-size: cover)
+   * background image no responsive support
+   * <img/> tag has better accessibility
+   */
+}
+.u-card .gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,.7));
+  background-image: linear-gradient(to bottom,rgba(255,255,255,0),rgba(0,0,0,.7));
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 200ms ease-in;
+          transition: opacity 200ms ease-in;
+  opacity: 0.6;
+}
+.u-card .gradient:hover {
+  opacity: 0.9;
+}
+.u-card .img {
+  min-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.u-card .text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 10px 10px;
+  color: #ffffff;
+}
+.u-card .title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.3;
+  text-shadow: .5px 1px 1px #111;
+  word-wrap: break-word;
+}
+.u-card .leadtext {
+  margin: 0 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #dddddd;
+  max-height: 36px;
+  overflow: hidden;
+}
+.u-card .link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.u-card .info {
+  color: #cccccc;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.u-card .avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.u-card .avatar, .u-card .author {
+  margin-right: 7px;
+}
+.u-card .label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 6px 5px;
+  color: #ffffff;
+  background-color: #91426c;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+}

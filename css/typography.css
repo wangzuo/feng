@@ -1,0 +1,48 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-size: 13px;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+
+a {
+  color: #1385e5;
+  text-decoration: none;
+}
+
+hr {
+  background: #eeeeee;
+  border: none;
+  height: 1px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  padding: 0;
+  line-height: 33px;
+}
+
+pre,
+code {
+  font-family: Menlo;
+  font-size: 12px;
+}
