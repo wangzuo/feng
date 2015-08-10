@@ -56,7 +56,7 @@ var Panel = React.createClass({
     var ps = path.split('/');
     var section = ps[1];
     var page = ps[2];
-    var current = pages.filter((page) => page.path === section)[0];
+    var current = sections.filter((page) => page.path === section)[0];
 
     return (
       <div className="g-container">
