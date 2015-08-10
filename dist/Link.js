@@ -9,7 +9,7 @@ module.exports = React.createClass({
   render: function render() {
     var href = this.props.href;
 
-    if (process.env.PAGE) href = href + '.html';
+    if (!__DEV__) href = href + '.html';
 
     return React.createElement(
       'a',
