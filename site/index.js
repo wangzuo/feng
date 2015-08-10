@@ -1,21 +1,22 @@
-require('../postcss/normalize.css');
-require('../postcss/grid.css');
-require('../postcss/typography.css');
-require('../postcss/button.css');
-require('../postcss/form.css');
-require('../postcss/card.css');
-require('../postcss/functions.css');
-require('../postcss/header.css');
-require('../postcss/nav.css');
-require('../postcss/tab.css');
-require('../postcss/footer.css');
-require('../postcss/label.css');
-require('../postcss/input-slider.css');
-require('../postcss/input-color.css');
-require('../postcss/select.css');
-require('../postcss/switch.css')
-require('../postcss/example.css');
-
+if(!process.env.PAGE) {
+  require('../postcss/normalize.css');
+  require('../postcss/grid.css');
+  require('../postcss/typography.css');
+  require('../postcss/button.css');
+  require('../postcss/form.css');
+  require('../postcss/card.css');
+  require('../postcss/functions.css');
+  require('../postcss/header.css');
+  require('../postcss/nav.css');
+  require('../postcss/tab.css');
+  require('../postcss/footer.css');
+  require('../postcss/label.css');
+  require('../postcss/input-slider.css');
+  require('../postcss/input-color.css');
+  require('../postcss/select.css');
+  require('../postcss/switch.css')
+  require('../postcss/example.css');
+}
 
 var history2 = require('history2');
 var React = require('react');
@@ -24,13 +25,10 @@ var pages = require('./pages');
 var App = require('./app');
 var Nav = require('../lib/nav');
 
-
 var Panel = React.createClass({
   displayName: 'Panel',
 
   renderPage(section, page) {
-    console.log('renderPage', section, page);
-
     var component = require(`./${section}/${page}`);
     return React.createElement(component);
   },
@@ -60,29 +58,35 @@ var Panel = React.createClass({
   }
 });
 
-function route(path) {
-  React.render(
-    <App path={path}><Panel path={path}/></App>,
-    document.getElementById('app')
-  );
-}
-
-var path = history2.init({
-  mode: 'hashbang',
-  basePath: '/site'
-});
-
-route(path);
-
-history2.on('change', function(path) {
-  route(path);
-});
-
-document.body.addEventListener('click', function(e) {
-  if(e.target.classList.contains('j-link')) {
-    e.preventDefault();
-    var href = e.target.getAttribute('href');
-    route(href);
-    history2.change(href);
+if(process.env.PAGE) {
+  module.exports = function(path) {
+    return React.renderToString(<App path={path}><Panel path={path}/></App>);
   }
-});
+} else {
+  function route(path) {
+    React.render(
+      <App path={path}><Panel path={path}/></App>,
+      document.getElementById('app')
+    );
+  }
+
+  var path = history2.init({
+    mode: 'hashbang',
+    basePath: '/site'
+  });
+
+  route(path);
+
+  history2.on('change', function(path) {
+    route(path);
+  });
+
+  document.body.addEventListener('click', function(e) {
+    if(e.target.classList.contains('j-link')) {
+      e.preventDefault();
+      var href = e.target.getAttribute('href');
+      route(href);
+      history2.change(href);
+    }
+  });
+}

@@ -1,4 +1,5 @@
 var React = require('react');
+var babel = require('babel-core/browser');
 var Grid = require('../lib/grid');
 var Button = require('../lib/button');
 var ButtonGroup = require('../lib/button-group');
@@ -8,6 +9,7 @@ var Field = require('../lib/field');
 var Checkbox = require('../lib/checkbox');
 var Label = require('../lib/label');
 var Tabs = require('../lib/tabs');
+// var Gravatar = require('../lib/Gravatar');
 var FengForm = require('../lib/feng-form');
 
 module.exports = React.createClass({

@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var concat = require('gulp-concat');
 var babel = require('gulp-babel');
 var postcss = require('gulp-postcss');
 var del = require('del');
@@ -25,15 +26,26 @@ gulp.task('clean:postcss', function(cb) {
   del(['css/*.css'], cb);
 });
 
+gulp.task('clean:builds', function(cb) {
+  del(['builds/**/*'], cb);
+});
+
 gulp.task('watch', function() {
   gulp.watch('lib/*.js', ['lib']);
   gulp.watch('postcss/*.css', ['postcss']);
 });
 
-gulp.task('gh-pages', function() {
+gulp.task('build:css', ['postcss'], function() {
+  return gulp.src('css/*.css')
+    .pipe(concat('feng.css'))
+    .pipe(gulp.dest('builds'));
+});
+
+gulp.task('gh-pages', ['build'], function() {
   return gulp.src('./builds/**/*')
     .pipe(ghPages());
 });
 
-gulp.task('clean', ['clean:postcss', 'clean:lib']);
+gulp.task('build', ['build:css']);
+gulp.task('clean', ['clean:postcss', 'clean:lib', 'clean:builds']);
 gulp.task('default', ['postcss', 'lib']);

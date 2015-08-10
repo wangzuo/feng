@@ -16,7 +16,8 @@ module.exports = {
     return require('./processors');
   },
   externals: {
-    'react': 'React'
+    'react': 'React',
+    'babel-core/browser': 'babel'
   },
   devtool: "source-map"
 };

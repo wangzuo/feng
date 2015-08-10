@@ -1,9 +1,8 @@
 'use strict';
 
-var _reactRouter = require('react-router');
-
-var React = require('react');
 var cx = require('classnames');
+var React = require('react');
+var Link = require('./link');
 
 module.exports = React.createClass({
   displayName: 'Nav',
@@ -22,10 +21,10 @@ module.exports = React.createClass({
       { className: cx('u-nav', this.props.className) },
       items.map(function (item, i) {
         return React.createElement(
-          _reactRouter.Link,
+          Link,
           {
             key: i,
-            to: item.path,
+            href: item.path,
             target: item.target },
           item.text
         );
