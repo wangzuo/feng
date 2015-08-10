@@ -16,39 +16,43 @@ require('../postcss/select.css');
 require('../postcss/switch.css')
 require('../postcss/example.css');
 
-var Nav = require('../lib/nav');
 
+var history2 = require('history2');
 var React = require('react');
-var Router = require('react-router');
-
 // todo may use haml or sth else
 var pages = require('./pages');
-
 var App = require('./app');
+var Nav = require('../lib/nav');
 
-var Route = Router.Route;
-var RouteHandler = Router.RouteHandler;
 
 var Panel = React.createClass({
-  contextTypes: {
-    router: React.PropTypes.func
+  displayName: 'Panel',
+
+  renderPage(section, page) {
+    console.log('renderPage', section, page);
+
+    var component = require(`./${section}/${page}`);
+    return React.createElement(component);
   },
 
   render() {
-    var path = this.context.router.getCurrentPath();
-    var section = path.split('/')[1];
+    var path = this.props.path;
+    var ps = path.split('/');
+    var section = ps[1];
+    var page = ps[2];
     var current = pages.filter((page) => page.path === section)[0];
 
     return (
       <div className="g-container">
         <div className="g-r">
           <div className="g-3">
-            <Nav className="u-nav u-nav-y"
+            <Nav
+              className="u-nav u-nav-y"
               items={current.pages}
             />
           </div>
           <div className="g-9">
-            <RouteHandler/>
+            {this.renderPage(section, page)}
           </div>
         </div>
       </div>
@@ -56,26 +60,29 @@ var Panel = React.createClass({
   }
 });
 
-var routes = (
-  <Route path="/" handler={App}>
-    <Route name="getting-started" path="/getting-started" handler={Panel}/>
+function route(path) {
+  React.render(
+    <App path={path}><Panel path={path}/></App>,
+    document.getElementById('app')
+  );
+}
 
-    <Route name="css" path="/css" handler={Panel}>
-      <Route name="grid" path="/css/grid" handler={require('./css/grid')}/>
-      <Route name="typography" path="/css/typography" handler={require('./css/typography')}/>
-      <Route name="buttons" path="/css/buttons" handler={require('./css/buttons')}/>
-      <Route name="labels" path="/css/labels" handler={require('./css/labels')}/>
-      <Route name="forms" path="/css/forms" handler={require('./css/forms')}/>
-      <Route name="card" path="/css/card" handler={require('./css/card')}/>
-      <Route name="tabs" path="/css/tabs" handler={require('./css/tabs')}/>
-    </Route>
+var path = history2.init({
+  mode: 'hashbang',
+  basePath: '/site'
+});
 
-    <Route name="react" path="/react" handler={Panel}>
-      <Route name="feng-form" path="/react/feng-form" handler={require('./react/feng-form')}/>
-    </Route>
-  </Route>
-);
+route(path);
 
-Router.run(routes, function(Handler) {
-  React.render(<Handler/>, document.getElementById('app'));
+history2.on('change', function(path) {
+  route(path);
+});
+
+document.body.addEventListener('click', function(e) {
+  if(e.target.classList.contains('j-link')) {
+    e.preventDefault();
+    var href = e.target.getAttribute('href');
+    route(href);
+    history2.change(href);
+  }
 });
