@@ -11,6 +11,7 @@ var Label = require('../lib/label');
 var Tabs = require('../lib/tabs');
 // var Gravatar = require('../lib/Gravatar');
 var FengForm = require('../lib/feng-form');
+var Code = require('./code');
 
 module.exports = React.createClass({
   displayName: 'Example',
@@ -49,16 +50,11 @@ module.exports = React.createClass({
 
           <Tabs.Contents>
             <Tabs.Content active={active === 0}>
-              <pre>
-                {code}
-              </pre>
+              <Code code={code}/>
             </Tabs.Content>
 
             <Tabs.Content active={active === 1}>
-              {showHtml ?
-              <pre>
-                {React.renderToStaticMarkup(el)}
-              </pre> : null}
+              {showHtml ? <Code code={React.renderToStaticMarkup(el)} format/> : null}
             </Tabs.Content>
           </Tabs.Contents>
         </Tabs.Tabs>
