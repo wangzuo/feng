@@ -1,3 +1,8 @@
+var webpack = require('webpack');
+var definePlugin = new webpack.DefinePlugin({
+  __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true'))
+});
+
 module.exports = {
   entry: './site/index.js',
   output: {
@@ -5,11 +10,11 @@ module.exports = {
     filename: 'index.js',
     publicPath: "/builds/",
   },
+  plugins: [definePlugin],
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-      {test: /\.css$/, loader: "style-loader!css-loader!postcss-loader"},
-      {test: /\.less$/, loader: "style-loader!css-loader!less-loader"}
+      {test: /\.css$/, loader: "style-loader!css-loader!postcss-loader"}
     ]
   },
   postcss: function() {

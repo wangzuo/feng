@@ -14,7 +14,9 @@ module.exports = React.createClass({
     var code = this.props.code;
     var format = this.props.format;
 
-    if(process.env.PAGE) {
+    if(__DEV__) {
+      return <pre>{code}</pre>;
+    } else {
       var Highlights = require('highlights');
       var highlighter = new Highlights();
 
@@ -26,7 +28,5 @@ module.exports = React.createClass({
       });
       return  <pre dangerouslySetInnerHTML={{__html: html}}></pre>;
     }
-
-    return <pre>{code}</pre>;
   }
 });

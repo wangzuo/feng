@@ -1,4 +1,4 @@
-if(!process.env.PAGE) {
+if(__DEV__) {
   require('../postcss/normalize.css');
   require('../postcss/grid.css');
   require('../postcss/typography.css');
@@ -21,15 +21,33 @@ if(!process.env.PAGE) {
 var history2 = require('history2');
 var React = require('react');
 // todo may use haml or sth else
-var pages = require('./pages');
+var sections = require('./pages');
 var App = require('./app');
 var Nav = require('../lib/nav');
+
+var pages = {
+  'getting-started': {},
+  'react': {
+    'feng-form': require('./react/feng-form')
+  },
+  css: {
+    buttons: require('./css/buttons'),
+    forms: require('./css/forms'),
+    tabs: require('./css/tabs'),
+    card: require('./css/card'),
+    grid: require('./css/grid'),
+    labels: require('./css/labels'),
+    typography: require('./css/typography')
+  }
+}
 
 var Panel = React.createClass({
   displayName: 'Panel',
 
   renderPage(section, page) {
-    var component = require(`./${section}/${page}`);
+    // console.log('renderPage', section, page);
+    var component = pages[section][page];
+    if(!component) throw new Error(`${section}/${page} not found`);
     return React.createElement(component);
   },
 
@@ -58,11 +76,7 @@ var Panel = React.createClass({
   }
 });
 
-if(process.env.PAGE) {
-  module.exports = function(path) {
-    return React.renderToString(<App path={path}><Panel path={path}/></App>);
-  }
-} else {
+if(__DEV__) {
   function route(path) {
     React.render(
       <App path={path}><Panel path={path}/></App>,
@@ -90,3 +104,7 @@ if(process.env.PAGE) {
     }
   });
 }
+
+module.exports = function(path) {
+  return React.renderToString(<App path={path}><Panel path={path}/></App>);
+};

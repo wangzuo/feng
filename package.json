@@ -4,8 +4,8 @@
   "description": "feng-ui",
   "main": "index.js",
   "scripts": {
-    "pages": "PAGE=true babel-node render.js",
-    "start": "webpack-dev-server -c --port=7788",
+    "pages": "babel-node render.js",
+    "start": "BUILD_DEV=1 webpack-dev-server -c --port=7788",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Wang Zuo",
@@ -24,8 +24,7 @@
     "react-input-slider": "^1.1.1",
     "react-input-switch": "^1.0.0",
     "react-select": "^0.5.6",
-    "react-textarea-autosize": "^2.4.2",
-    "through2-concat": "^1.0.1"
+    "react-textarea-autosize": "^2.4.2"
   },
   "devDependencies": {
     "autoprefixer": "^5.2.0",
