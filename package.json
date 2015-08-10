@@ -51,7 +51,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/wangzuo/feng.git"
+    "url": "git+https://github.com/wangzuo/feng-ui.git"
   },
-  "homepage": "https://bitbucket.org/wangzuo/feng#readme"
+  "bugs": {
+    "url": "https://github.com/wangzuo/feng-ui/issues"
+  },
+  "homepage": "https://github.com/wangzuo/feng-ui#readme"
 }
