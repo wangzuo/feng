@@ -47,7 +47,10 @@ gulp.task('watch', function() {
 gulp.task('dist:css', ['postcss'], function() {
   return gulp.src('lib/*.css')
     .pipe(concat('feng.css'))
-    .pipe(minifyCss({keepSpecialComments: 0}))
+    .pipe(minifyCss({
+      advanced: false,
+      keepSpecialComments: 0
+    }))
     .pipe(rename('feng.min.css'))
     .pipe(gulp.dest('dist'));
 });
