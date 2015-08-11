@@ -98,6 +98,17 @@ module.exports = React.createClass({
   </ButtonGroup>
 </div>`}
         </Example>
+
+        <h3>Loading Button</h3>
+        <Example>
+{`<div className="example-buttons">
+  <Button><Spinner/></Button>
+  <Button loading disabled>Saving</Button>
+  <Button color="blue" loading disabled>Saving</Button>
+  <Button color="yellow" loading disabled>Saving</Button>
+  <Button color="red" loading disabled>Saving</Button>
+</div>`}
+        </Example>
       </div>
     )
   }

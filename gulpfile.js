@@ -3,27 +3,36 @@ var concat = require('gulp-concat');
 var babel = require('gulp-babel');
 var postcss = require('gulp-postcss');
 var del = require('del');
+var minifyCss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
 var ghPages = require('gulp-gh-pages');
+var webpack = require('webpack');
 var processors = require('./processors');
 
-gulp.task('lib', function() {
-  return gulp.src('lib/*.js')
+gulp.task('react', function() {
+  return gulp.src('react/*.js')
     .pipe(babel())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('lib'));
 });
 
-gulp.task('clean:lib', function(cb) {
-  del(['dist/*.js'], cb);
+gulp.task('clean:react', function(cb) {
+  del(['lib/*.js'], cb);
 });
 
 gulp.task('postcss', function() {
   return gulp.src('postcss/*.css')
     .pipe(postcss(processors))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('lib'));
 });
 
 gulp.task('clean:postcss', function(cb) {
-  del(['css/*.css'], cb);
+  del(['lib/*.css'], cb);
+});
+
+gulp.task('clean:dist', function(cb) {
+  del(['dist/*'], cb);
 });
 
 gulp.task('clean:builds', function(cb) {
@@ -31,21 +40,45 @@ gulp.task('clean:builds', function(cb) {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('lib/*.js', ['lib']);
+  gulp.watch('react/*.js', ['react']);
   gulp.watch('postcss/*.css', ['postcss']);
 });
 
-gulp.task('build:css', ['postcss'], function() {
-  return gulp.src('css/*.css')
+gulp.task('dist:css', ['postcss'], function() {
+  return gulp.src('lib/*.css')
     .pipe(concat('feng.css'))
-    .pipe(gulp.dest('builds'));
+    .pipe(minifyCss({keepSpecialComments: 0}))
+    .pipe(rename('feng.min.css'))
+    .pipe(gulp.dest('dist'));
 });
 
-gulp.task('gh-pages', ['build'], function() {
+gulp.task('webpack', ['react'], function(cb) {
+  webpack({
+    entry: './index.js',
+    output: {
+      path: __dirname + '/dist',
+      filename: 'feng.min.js',
+      library: 'Feng'
+    },
+    externals: {
+      'react': 'React'
+    }
+  }, function(err, stats) {
+    cb();
+  });
+});
+
+gulp.task('dist:js', ['webpack'], function(cb) {
+  return gulp.src('dist/feng.min.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('gh-pages', ['dist'], function() {
   return gulp.src('./builds/**/*')
     .pipe(ghPages());
 });
 
-gulp.task('build', ['build:css']);
-gulp.task('clean', ['clean:postcss', 'clean:lib', 'clean:builds']);
-gulp.task('default', ['postcss', 'lib']);
+gulp.task('dist', ['dist:css', 'dist:js']);
+gulp.task('clean', ['clean:postcss', 'clean:react', 'clean:builds', 'clean:dist']);
+gulp.task('default', ['postcss', 'react']);

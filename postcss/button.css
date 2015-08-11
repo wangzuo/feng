@@ -35,6 +35,12 @@
   &.disabled {
     opacity: .6;
   }
+
+  &.is-loading {
+    .spinner {
+      margin-right: 12px;
+    }
+  }
 }
 
 .u-btn-lg {

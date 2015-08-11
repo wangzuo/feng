@@ -1,16 +1,17 @@
 var React = require('react');
 var babel = require('babel-core/browser');
 
-var Grid = require('../lib/grid');
-var Button = require('../lib/button');
-var ButtonGroup = require('../lib/button-group');
-var Form = require('../lib/form');
-var Card = require('../lib/card');
-var Field = require('../lib/field');
-var Checkbox = require('../lib/checkbox');
-var Label = require('../lib/label');
-var Tabs = require('../lib/tabs');
-var FengForm = require('../lib/feng-form');
+var Grid = require('../react/grid');
+var Button = require('../react/button');
+var ButtonGroup = require('../react/button-group');
+var Form = require('../react/form');
+var Card = require('../react/card');
+var Field = require('../react/field');
+var Checkbox = require('../react/checkbox');
+var Label = require('../react/label');
+var Tabs = require('../react/tabs');
+var Spinner = require('../react/spinner');
+var FengForm = require('../react/feng-form');
 
 var Code = require('./code');
 

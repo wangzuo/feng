@@ -15,7 +15,8 @@ if(__DEV__) {
   require('../postcss/input-color.css');
   require('../postcss/select.css');
   require('../postcss/switch.css')
-  require('../postcss/example.css');
+  require('../postcss/spinner.css');
+  require('./example.css');
 }
 
 var history2 = require('history2');

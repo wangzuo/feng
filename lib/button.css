@@ -35,6 +35,10 @@
   opacity: .6;
 }
 
+.u-btn.is-loading .spinner {
+  margin-right: 12px;
+}
+
 .u-btn-lg {
   padding: 11px 13px;
   font-size: 14px;

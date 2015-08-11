@@ -1,7 +1,8 @@
 var React = require('react');
 var Header = require('./header');
 var Footer = require('./footer');
-var Nav = require('../lib/nav');
+var Nav = require('./nav');
+var Grid = require('../react/grid');
 
 var sections = require('./pages');
 
@@ -19,14 +20,12 @@ var pages = {
     labels: require('./css/labels'),
     typography: require('./css/typography')
   }
-}
-
+};
 
 var Panel = React.createClass({
   displayName: 'Panel',
 
   renderPage(section, page) {
-    // console.log('renderPage', section, page);
     var component = pages[section][page];
     if(!component) throw new Error(`${section}/${page} not found`);
     return React.createElement(component);
@@ -40,19 +39,19 @@ var Panel = React.createClass({
     var current = sections.filter((page) => page.path === section)[0];
 
     return (
-      <div className="g-container">
-        <div className="g-r">
-          <div className="g-3">
+      <Grid.Container>
+        <Grid.Row>
+          <Grid.Column d={3}>
             <Nav
               className="u-nav u-nav-y"
               items={current.pages}
             />
-          </div>
-          <div className="g-9">
+          </Grid.Column>
+          <Grid.Column d={9}>
             {this.renderPage(section, page)}
-          </div>
-        </div>
-      </div>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid.Container>
     );
   }
 });

@@ -1,5 +1,5 @@
 var React = require('react');
-var Nav = require('../lib/nav');
+var Nav = require('./nav');
 var pages = require('./pages');
 
 module.exports = React.createClass({
