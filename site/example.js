@@ -6,6 +6,7 @@ var Button = require('../react/button');
 var ButtonGroup = require('../react/button-group');
 var Form = require('../react/form');
 var Card = require('../react/card');
+var Slat = require('../react/slat');
 var Field = require('../react/field');
 var Checkbox = require('../react/checkbox');
 var Label = require('../react/label');

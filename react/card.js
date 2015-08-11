@@ -1,3 +1,4 @@
+var cx = require('classnames');
 var React = require('react');
 var Gravatar = require('./gravatar.js');
 
@@ -6,14 +7,13 @@ module.exports = React.createClass({
 
   getDefaultProps() {
     return {
-      // todo: responsive image support
       link: '#'
-   };
+    };
   },
 
   render() {
     return (
-      <div className="u-card">
+      <div className={cx('u-card', this.props.className)}>
         <div className="gradient"></div>
         <img className="img" src={this.props.image}/>
         <div className="text">
@@ -22,7 +22,7 @@ module.exports = React.createClass({
           <div className="info">
             <Gravatar className="avatar" email={this.props.authorEmail} size={20}/>
             <span className="author">{this.props.authorName}</span>
-            <span className="time">3 days ago</span>
+            <span className="time">{this.props.time}</span>
           </div>
         </div>
         <span className="label">{this.props.label}</span>

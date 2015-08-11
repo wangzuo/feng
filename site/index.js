@@ -16,6 +16,7 @@ if(__DEV__) {
   require('../postcss/select.css');
   require('../postcss/switch.css')
   require('../postcss/spinner.css');
+  require('../postcss/slat.css');
   require('./example.css');
 }
 

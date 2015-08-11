@@ -1,0 +1,19 @@
+@import '_variables';
+
+.u-slat {
+  position: relative;
+  padding-left: 90px;
+
+  .img {
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 80px;
+  }
+
+  .title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}

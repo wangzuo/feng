@@ -84,4 +84,4 @@ gulp.task('gh-pages', ['dist'], function() {
 
 gulp.task('dist', ['dist:css', 'dist:js']);
 gulp.task('clean', ['clean:postcss', 'clean:react', 'clean:builds', 'clean:dist']);
-gulp.task('default', ['postcss', 'react']);
+gulp.task('default', ['dist']);

@@ -4,7 +4,8 @@ var Example = require('../example');
 module.exports = React.createClass({
   render() {
     return (
-      <Example>
+      <div>
+        <Example>
 {`<Card
   label="NYHETER"
   title="Ornare Parturient Ridiculus Nibh"
@@ -13,8 +14,18 @@ module.exports = React.createClass({
   image="http://yoo.io//gk/GkkemmjxHGXIdrNi4Nv8Ig.jpg"
   authorName="Wang Zuo"
   authorEmail="wzuoadjusted@gmail.com"
+  time="3 days ago"
 />`}
-      </Example>
+        </Example>
+
+        <Example>
+{`<Slat
+  title="Egestas Adipiscing Malesuada Euismod Bibendum"
+  image="http://yoo.io//qm/QM30YAEXXaGTmfAZK0jl0w.jpg">
+  Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit.
+</Slat>`}
+        </Example>
+      </div>
     );
   }
 });
