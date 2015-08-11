@@ -12,5 +12,9 @@ module.exports = {
   'label': require('./lib/label'),
   'nav': require('./lib/nav'),
   'spinner': require('./lib/spinner'),
-  'tabs': require('./lib/tabs')
+  'tabs': require('./lib/tabs'),
+  'InputColor': require('./lib/input-color'),
+  'InputSlider': require('./lib/input-slider'),
+  'InputSwitch': require('./lib/input-switch'),
+  'Select': require('./lib/select')
 };
