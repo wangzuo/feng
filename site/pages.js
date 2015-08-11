@@ -34,4 +34,7 @@ module.exports = [{
     text: 'Feng Form',
     path: '/react/feng-form'
   }]
-}]
+}, {
+  text: 'About',
+  path: 'about'
+}];
