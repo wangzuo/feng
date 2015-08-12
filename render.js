@@ -1,11 +1,10 @@
 GLOBAL.__DEV__ = false;
 
-
 var fs = require('fs');
 var path = require('path');
 var async = require('async');
 var mkdirp = require('mkdirp');
-var sections= require('./site/pages');
+var sections = require('./site/pages');
 var site = require('./site/index');
 
 var dir = 'builds';
@@ -18,7 +17,7 @@ function html(str) {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <title>Feng</title>
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" type="text/css"/>
-    <link rel="stylesheet" href="../feng.css" type="text/css"/>
+    <link rel="stylesheet" href="../../dist/feng.min.css" type="text/css"/>
     </head>
     <body>
   ${str}

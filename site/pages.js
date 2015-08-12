@@ -36,5 +36,6 @@ module.exports = [{
   }]
 }, {
   text: 'About',
-  path: 'about'
+  path: 'about',
+  pages: []
 }];
