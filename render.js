@@ -1,4 +1,5 @@
 GLOBAL.__DEV__ = false;
+GLOBAL.__PAGE__ = false;
 
 var fs = require('fs');
 var path = require('path');
@@ -9,7 +10,7 @@ var site = require('./site/index');
 
 var dir = 'builds';
 
-function html(str) {
+function html(str, page) {
   return `<!DOCTYPE html>
   <html>
   <head>
@@ -20,7 +21,19 @@ function html(str) {
     <link rel="stylesheet" href="../../dist/feng.min.css" type="text/css"/>
     </head>
     <body>
+    <div id="app">
   ${str}
+  </div>
+
+  <script>var __PAGE__ = true;</script>
+  <script src="../babel-browser.min.js"></script>
+  <script src="https://fb.me/react-0.13.3.js"></script>
+  <script src="../app.js"></script>
+  <script>
+
+  React.render(React.createElement(App, {path: '${page}'}), document.getElementById('app'));
+
+  </script>
     </body>
     </html>`;
 }
@@ -29,7 +42,7 @@ function build(section, page, cb) {
   console.log('building', section, page);
   mkdirp(path.join(dir, section), function(err) {
     if(err) return cb(err);
-    fs.writeFile(`builds${page}.html`, html(site(`${page}`)), function(err) {
+    fs.writeFile(`builds${page}.html`, html(site(`${page}`), page), function(err) {
       if(err) return cb(err);
       console.log('done', section, page);
       if(cb) cb();

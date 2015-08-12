@@ -10,9 +10,21 @@ module.exports = React.createClass({
     };
   },
 
+  shouldComponentUpdate() {
+    if(__PAGE__) return false;
+  },
+
   render() {
     var code = this.props.code;
     var format = this.props.format;
+
+    // if(__PAGE__) {
+    //   // var dom = React.findDOMNode(this);
+    //   // console.log(this);
+    //   // return <pre dangerouslySetInnerHTML={{__html: html}}></pre>
+    //   // return null;
+    //   return null;
+    // }
 
     if(__DEV__) {
       return <pre>{code}</pre>;
