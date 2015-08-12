@@ -1,1 +1,1 @@
-module.exports = require('input-slider');
+module.exports = require('react-input-slider');
