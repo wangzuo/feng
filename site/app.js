@@ -18,7 +18,8 @@ var pages = {
     card: require('./css/card'),
     grid: require('./css/grid'),
     labels: require('./css/labels'),
-    typography: require('./css/typography')
+    typography: require('./css/typography'),
+    dropdown: require('./css/dropdown')
   }
 };
 

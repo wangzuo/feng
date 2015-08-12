@@ -26,6 +26,9 @@ module.exports = [{
   }, {
     text: 'Tabs',
     path: '/css/tabs'
+  }, {
+    text: 'Dropdown',
+    path: '/css/dropdown'
   }]
 }, {
   text: 'React',

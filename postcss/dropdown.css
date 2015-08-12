@@ -1,0 +1,33 @@
+@import '_variables';
+
+.u-dropdown {
+  display: inline-block;
+  position: relative;
+
+  .items {
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray);
+    background-color: var(--color-white);
+    list-style: none;
+    z-index: 1000;
+
+    li {
+      padding: 7px 15px;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--color-gray);
+      }
+    }
+  }
+
+  &.is-open .items {
+    display: inline-block;
+    top: 34px;
+    left: -2px;
+  }
+}

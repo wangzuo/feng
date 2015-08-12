@@ -13,6 +13,7 @@ var Label = require('../react/label');
 var Tabs = require('../react/tabs');
 var Spinner = require('../react/spinner');
 var FengForm = require('../react/feng-form');
+var Dropdown = require('../react/dropdown');
 
 var Code = require('./code');
 
