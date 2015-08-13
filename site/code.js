@@ -28,7 +28,13 @@ module.exports = React.createClass({
     var code = this.props.code;
     var format = this.props.format;
 
-    if(format) code = beautify(code, {indent_size: 2});
+    if(format) {
+      code = beautify(code, {
+        indent_size: 2,
+        wrap_line_length: 80,
+        unformatted: []
+      });
+    }
 
     return (
       <pre {... this.props}>
