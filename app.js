@@ -274,12 +274,10 @@ var App =
 	  render: function render() {
 	    var href = this.props.href;
 
-	    // if(!__DEV__) href = href + '.html';
-
 	    return React.createElement(
 	      'a',
 	      {
-	        href: href + '.html',
+	        href: '/feng-ui' + href + '.html',
 	        target: this.props.target,
 	        className: cx('j-link', this.props.classNams) },
 	      this.props.children
