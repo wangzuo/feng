@@ -78,6 +78,7 @@ var App =
 	  renderPage: function renderPage(section, page) {
 	    var component = pages[section][page];
 	    if (!component) throw new Error(section + '/' + page + ' not found');
+
 	    return React.createElement(component);
 	  },
 
@@ -100,6 +101,7 @@ var App =
 	          Grid.Column,
 	          { d: 3 },
 	          React.createElement(Nav, {
+	            title: section,
 	            className: 'u-nav u-nav-y',
 	            items: current.pages
 	          })
@@ -190,6 +192,11 @@ var App =
 	    return React.createElement(
 	      'nav',
 	      { className: cx('u-nav', this.props.className) },
+	      React.createElement(
+	        'a',
+	        { href: 'javascript:void(0)', className: 'title' },
+	        this.props.title
+	      ),
 	      items.map(function (item, i) {
 	        return React.createElement(
 	          Link,

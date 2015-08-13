@@ -1,5 +1,6 @@
 .m-example {
-  border: 1px solid #eee;
+  border: 1px solid #eaeaea;
+  border-radius: 2px;
 }
 
 .m-example .preview {
