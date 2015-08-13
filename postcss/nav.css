@@ -1,3 +1,5 @@
+@import '_variables';
+
 .u-nav {
   a {
     display: inline-block;
@@ -7,18 +9,24 @@
       font-weight: bold;
     }
 
-    &:not(last-child) {
-      margin-right: 15px;
-    }
   }
 }
 
 .u-nav-y {
+  border: 1px solid var(--color-gray);
+  border-radius: 3px;
+
   a {
     display: block;
+    padding: 12px 14px;
 
     &:not(:last-child) {
-      margin-bottom: 10px;
+      border-bottom: 1px solid var(--color-light-gray);
     }
+  }
+
+  .title {
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-gray) !important;
   }
 }

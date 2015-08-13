@@ -1,5 +1,8 @@
+@import '../postcss/_variables';
+
 .m-example {
-  border: 1px solid #eee;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 2px;
 
   .preview {
     margin-bottom: 20px;

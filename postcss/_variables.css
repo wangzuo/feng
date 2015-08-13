@@ -4,12 +4,12 @@
   --color-green: #27ae60;
   --color-red: #e74c3c;
   --color-yellow: #f1c40f;
+  --color-light-gray: #eaeaea;
   --color-gray: #bdc3c7;
   --color-black: #333333;
 
   --container-width: 940px;
-  --column-width: 60;
-  --gutter-width: 10px;
+  --gutter-width: 20px;
   --columns: 12;
 
   --body-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

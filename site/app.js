@@ -29,6 +29,7 @@ var Panel = React.createClass({
   renderPage(section, page) {
     var component = pages[section][page];
     if(!component) throw new Error(`${section}/${page} not found`);
+
     return React.createElement(component);
   },
 
@@ -44,6 +45,7 @@ var Panel = React.createClass({
         <Grid.Row>
           <Grid.Column d={3}>
             <Nav
+              title={section}
               className="u-nav u-nav-y"
               items={current.pages}
             />

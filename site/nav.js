@@ -16,6 +16,7 @@ module.exports = React.createClass({
 
     return (
       <nav className={cx('u-nav', this.props.className)}>
+        <a href="javascript:void(0)" className="title">{this.props.title}</a>
         {items.map((item, i) => (
           <Link
             key={i}
