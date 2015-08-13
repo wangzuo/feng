@@ -1,0 +1,27 @@
+.u-dropdown {
+  display: inline-block;
+  position: relative;
+}
+.u-dropdown .items {
+  position: absolute;
+  display: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+  background-color: #ffffff;
+  list-style: none;
+  z-index: 1000;
+}
+.u-dropdown .items li {
+  padding: 7px 15px;
+  cursor: pointer;
+}
+.u-dropdown .items li:not(:last-child) {
+  border-bottom: 1px solid #bdc3c7;
+}
+.u-dropdown.is-open .items {
+  display: inline-block;
+  top: 34px;
+  left: -2px;
+}

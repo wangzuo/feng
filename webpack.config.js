@@ -10,7 +10,6 @@ module.exports = {
     filename: 'index.js',
     publicPath: "/builds/",
   },
-  plugins: [definePlugin],
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},

@@ -36,15 +36,6 @@ gulp.task('clean:dist', function(cb) {
   del(['dist/*'], cb);
 });
 
-gulp.task('clean:builds', function(cb) {
-  del(['builds/**/*'], cb);
-});
-
-gulp.task('watch', function() {
-  gulp.watch('react/*.js', ['react']);
-  gulp.watch('postcss/*.css', ['postcss']);
-});
-
 gulp.task('dist:css', ['postcss'], function() {
   return gulp.src('lib/*.css')
     .pipe(concat('feng.css'))
@@ -72,19 +63,20 @@ gulp.task('webpack', ['react'], function(cb) {
   });
 });
 
-var definePlugin = new webpack.DefinePlugin({
-  __DEV__: JSON.stringify(JSON.parse(true))
+gulp.task('dist:js', ['webpack'], function(cb) {
+  return gulp.src('dist/feng.min.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build', function(cb) {
+gulp.task('site:app', function(cb) {
   webpack({
     entry: './site/app.js',
     output: {
-      path: __dirname + '/builds',
+      path: __dirname + '/_site',
       filename: 'app.js',
       library: 'App'
     },
-    plugins: [definePlugin],
     module: {
       loaders: [
         {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
@@ -105,10 +97,18 @@ gulp.task('build', function(cb) {
   });
 });
 
-gulp.task('dist:js', ['webpack'], function(cb) {
-  return gulp.src('dist/feng.min.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist'));
+gulp.task('site:css', ['dist:css'], function() {
+  return gulp.src('dist/feng.min.css')
+    .pipe(gulp.dest('_site'));
+});
+
+gulp.task('site:vendors', function() {
+  return gulp.src('vendors/*')
+    .pipe(gulp.dest('_site/vendors'));
+});
+
+gulp.task('clean:site', function(cb) {
+  del(['_site/**/*'], cb);
 });
 
 gulp.task('gh-pages', ['dist'], function() {
@@ -117,5 +117,6 @@ gulp.task('gh-pages', ['dist'], function() {
 });
 
 gulp.task('dist', ['dist:css', 'dist:js']);
-gulp.task('clean', ['clean:postcss', 'clean:react', 'clean:builds', 'clean:dist']);
+gulp.task('clean', ['clean:postcss', 'clean:react', 'clean:site', 'clean:dist']);
+gulp.task('site', ['site:app', 'site:vendors', 'site:css'])
 gulp.task('default', ['dist']);
