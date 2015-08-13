@@ -8,14 +8,20 @@
   position: relative;
 
   .tabs-nav {
-    background-color: var(--color-gray);
+    /*background-color: var(--color-gray);*/
+    border-bottom: 1px solid #eee;
     overflow: hidden;
   }
 
+  &.is-right {
+    .tabs-nav {
+      text-align: right;
+    }
+  }
+
   .tab {
-    float: left;
-    padding: 8px 12px;
-    font-size: 14px;
+    display: inline-block;
+    padding: 5px 8px;
     font-weight: bold;
     line-height: 18px;
     cursor: pointer;

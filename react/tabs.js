@@ -6,14 +6,16 @@ exports.Tabs = React.createClass({
 
   getDefaultProps() {
     return {
-      fixed: false
+      fixed: false,
+      alignRight: false
     };
   },
 
   render() {
     var cn = cx(
       'u-tabs',
-      {'u-tabs-fixed' : this.props.fixed},
+      {'u-tabs-fixed': this.props.fixed},
+      {'is-right': this.props.alignRight},
       this.props.className
     );
 

@@ -102,13 +102,18 @@ gulp.task('site:css', ['dist:css'], function() {
     .pipe(gulp.dest('feng-ui'));
 });
 
+gulp.task('site:styles', function() {
+  return gulp.src('site/*.css')
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('feng-ui'));
+});
+
 gulp.task('site:vendors', function() {
   return gulp.src('vendors/*')
     .pipe(gulp.dest('feng-ui/vendors'));
 });
 
-
-gulp.task('site', ['site:app', 'site:vendors', 'site:css'])
+gulp.task('site', ['site:app', 'site:vendors', 'site:css', 'site:styles']);
 
 gulp.task('clean:site', function(cb) {
   del(['feng-ui/**/*'], cb);

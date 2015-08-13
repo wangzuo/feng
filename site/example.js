@@ -46,7 +46,7 @@ module.exports = React.createClass({
           {el}
         </div>
 
-        <Tabs.Tabs className="codes">
+        <Tabs.Tabs className="codes" alignRight>
           <Tabs.Nav>
             <Tabs.Tab active={active === 0} onClick={this.changeTab.bind(null, 0)}>React</Tabs.Tab>
             <Tabs.Tab active={active === 1} onClick={this.changeTab.bind(null, 1)}>Html</Tabs.Tab>

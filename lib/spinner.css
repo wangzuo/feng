@@ -20,11 +20,12 @@
   background-color: #ffffff
 }
 
-.u-spinner-three-bounce .u-bounce1 {
+.u-spinner-three-bounce .bounce1 {
   -webkit-animation-delay: -0.32s;
           animation-delay: -0.32s;
 }
-.u-spinner-three-bounce .u-bounce2 {
+
+.u-spinner-three-bounce .bounce2 {
   -webkit-animation-delay: -0.16s;
           animation-delay: -0.16s;
 }

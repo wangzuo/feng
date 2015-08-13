@@ -15,9 +15,9 @@ module.exports = React.createClass({
       <span className={cx('u-spinner', 'u-spinner-three-bounce', {
         'is-inverted': this.props.inverted
       }, this.props.className)}>
-        <span className="u-bounce1"/>
-        <span className="u-bounce2"/>
-        <span className="u-bounce3"/>
+        <span className="bounce1"/>
+        <span className="bounce2"/>
+        <span className="bounce3"/>
       </span>
     );
   }

@@ -20,13 +20,13 @@
   &.is-inverted span {
     background-color: var(--color-white)
   }
-}
 
-.u-spinner-three-bounce .u-bounce1 {
-  animation-delay: -0.32s;
-}
-.u-spinner-three-bounce .u-bounce2 {
-  animation-delay: -0.16s;
+  .bounce1 {
+    animation-delay: -0.32s;
+  }
+  .bounce2 {
+    animation-delay: -0.16s;
+  }
 }
 
 @keyframes u-threeBounceDelay {
