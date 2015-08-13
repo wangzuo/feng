@@ -500,7 +500,7 @@ var App =
 	      ),
 	      React.createElement(
 	        Tabs.Tabs,
-	        { className: 'codes' },
+	        { className: 'codes', alignRight: true },
 	        React.createElement(
 	          Tabs.Nav,
 	          null,
@@ -642,9 +642,9 @@ var App =
 	      { className: cx('u-spinner', 'u-spinner-three-bounce', {
 	          'is-inverted': this.props.inverted
 	        }, this.props.className) },
-	      React.createElement('span', { className: 'u-bounce1' }),
-	      React.createElement('span', { className: 'u-bounce2' }),
-	      React.createElement('span', { className: 'u-bounce3' })
+	      React.createElement('span', { className: 'bounce1' }),
+	      React.createElement('span', { className: 'bounce2' }),
+	      React.createElement('span', { className: 'bounce3' })
 	    );
 	  }
 	});
@@ -1196,12 +1196,13 @@ var App =
 
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      fixed: false
+	      fixed: false,
+	      alignRight: false
 	    };
 	  },
 
 	  render: function render() {
-	    var cn = cx('u-tabs', { 'u-tabs-fixed': this.props.fixed }, this.props.className);
+	    var cn = cx('u-tabs', { 'u-tabs-fixed': this.props.fixed }, { 'is-right': this.props.alignRight }, this.props.className);
 
 	    return React.createElement(
 	      'div',
@@ -4166,7 +4167,13 @@ var App =
 	    var code = this.props.code;
 	    var format = this.props.format;
 
-	    if (format) code = beautify(code, { indent_size: 2 });
+	    if (format) {
+	      code = beautify(code, {
+	        indent_size: 2,
+	        wrap_line_length: 80,
+	        unformatted: []
+	      });
+	    }
 
 	    return React.createElement(
 	      'pre',
