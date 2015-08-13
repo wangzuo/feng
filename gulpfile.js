@@ -73,7 +73,7 @@ gulp.task('site:app', function(cb) {
   webpack({
     entry: './site/app.js',
     output: {
-      path: __dirname + '/_site',
+      path: __dirname + '/feng-ui',
       filename: 'app.js',
       library: 'App'
     },
@@ -99,24 +99,26 @@ gulp.task('site:app', function(cb) {
 
 gulp.task('site:css', ['dist:css'], function() {
   return gulp.src('dist/feng.min.css')
-    .pipe(gulp.dest('_site'));
+    .pipe(gulp.dest('feng-ui'));
 });
 
 gulp.task('site:vendors', function() {
   return gulp.src('vendors/*')
-    .pipe(gulp.dest('_site/vendors'));
+    .pipe(gulp.dest('feng-ui/vendors'));
 });
+
+
+gulp.task('site', ['site:app', 'site:vendors', 'site:css'])
 
 gulp.task('clean:site', function(cb) {
-  del(['_site/**/*'], cb);
+  del(['feng-ui/**/*'], cb);
 });
 
-gulp.task('gh-pages', ['dist'], function() {
-  return gulp.src('./builds/**/*')
+gulp.task('gh-pages', ['site'], function() {
+  return gulp.src('./feng-ui/**/*')
     .pipe(ghPages());
 });
 
 gulp.task('dist', ['dist:css', 'dist:js']);
 gulp.task('clean', ['clean:postcss', 'clean:react', 'clean:site', 'clean:dist']);
-gulp.task('site', ['site:app', 'site:vendors', 'site:css'])
-gulp.task('default', ['dist']);
+gulp.task('default', ['dist', 'site']);

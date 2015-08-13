@@ -4,8 +4,8 @@
   "description": "feng-ui",
   "main": "index.js",
   "scripts": {
-    "pages": "babel-node render.js",
-    "start": "BUILD_DEV=1 webpack-dev-server -c --port=7788",
+    "pages": "gulp site && babel-node render.js",
+    "start": "webpack-dev-server -c --port=7788",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Wang Zuo",
