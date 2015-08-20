@@ -6,9 +6,11 @@ module.exports = React.createClass({
     return (
       <div>
         <Example>
-{`<Dropdown items={['dog', 'pig', 'moose']} open>
-  <Button>More</Button>
-</Dropdown>`}
+{`<div className="example-dropdown">
+    <Dropdown items={['dog', 'pig', 'moose']} open>
+    <Button>More <i className="ion-chevron-down"></i></Button>
+  </Dropdown>
+</div>`}
         </Example>
       </div>
     );
