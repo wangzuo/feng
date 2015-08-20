@@ -1,6 +1,7 @@
 @import '../postcss/_variables';
 
 .m-example {
+  margin-bottom: 8px;
   border: 1px solid var(--color-light-gray);
   border-radius: 2px;
 
@@ -10,6 +11,7 @@
   }
 
   .tabs {
+    /*background-color: #f5f2f0;*/
   }
 }
 

@@ -6,10 +6,10 @@
 
 .u-tabs {
   position: relative;
+  background-color: #f5f2f0;
 
   .tabs-nav {
-    /*background-color: var(--color-gray);*/
-    border-bottom: 1px solid #eee;
+    padding: 7px 6px;
     overflow: hidden;
   }
 
@@ -22,12 +22,13 @@
   .tab {
     display: inline-block;
     padding: 5px 8px;
+    border-radius: 12px;
     font-weight: bold;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 1;
     cursor: pointer;
 
     &:hover {
-      /*background-color: lighten(@color-blue, 10%);*/
       background-color: var(--color-blue);
       color: #fff;
     }
@@ -35,6 +36,10 @@
     &.is-active {
       background-color: var(--color-blue);
       color: #fff;
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
     }
   }
 

@@ -1,8 +1,10 @@
+@import '_variables';
+
 .m-header {
   padding-top: 15px;
   padding-bottom: 20px;
   margin-bottom: 18px;
-  background-color: #efefef;
+  background-color: var(--color-light-gray);
 
   .nav {
     float: right;
