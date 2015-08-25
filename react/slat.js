@@ -8,7 +8,7 @@ module.exports = React.createClass({
       <div className="u-slat">
         <img className="img" src={this.props.image}/>
         <div className="title">{this.props.title}</div>
-        {this.props.children}
+        <div className="inner">{this.props.children}</div>
       </div>
     );
   }
