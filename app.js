@@ -51,24 +51,24 @@ var App =
 	var Header = __webpack_require__(2);
 	var Footer = __webpack_require__(7);
 	var Nav = __webpack_require__(3);
-	var Grid = __webpack_require__(8);
+	var Grid = __webpack_require__(9);
 
 	var sections = __webpack_require__(6);
 
 	var pages = {
 	  'getting-started': {},
 	  'react': {
-	    'feng-form': __webpack_require__(9)
+	    'feng-form': __webpack_require__(10)
 	  },
 	  css: {
-	    buttons: __webpack_require__(56),
-	    forms: __webpack_require__(57),
-	    tabs: __webpack_require__(58),
-	    card: __webpack_require__(59),
-	    grid: __webpack_require__(60),
-	    labels: __webpack_require__(61),
-	    typography: __webpack_require__(62),
-	    dropdown: __webpack_require__(63)
+	    buttons: __webpack_require__(58),
+	    forms: __webpack_require__(59),
+	    tabs: __webpack_require__(60),
+	    card: __webpack_require__(61),
+	    grid: __webpack_require__(62),
+	    labels: __webpack_require__(63),
+	    typography: __webpack_require__(64),
+	    dropdown: __webpack_require__(65)
 	  }
 	};
 
@@ -350,21 +350,114 @@ var App =
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var Grid = __webpack_require__(8);
 
 	module.exports = React.createClass({
 	  displayName: 'Footer',
 
 	  render: function render() {
+	    var year = new Date().getFullYear();
+
 	    return React.createElement(
 	      'div',
 	      { className: 'm-footer' },
-	      'feng-ui'
+	      React.createElement(
+	        Grid.Container,
+	        null,
+	        React.createElement(
+	          Grid.Row,
+	          null,
+	          React.createElement(
+	            Grid.Column,
+	            { d: 3 },
+	            React.createElement(
+	              'nav',
+	              null,
+	              React.createElement(
+	                'a',
+	                { href: 'https://github.com/wangzuo/feng-ui' },
+	                'Github'
+	              ),
+	              React.createElement(
+	                'a',
+	                { href: 'https://npmjs.com/package/feng-ui' },
+	                'NPM'
+	              ),
+	              React.createElement(
+	                'a',
+	                { href: '#' },
+	                'About'
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'leadtext' },
+	              'Copyright © 2015 (ISC) License'
+	            )
+	          )
+	        )
+	      )
 	    );
 	  }
 	});
 
 /***/ },
 /* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _extends = Object.assign || function (target) {
+	  for (var i = 1; i < arguments.length; i++) {
+	    var source = arguments[i];for (var key in source) {
+	      if (Object.prototype.hasOwnProperty.call(source, key)) {
+	        target[key] = source[key];
+	      }
+	    }
+	  }return target;
+	};
+
+	var React = __webpack_require__(1);
+	var cx = __webpack_require__(4);
+
+	exports.Container = React.createClass({
+	  displayName: 'Container',
+
+	  render: function render() {
+	    return React.createElement('div', _extends({}, this.props, {
+	      className: cx('g-c', this.props.className) }), this.props.children);
+	  }
+	});
+
+	exports.Row = React.createClass({
+	  displayName: 'Row',
+
+	  render: function render() {
+	    return React.createElement('div', _extends({}, this.props, {
+	      className: cx('g-r', this.props.className) }), this.props.children);
+	  }
+	});
+
+	exports.Column = React.createClass({
+	  displayName: 'Column',
+
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      d: 1,
+	      t: 1,
+	      m: 1
+	    };
+	  },
+
+	  render: function render() {
+	    var cn = cx('g-' + this.props.d, 't-' + this.props.t, 'm-' + this.props.m, this.props.className);
+
+	    return React.createElement('div', _extends({}, this.props, { className: cn }), this.props.children);
+	  }
+	});
+
+/***/ },
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -423,13 +516,13 @@ var App =
 	});
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(10);
+	var Example = __webpack_require__(11);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -448,7 +541,7 @@ var App =
 	});
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -456,23 +549,23 @@ var App =
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var babel = __webpack_require__(11);
+	var babel = __webpack_require__(12);
 
-	var Grid = __webpack_require__(8);
-	var Button = __webpack_require__(12);
-	var ButtonGroup = __webpack_require__(14);
-	var Form = __webpack_require__(15);
-	var Card = __webpack_require__(16);
-	var Slat = __webpack_require__(19);
-	var Field = __webpack_require__(20);
-	var Checkbox = __webpack_require__(21);
-	var Label = __webpack_require__(22);
-	var Tabs = __webpack_require__(23);
-	var Spinner = __webpack_require__(13);
-	var FengForm = __webpack_require__(24);
-	var Dropdown = __webpack_require__(50);
+	var Grid = __webpack_require__(9);
+	var Button = __webpack_require__(13);
+	var ButtonGroup = __webpack_require__(15);
+	var Form = __webpack_require__(16);
+	var Card = __webpack_require__(17);
+	var Slat = __webpack_require__(20);
+	var Field = __webpack_require__(21);
+	var Checkbox = __webpack_require__(22);
+	var Label = __webpack_require__(23);
+	var Tabs = __webpack_require__(24);
+	var Spinner = __webpack_require__(14);
+	var FengForm = __webpack_require__(25);
+	var Dropdown = __webpack_require__(52);
 
-	var Code = __webpack_require__(51);
+	var Code = __webpack_require__(53);
 
 	module.exports = React.createClass({
 	  displayName: 'Example',
@@ -507,7 +600,7 @@ var App =
 	      ),
 	      React.createElement(
 	        Tabs.Tabs,
-	        { className: 'codes', alignRight: true },
+	        { className: 'codes' },
 	        React.createElement(
 	          Tabs.Nav,
 	          null,
@@ -548,13 +641,13 @@ var App =
 	});
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	module.exports = babel;
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -563,7 +656,7 @@ var App =
 
 	var React = __webpack_require__(1);
 	var cx = __webpack_require__(4);
-	var Spinner = __webpack_require__(13);
+	var Spinner = __webpack_require__(14);
 
 	module.exports = React.createClass({
 	  displayName: 'Button',
@@ -626,7 +719,7 @@ var App =
 	});
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -657,7 +750,7 @@ var App =
 	});
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -677,7 +770,7 @@ var App =
 	});
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -706,14 +799,14 @@ var App =
 	});
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
-	var Gravatar = __webpack_require__(17);
+	var Gravatar = __webpack_require__(18);
 
 	module.exports = React.createClass({
 	  displayName: 'Card',
@@ -770,7 +863,7 @@ var App =
 	});
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -778,7 +871,7 @@ var App =
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var _md5 = __webpack_require__(18);
+	var _md5 = __webpack_require__(19);
 	var md5 = _md5.md5 || _md5;
 
 	module.exports = React.createClass({
@@ -796,7 +889,7 @@ var App =
 	});
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -1076,7 +1169,7 @@ var App =
 
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1096,13 +1189,17 @@ var App =
 	        { className: 'title' },
 	        this.props.title
 	      ),
-	      this.props.children
+	      React.createElement(
+	        'div',
+	        { className: 'inner' },
+	        this.props.children
+	      )
 	    );
 	  }
 	});
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1137,7 +1234,7 @@ var App =
 	});
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1162,7 +1259,7 @@ var App =
 	});
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1188,7 +1285,7 @@ var App =
 	});
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1272,24 +1369,24 @@ var App =
 	});
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Select = __webpack_require__(25);
-	var Switch = __webpack_require__(28);
-	var Textarea = __webpack_require__(30);
-	var InputColor = __webpack_require__(33);
+	var Select = __webpack_require__(26);
+	var Switch = __webpack_require__(29);
+	var Textarea = __webpack_require__(31);
+	var InputColor = __webpack_require__(34);
 	// var InputNumber = require('react-input-number');
-	var InputSlider = __webpack_require__(42);
+	var InputSlider = __webpack_require__(44);
 
 	// todo: avoid e.target.value
 	// var InputText = require('./input-text');
 
-	var Field = __webpack_require__(20);
-	var Form = __webpack_require__(15);
+	var Field = __webpack_require__(21);
+	var Form = __webpack_require__(16);
 
 	function renderElement(attr, value, onChange) {
 	  var type = attr.type;
@@ -1482,7 +1579,7 @@ var App =
 	});
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* disable some rules until we refactor more completely; fixing them now would
@@ -1494,9 +1591,9 @@ var App =
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var Input = __webpack_require__(26);
+	var Input = __webpack_require__(27);
 	var classes = __webpack_require__(4);
-	var Value = __webpack_require__(27);
+	var Value = __webpack_require__(28);
 
 	var requestId = 0;
 
@@ -2310,7 +2407,7 @@ var App =
 	module.exports = Select;
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2418,7 +2515,7 @@ var App =
 	module.exports = AutosizeInput;
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2489,14 +2586,14 @@ var App =
 	module.exports = Value;
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(29);
+	module.exports = __webpack_require__(30);
 
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2537,7 +2634,7 @@ var App =
 	});
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2567,11 +2664,11 @@ var App =
 
 	var _React2 = _interopRequireWildcard(_React);
 
-	var _emptyFunction = __webpack_require__(31);
+	var _emptyFunction = __webpack_require__(32);
 
 	var _emptyFunction2 = _interopRequireWildcard(_emptyFunction);
 
-	var _calculateNodeHeight = __webpack_require__(32);
+	var _calculateNodeHeight = __webpack_require__(33);
 
 	var _calculateNodeHeight2 = _interopRequireWildcard(_calculateNodeHeight);
 
@@ -2762,7 +2859,7 @@ var App =
 
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports) {
 
 	/**
@@ -2800,7 +2897,7 @@ var App =
 
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2918,27 +3015,27 @@ var App =
 
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(34);
+	module.exports = __webpack_require__(35);
 
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var cx = __webpack_require__(4);
+	var cx = __webpack_require__(36);
 	var React = __webpack_require__(1);
-	var assign = __webpack_require__(35);
-	var colorParser = __webpack_require__(36);
-	var rgbaColor = __webpack_require__(38);
-	var rgb2hsv = __webpack_require__(39);
-	var rgb2hex = __webpack_require__(40);
+	var assign = __webpack_require__(37);
+	var colorParser = __webpack_require__(38);
+	var rgbaColor = __webpack_require__(40);
+	var rgb2hsv = __webpack_require__(41);
+	var rgb2hex = __webpack_require__(42);
 
-	var ColorPicker = __webpack_require__(41);
+	var ColorPicker = __webpack_require__(43);
 
 	var KEY_ENTER = 13;
 
@@ -3000,14 +3097,14 @@ var App =
 
 	    return React.createElement(
 	      'span',
-	      { className: cx('m-input-color', {
+	      { className: cx({
+	          'm-input-color': true,
 	          'color-picker-open': this.state.colorPicker
 	        }) },
 	      React.createElement('span', {
 	        className: "css-color",
 	        style: { background: rgbaBackground },
-	        onClick: this._onClick
-	      }),
+	        onClick: this._onClick }),
 	      React.createElement(
 	        'span',
 	        {
@@ -3088,7 +3185,56 @@ var App =
 	});
 
 /***/ },
-/* 35 */
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2015 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+
+	function classNames() {
+		var classes = '';
+		var arg;
+
+		for (var i = 0; i < arguments.length; i++) {
+			arg = arguments[i];
+			if (!arg) {
+				continue;
+			}
+
+			if ('string' === typeof arg || 'number' === typeof arg) {
+				classes += ' ' + arg;
+			} else if (Object.prototype.toString.call(arg) === '[object Array]') {
+				classes += ' ' + classNames.apply(null, arg);
+			} else if ('object' === typeof arg) {
+				for (var key in arg) {
+					if (!arg.hasOwnProperty(key) || !arg[key]) {
+						continue;
+					}
+					classes += ' ' + key;
+				}
+			}
+		}
+		return classes.substr(1);
+	}
+
+	// safely export classNames for node / browserify
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	}
+
+	// safely export classNames for RequireJS
+	if (true) {
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+			return classNames;
+		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}
+
+
+/***/ },
+/* 37 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3120,7 +3266,7 @@ var App =
 
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -3128,7 +3274,7 @@ var App =
 	 * Module dependencies.
 	 */
 
-	var colors = __webpack_require__(37);
+	var colors = __webpack_require__(39);
 
 	/**
 	 * Expose `parse`.
@@ -3253,7 +3399,7 @@ var App =
 
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports) {
 
 	
@@ -3408,7 +3554,7 @@ var App =
 	};
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports) {
 
 	module.exports = function(r, g, b, a) {
@@ -3417,7 +3563,7 @@ var App =
 	};
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports) {
 
 	// http://www.rapidtables.com/convert/color/rgb-to-hsv.htm
@@ -3455,7 +3601,7 @@ var App =
 	};
 
 /***/ },
-/* 40 */
+/* 42 */
 /***/ function(module, exports) {
 
 	module.exports = function(r, g, b) {
@@ -3473,22 +3619,22 @@ var App =
 
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var objectAssign = __webpack_require__(35);
-	var InputSlider = __webpack_require__(42);
-	var InputNumber = __webpack_require__(44);
+	var objectAssign = __webpack_require__(37);
+	var InputSlider = __webpack_require__(44);
+	var InputNumber = __webpack_require__(46);
 
-	var rgb2hsv = __webpack_require__(39);
-	var hsv2hex = __webpack_require__(47);
-	var hsv2rgb = __webpack_require__(48);
-	var rgb2hex = __webpack_require__(40);
-	var hex2rgb = __webpack_require__(49);
-	var rgba = __webpack_require__(38);
+	var rgb2hsv = __webpack_require__(41);
+	var hsv2hex = __webpack_require__(49);
+	var hsv2rgb = __webpack_require__(50);
+	var rgb2hex = __webpack_require__(42);
+	var hex2rgb = __webpack_require__(51);
+	var rgba = __webpack_require__(40);
 
 	var KEY_ENTER = 13;
 
@@ -3742,14 +3888,14 @@ var App =
 	});
 
 /***/ },
-/* 42 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(43);
+	module.exports = __webpack_require__(45);
 
 
 /***/ },
-/* 43 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3895,18 +4041,18 @@ var App =
 	});
 
 /***/ },
-/* 44 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(45);
+	module.exports = __webpack_require__(47);
 
 
 /***/ },
-/* 45 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
-	var _parse = __webpack_require__(46);
+	var _parse = __webpack_require__(48);
 
 	var KEY_UP = 38;
 	var KEY_DOWN = 40;
@@ -3988,7 +4134,7 @@ var App =
 	});
 
 /***/ },
-/* 46 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = function(value, step, max, min) {
@@ -4010,11 +4156,11 @@ var App =
 	};
 
 /***/ },
-/* 47 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hsv2rgb = __webpack_require__(48);
-	var rgb2hex = __webpack_require__(40);
+	var hsv2rgb = __webpack_require__(50);
+	var rgb2hex = __webpack_require__(42);
 
 	module.exports = function(h, s, v) {
 	  var rgb = hsv2rgb(h, s, v);
@@ -4023,7 +4169,7 @@ var App =
 
 
 /***/ },
-/* 48 */
+/* 50 */
 /***/ function(module, exports) {
 
 	// http://www.rapidtables.com/convert/color/hsv-to-rgb.htm
@@ -4071,7 +4217,7 @@ var App =
 
 
 /***/ },
-/* 49 */
+/* 51 */
 /***/ function(module, exports) {
 
 	module.exports = function(hex) {
@@ -4094,7 +4240,7 @@ var App =
 
 
 /***/ },
-/* 50 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4139,14 +4285,14 @@ var App =
 	});
 
 /***/ },
-/* 51 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
-	var beautify = __webpack_require__(52).html;
+	var beautify = __webpack_require__(54).html;
 
 	module.exports = React.createClass({
 	  displayName: 'Code',
@@ -4195,7 +4341,7 @@ var App =
 	});
 
 /***/ },
-/* 52 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -4236,9 +4382,9 @@ var App =
 	if (true) {
 	    // Add support for AMD ( https://github.com/amdjs/amdjs-api/wiki/AMD#defineamd-property- )
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(53),
-	        __webpack_require__(54),
-	        __webpack_require__(55)
+	        __webpack_require__(55),
+	        __webpack_require__(56),
+	        __webpack_require__(57)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(js_beautify, css_beautify, html_beautify) {
 	        return get_beautify(js_beautify, css_beautify, html_beautify);
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -4256,7 +4402,7 @@ var App =
 
 
 /***/ },
-/* 53 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -6349,7 +6495,7 @@ var App =
 
 
 /***/ },
-/* 54 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -6846,7 +6992,7 @@ var App =
 
 
 /***/ },
-/* 55 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -7769,9 +7915,9 @@ var App =
 
 	    if (true) {
 	        // Add support for AMD ( https://github.com/amdjs/amdjs-api/wiki/AMD#defineamd-property- )
-	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, __webpack_require__(53), __webpack_require__(54)], __WEBPACK_AMD_DEFINE_RESULT__ = function(requireamd) {
-	            var js_beautify =  __webpack_require__(53);
-	            var css_beautify =  __webpack_require__(54);
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, __webpack_require__(55), __webpack_require__(56)], __WEBPACK_AMD_DEFINE_RESULT__ = function(requireamd) {
+	            var js_beautify =  __webpack_require__(55);
+	            var css_beautify =  __webpack_require__(56);
 
 	            return {
 	              html_beautify: function(html_source, options) {
@@ -7804,13 +7950,13 @@ var App =
 
 
 /***/ },
-/* 56 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(10);
+	var Example = __webpack_require__(11);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -7914,13 +8060,13 @@ var App =
 	});
 
 /***/ },
-/* 57 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(10);
+	var Example = __webpack_require__(11);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -7935,13 +8081,13 @@ var App =
 	});
 
 /***/ },
-/* 58 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(10);
+	var Example = __webpack_require__(11);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -7980,13 +8126,13 @@ var App =
 	});
 
 /***/ },
-/* 59 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(10);
+	var Example = __webpack_require__(11);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8010,13 +8156,13 @@ var App =
 	});
 
 /***/ },
-/* 60 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(10);
+	var Example = __webpack_require__(11);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8045,13 +8191,13 @@ var App =
 	});
 
 /***/ },
-/* 61 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(10);
+	var Example = __webpack_require__(11);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8066,7 +8212,7 @@ var App =
 	});
 
 /***/ },
-/* 62 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8141,13 +8287,13 @@ var App =
 	});
 
 /***/ },
-/* 63 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(10);
+	var Example = __webpack_require__(11);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8159,7 +8305,7 @@ var App =
 	      React.createElement(
 	        Example,
 	        null,
-	        '<Dropdown items={[\'dog\', \'pig\', \'moose\']} open>\n  <Button>More</Button>\n</Dropdown>'
+	        '<div className="example-dropdown">\n    <Dropdown items={[\'dog\', \'pig\', \'moose\']} open>\n    <Button>More <i className="ion-chevron-down"></i></Button>\n  </Dropdown>\n</div>'
 	      )
 	    );
 	  }

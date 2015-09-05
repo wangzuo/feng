@@ -1,4 +1,5 @@
 .m-example {
+  margin-bottom: 8px;
   border: 1px solid #eaeaea;
   border-radius: 2px;
 }
@@ -8,7 +9,9 @@
   padding: 20px 13px;
 }
 
-.m-example .tabs {}
+.m-example .tabs {
+  /*background-color: #f5f2f0;*/
+}
 
 .example-grid .container {
   background-color: #eee;
@@ -52,4 +55,8 @@
 
 .example-labels .u-label:not(:last-child) {
   margin-right: 10px;
+}
+
+.example-dropdown {
+  height: 120px;
 }
