@@ -58,17 +58,18 @@ var App =
 	var pages = {
 	  'getting-started': {},
 	  'react': {
-	    'feng-form': __webpack_require__(10)
+	    'feng-form': __webpack_require__(10),
+	    tabs: __webpack_require__(59),
+	    dropdown: __webpack_require__(60),
+	    dialogs: __webpack_require__(61)
 	  },
 	  css: {
-	    buttons: __webpack_require__(58),
-	    forms: __webpack_require__(59),
-	    tabs: __webpack_require__(60),
-	    card: __webpack_require__(61),
-	    grid: __webpack_require__(62),
-	    labels: __webpack_require__(63),
-	    typography: __webpack_require__(64),
-	    dropdown: __webpack_require__(65)
+	    buttons: __webpack_require__(62),
+	    forms: __webpack_require__(63),
+	    card: __webpack_require__(64),
+	    grid: __webpack_require__(65),
+	    labels: __webpack_require__(66),
+	    typography: __webpack_require__(67)
 	  }
 	};
 
@@ -323,17 +324,20 @@ var App =
 	  }, {
 	    text: 'Card',
 	    path: '/css/card'
-	  }, {
-	    text: 'Tabs',
-	    path: '/css/tabs'
-	  }, {
-	    text: 'Dropdown',
-	    path: '/css/dropdown'
 	  }]
 	}, {
 	  text: 'React',
 	  path: 'react',
 	  pages: [{
+	    text: 'Tabs',
+	    path: '/react/tabs'
+	  }, {
+	    text: 'Dropdown',
+	    path: '/react/dropdown'
+	  }, {
+	    text: 'Dialog',
+	    path: '/react/dialogs'
+	  }, {
 	    text: 'Feng Form',
 	    path: '/react/feng-form'
 	  }]
@@ -564,8 +568,9 @@ var App =
 	var Spinner = __webpack_require__(14);
 	var FengForm = __webpack_require__(25);
 	var Dropdown = __webpack_require__(52);
+	var Dialog = __webpack_require__(53);
 
-	var Code = __webpack_require__(53);
+	var Code = __webpack_require__(54);
 
 	module.exports = React.createClass({
 	  displayName: 'Example',
@@ -4290,9 +4295,38 @@ var App =
 
 	'use strict';
 
+	var React = __webpack_require__(1);
+
+	module.exports = React.createClass({
+	  displayName: 'Dialog',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      { className: 'u-dialog-wrap' },
+	      React.createElement('div', { className: 'u-dialog-bg' }),
+	      React.createElement(
+	        'div',
+	        { className: 'u-dialog' },
+	        React.createElement(
+	          'div',
+	          { className: 'content' },
+	          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'
+	        )
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
 	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
-	var beautify = __webpack_require__(54).html;
+	var beautify = __webpack_require__(55).html;
 
 	module.exports = React.createClass({
 	  displayName: 'Code',
@@ -4341,7 +4375,7 @@ var App =
 	});
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -4382,9 +4416,9 @@ var App =
 	if (true) {
 	    // Add support for AMD ( https://github.com/amdjs/amdjs-api/wiki/AMD#defineamd-property- )
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(55),
 	        __webpack_require__(56),
-	        __webpack_require__(57)
+	        __webpack_require__(57),
+	        __webpack_require__(58)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(js_beautify, css_beautify, html_beautify) {
 	        return get_beautify(js_beautify, css_beautify, html_beautify);
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -4402,7 +4436,7 @@ var App =
 
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -6495,7 +6529,7 @@ var App =
 
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -6992,7 +7026,7 @@ var App =
 
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -7915,9 +7949,9 @@ var App =
 
 	    if (true) {
 	        // Add support for AMD ( https://github.com/amdjs/amdjs-api/wiki/AMD#defineamd-property- )
-	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, __webpack_require__(55), __webpack_require__(56)], __WEBPACK_AMD_DEFINE_RESULT__ = function(requireamd) {
-	            var js_beautify =  __webpack_require__(55);
-	            var css_beautify =  __webpack_require__(56);
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, __webpack_require__(56), __webpack_require__(57)], __WEBPACK_AMD_DEFINE_RESULT__ = function(requireamd) {
+	            var js_beautify =  __webpack_require__(56);
+	            var css_beautify =  __webpack_require__(57);
 
 	            return {
 	              html_beautify: function(html_source, options) {
@@ -7950,7 +7984,102 @@ var App =
 
 
 /***/ },
-/* 58 */
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Example = __webpack_require__(11);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h3',
+	        null,
+	        'Auto height'
+	      ),
+	      React.createElement(
+	        Example,
+	        null,
+	        '<div className="example-tabs">\n\n<Tabs.Tabs>\n  <Tabs.Nav>\n    <Tabs.Tab active>Pharetra</Tabs.Tab>\n    <Tabs.Tab >Inceptos</Tabs.Tab>\n    <Tabs.Tab >Mollis</Tabs.Tab>\n  </Tabs.Nav>\n\n  <Tabs.Contents>\n    <Tabs.Content active>\n    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.\n\nMorbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.\nInteger posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor.\n    </Tabs.Content>\n\n    <Tabs.Content>\n    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\n    </Tabs.Content>\n\n    <Tabs.Content>\n    Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.\n    </Tabs.Content>\n  </Tabs.Contents>\n</Tabs.Tabs>\n\n</div>'
+	      ),
+	      React.createElement(
+	        'h3',
+	        null,
+	        'Fixed height'
+	      ),
+	      React.createElement(
+	        Example,
+	        null,
+	        '<div className="example-tabs-fixed">\n\n<Tabs.Tabs fixed>\n  <Tabs.Nav>\n    <Tabs.Tab active>Pharetra</Tabs.Tab>\n    <Tabs.Tab>Inceptos</Tabs.Tab>\n    <Tabs.Tab>Mollis</Tabs.Tab>\n  </Tabs.Nav>\n\n  <Tabs.Contents>\n    <Tabs.Content active>\n    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.\n\nMorbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.\nInteger posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor.\n    </Tabs.Content>\n    <Tabs.Content>\n    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\n    </Tabs.Content>\n\n    <Tabs.Content>\n    Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.\n    </Tabs.Content>\n  </Tabs.Contents>\n</Tabs.Tabs>\n\n</div>'
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Example = __webpack_require__(11);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        Example,
+	        null,
+	        '<div className="example-dropdown">\n    <Dropdown items={[\'dog\', \'pig\', \'moose\']} open>\n    <Button>More <i className="ion-chevron-down"></i></Button>\n  </Dropdown>\n</div>'
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 61 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Example = __webpack_require__(11);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h3',
+	        null,
+	        'Dialogs'
+	      ),
+	      React.createElement(
+	        Example,
+	        null,
+	        '<Dialog/>'
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8060,7 +8189,7 @@ var App =
 	});
 
 /***/ },
-/* 59 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8081,52 +8210,7 @@ var App =
 	});
 
 /***/ },
-/* 60 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var Example = __webpack_require__(11);
-
-	module.exports = React.createClass({
-	  displayName: 'exports',
-
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(
-	        'p',
-	        null,
-	        'Tabs Styling only.'
-	      ),
-	      React.createElement(
-	        'h3',
-	        null,
-	        'Auto height'
-	      ),
-	      React.createElement(
-	        Example,
-	        null,
-	        '<div className="example-tabs">\n\n<Tabs.Tabs>\n  <Tabs.Nav>\n    <Tabs.Tab active>Pharetra</Tabs.Tab>\n    <Tabs.Tab >Inceptos</Tabs.Tab>\n    <Tabs.Tab >Mollis</Tabs.Tab>\n  </Tabs.Nav>\n\n  <Tabs.Contents>\n    <Tabs.Content active>\n    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.\n\nMorbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.\nInteger posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor.\n    </Tabs.Content>\n\n    <Tabs.Content>\n    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\n    </Tabs.Content>\n\n    <Tabs.Content>\n    Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.\n    </Tabs.Content>\n  </Tabs.Contents>\n</Tabs.Tabs>\n\n</div>'
-	      ),
-	      React.createElement(
-	        'h3',
-	        null,
-	        'Fixed height'
-	      ),
-	      React.createElement(
-	        Example,
-	        null,
-	        '<div className="example-tabs-fixed">\n\n<Tabs.Tabs fixed>\n  <Tabs.Nav>\n    <Tabs.Tab active>Pharetra</Tabs.Tab>\n    <Tabs.Tab>Inceptos</Tabs.Tab>\n    <Tabs.Tab>Mollis</Tabs.Tab>\n  </Tabs.Nav>\n\n  <Tabs.Contents>\n    <Tabs.Content active>\n    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.\n\nMorbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.\nInteger posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor.\n    </Tabs.Content>\n    <Tabs.Content>\n    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\n    </Tabs.Content>\n\n    <Tabs.Content>\n    Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.\n    </Tabs.Content>\n  </Tabs.Contents>\n</Tabs.Tabs>\n\n</div>'
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 61 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8156,7 +8240,7 @@ var App =
 	});
 
 /***/ },
-/* 62 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8191,7 +8275,7 @@ var App =
 	});
 
 /***/ },
-/* 63 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8212,7 +8296,7 @@ var App =
 	});
 
 /***/ },
-/* 64 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8281,31 +8365,6 @@ var App =
 	        'u',
 	        null,
 	        'Underlined'
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 65 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var Example = __webpack_require__(11);
-
-	module.exports = React.createClass({
-	  displayName: 'exports',
-
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(
-	        Example,
-	        null,
-	        '<div className="example-dropdown">\n    <Dropdown items={[\'dog\', \'pig\', \'moose\']} open>\n    <Button>More <i className="ion-chevron-down"></i></Button>\n  </Dropdown>\n</div>'
 	      )
 	    );
 	  }
