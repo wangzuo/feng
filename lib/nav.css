@@ -1,24 +1,26 @@
 .u-nav a {
-
-    display: inline-block;
+  display: inline-block;
 }
 
 .u-nav a.active, .u-nav a.is-active {
-
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.u-nav a:not(last-child) {
-
-    margin-right: 15px;
+.u-nav-y {
+  border: 1px solid #bdc3c7;
+  border-radius: 3px;
 }
 
 .u-nav-y a {
-
-    display: block;
+  display: block;
+  padding: 12px 14px;
 }
 
 .u-nav-y a:not(:last-child) {
+  border-bottom: 1px solid #eaeaea;
+}
 
-    margin-bottom: 10px;
+.u-nav-y .title {
+  font-weight: bold;
+  border-bottom: 1px solid #bdc3c7 !important;
 }

@@ -1,6 +1,7 @@
 .u-dropdown {
   display: inline-block;
   position: relative;
+  z-index: 1000;
 }
 .u-dropdown .items {
   position: absolute;

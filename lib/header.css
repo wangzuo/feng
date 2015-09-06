@@ -2,7 +2,7 @@
   padding-top: 15px;
   padding-bottom: 20px;
   margin-bottom: 18px;
-  background-color: #efefef;
+  border-bottom: 1px solid #eaeaea;
 }
 .m-header .nav {
   float: right;

@@ -1,5 +1,7 @@
 .m-footer {
   margin-top: 30px;
-  margin-bottom: 50px;
-  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eaeaea;
 }
+
