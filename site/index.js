@@ -17,6 +17,7 @@ require('../postcss/switch.css')
 require('../postcss/spinner.css');
 require('../postcss/slat.css');
 require('../postcss/dropdown.css');
+require('../postcss/dialog.css');
 require('./example.css');
 
 var history2 = require('history2');

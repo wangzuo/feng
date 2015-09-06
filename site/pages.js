@@ -23,17 +23,20 @@ module.exports = [{
   }, {
     text: 'Card',
     path: '/css/card'
-  }, {
-    text: 'Tabs',
-    path: '/css/tabs'
-  }, {
-    text: 'Dropdown',
-    path: '/css/dropdown'
   }]
 }, {
   text: 'React',
   path: 'react',
   pages: [{
+    text: 'Tabs',
+    path: '/react/tabs'
+  }, {
+    text: 'Dropdown',
+    path: '/react/dropdown'
+  }, {
+    text: 'Dialog',
+    path: '/react/dialogs'
+  }, {
     text: 'Feng Form',
     path: '/react/feng-form'
   }]

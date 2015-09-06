@@ -14,6 +14,7 @@ var Tabs = require('../react/tabs');
 var Spinner = require('../react/spinner');
 var FengForm = require('../react/feng-form');
 var Dropdown = require('../react/dropdown');
+var Dialog = require('../react/dialog');
 
 var Code = require('./code');
 

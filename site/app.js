@@ -9,17 +9,18 @@ var sections = require('./pages');
 var pages = {
   'getting-started': {},
   'react': {
-    'feng-form': require('./react/feng-form')
+    'feng-form': require('./react/feng-form'),
+    tabs: require('./react/tabs'),
+    dropdown: require('./react/dropdown'),
+    dialogs: require('./react/dialogs')
   },
   css: {
     buttons: require('./css/buttons'),
     forms: require('./css/forms'),
-    tabs: require('./css/tabs'),
     card: require('./css/card'),
     grid: require('./css/grid'),
     labels: require('./css/labels'),
     typography: require('./css/typography'),
-    dropdown: require('./css/dropdown')
   }
 };
 

@@ -1,0 +1,43 @@
+.u-dialog-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1200;
+}
+
+.u-dialog-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1000;
+  background: black;
+  opacity: 0.4;
+}
+
+.u-dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 640px;
+  height: 180px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  z-index: 2000;
+}
+
+.u-dialog .header {}
+
+.u-dialog .content {
+  padding: 30px;
+  font-size: 20px;
+}
+
+.u-dialog .footer {}

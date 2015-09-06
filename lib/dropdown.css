@@ -14,6 +14,26 @@
   list-style: none;
   z-index: 1000;
 }
+.u-dropdown .items:before {
+  position: absolute;
+  display: inline-block;
+  top: -11px;
+  left: 12px;
+  border-bottom: 11px solid #bdc3c7;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  content: "";
+}
+.u-dropdown .items:after {
+  position: absolute;
+  display: inline-block;
+  top: -10px;
+  left: 12px;
+  border-bottom: 11px solid #ffffff;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  content: "";
+}
 .u-dropdown .items li {
   padding: 7px 15px;
   cursor: pointer;
@@ -23,6 +43,6 @@
 }
 .u-dropdown.is-open .items {
   display: inline-block;
-  top: 34px;
+  top: 45px;
   left: -2px;
 }

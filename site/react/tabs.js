@@ -5,8 +5,6 @@ module.exports = React.createClass({
   render() {
     return (
       <div>
-        <p>Tabs Styling only.</p>
-
         <h3>Auto height</h3>
         <Example>
 {`<div className="example-tabs">
