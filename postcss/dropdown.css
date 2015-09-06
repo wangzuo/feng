@@ -1,5 +1,29 @@
 @import '_variables';
 
+@define-mixin triangle {
+  &:before {
+    position: absolute;
+    display: inline-block;
+    top: -11px;
+    left: 12px;
+    border-bottom: 11px solid var(--color-gray);
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    content: "";
+  }
+
+  &:after {
+    position: absolute;
+    display: inline-block;
+    top: -10px;
+    left: 12px;
+    border-bottom: 11px solid var(--color-white);
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    content: "";
+  }
+}
+
 .u-dropdown {
   display: inline-block;
   position: relative;
@@ -16,6 +40,8 @@
     list-style: none;
     z-index: 1000;
 
+    @mixin triangle;
+
     li {
       padding: 7px 15px;
       cursor: pointer;
@@ -28,7 +54,7 @@
 
   &.is-open .items {
     display: inline-block;
-    top: 34px;
+    top: 45px;
     left: -2px;
   }
 }
