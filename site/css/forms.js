@@ -6,16 +6,13 @@ module.exports = React.createClass({
     return (
       <Example>
 {`<form className="u-form">
-  <Field>
-    <label>First Name</label>
+  <Field label="First Name">
     <input type="text" placeholder="First Name"/>
   </Field>
-  <Field>
-    <label>Last Name</label>
+  <Field label="Last Name">
     <input type="text" placeholder="Last Name"/>
   </Field>
-  <Field>
-    <label>About</label>
+  <Field label="About">
     <textarea placeholder="About" rows={4}></textarea>
   </Field>
   <Field>

@@ -11,12 +11,20 @@ module.exports = React.createClass({
     }
   },
 
+  renderLabel() {
+    if(!this.props.label) return null;
+
+    return (
+      <label className="label">{this.props.label}</label>
+    );
+  },
+
   render() {
     var horizontal = this.props.horizontal;
 
     return (
       <div className={cx('u-field', horizontal ? 'u-field-x' : null)}>
-        <label className="label">{this.props.label}</label>
+        {this.renderLabel()}
         {this.props.children}
       </div>
     );
