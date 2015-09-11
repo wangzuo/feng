@@ -43,6 +43,10 @@
     }
   }
 
+  .tabs-contents {
+    padding: 0 10px 10px 10px;
+  }
+
   .tabs-content {
     height: 100%;
     display: none;
