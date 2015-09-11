@@ -1,18 +1,24 @@
 var cx = require('classnames');
 var React = require('react');
+var Button = require('./button');
 
 module.exports = React.createClass({
   displayName: 'Dropdown',
 
   getDefaultProps() {
     return {
-      open: false,
-      items: []
+      items: ['dog', 'pig', 'moose']
     }
   },
 
+  getInitialState() {
+    return {
+      open: true
+    };
+  },
+
   render() {
-    var open = this.props.open;
+    var open = this.state.open;
     var items = this.props.items;
     var cn = cx('u-dropdown', {
       'is-open': open
@@ -20,7 +26,7 @@ module.exports = React.createClass({
 
     return (
       <div className={cn}>
-        {this.props.children}
+        <Button onClick={this.handleClick}>More <i className="ion-chevron-down"></i></Button>
 
         <ul className="items">
           {items.map((item, i) => (
@@ -29,5 +35,11 @@ module.exports = React.createClass({
         </ul>
       </div>
     );
+  },
+
+  handleClick(e) {
+    this.setState({
+      open: !this.state.open
+    });
   }
 });

@@ -7,9 +7,7 @@ module.exports = React.createClass({
       <div>
         <Example>
 {`<div className="example-dropdown">
-    <Dropdown items={['dog', 'pig', 'moose']} open>
-    <Button>More <i className="ion-chevron-down"></i></Button>
-  </Dropdown>
+  <Dropdown/>
 </div>`}
         </Example>
       </div>
