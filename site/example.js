@@ -50,7 +50,9 @@ module.exports = React.createClass({
         <Tabs.Tabs className="codes">
           <Tabs.Nav>
             <Tabs.Tab active={active === 0} onClick={this.changeTab.bind(null, 0)}>React</Tabs.Tab>
-            <Tabs.Tab active={active === 1} onClick={this.changeTab.bind(null, 1)}>Html</Tabs.Tab>
+            {showHtml ? <Tabs.Tab
+              active={active === 1}
+              onClick={this.changeTab.bind(null, 1)}>Html</Tabs.Tab> : null}
           </Tabs.Nav>
 
           <Tabs.Contents>
@@ -58,9 +60,10 @@ module.exports = React.createClass({
               <Code code={code}/>
             </Tabs.Content>
 
+            {showHtml ?
             <Tabs.Content active={active === 1}>
-              {showHtml ? <Code code={React.renderToStaticMarkup(el)} format/> : null}
-            </Tabs.Content>
+              <Code code={React.renderToStaticMarkup(el)} format/>
+            </Tabs.Content> : null}
           </Tabs.Contents>
         </Tabs.Tabs>
       </div>
