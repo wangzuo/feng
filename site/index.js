@@ -18,6 +18,7 @@ require('../postcss/spinner.css');
 require('../postcss/slat.css');
 require('../postcss/dropdown.css');
 require('../postcss/dialog.css');
+require('../postcss/avatar.css');
 require('./example.css');
 
 var history2 = require('history2');

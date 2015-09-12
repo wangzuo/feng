@@ -23,6 +23,9 @@ module.exports = [{
   }, {
     text: 'Card',
     path: '/css/card'
+  }, {
+    text: 'Avatar',
+    path: '/css/avatars'
   }]
 }, {
   text: 'React',

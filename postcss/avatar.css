@@ -1,0 +1,20 @@
+@import '_variables';
+
+.u-avatar {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  line-height: 40px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+
+  &.is-round {
+    border-radius: 4px;
+  }
+
+  &.is-circle {
+    border-radius: 50%;
+  }
+}

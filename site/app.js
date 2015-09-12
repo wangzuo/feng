@@ -21,6 +21,7 @@ var pages = {
     grid: require('./css/grid'),
     labels: require('./css/labels'),
     typography: require('./css/typography'),
+    avatars: require('./css/avatars')
   }
 };
 
