@@ -1,5 +1,7 @@
 var cx = require('classnames');
 var React = require('react');
+var _md5 = require('blueimp-md5');
+var md5 = _md5.md5 || _md5;
 
 module.exports = React.createClass({
   displayName: 'Avatar',
@@ -13,13 +15,29 @@ module.exports = React.createClass({
 
   getStyle() {
     var name = this.props.name;
-    var hex = backgroundColor(name);
-    var style = {
-      backgroundColor: `#${hex}`,
-      color: fontColor(hex + '')
-    };
+    var style = {};
+
+    if(name && name.length) {
+      var hex = backgroundColor(name);
+      style = {
+        backgroundColor: `#${hex}`,
+        color: fontColor(hex)
+      };
+    }
 
     return style;
+  },
+
+  renderInner() {
+    var name = this.props.name;
+    var email = this.props.email;
+
+    if(name && name.length) return name[0];
+    if(email) {
+      var hash = md5(email);
+      var size = 40;
+      return <img src={`http://www.gravatar.com/avatar/${hash}?s=${size}`}/>;
+    }
   },
 
   render() {
@@ -35,7 +53,7 @@ module.exports = React.createClass({
 
     return (
       <div className={cn} style={style}>
-        {name[0]}
+        {this.renderInner()}
       </div>
     );
   }
@@ -46,7 +64,7 @@ function backgroundColor(str) {
   for(var i = 0; i < str.length; i++) {
     hash = str.charCodeAt(i) + ((hash << 5) - hash);
   }
-  return hash;
+  return (hash+'').substr(0, 6);
 }
 
 function fontColor(hex) {

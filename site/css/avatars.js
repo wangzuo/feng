@@ -1,9 +1,18 @@
+var React = require('react');
 var Example = require('../example');
 
 module.exports = React.createClass({
   render() {
     return (
       <div>
+<Example>
+{`<div className="example-avatars">
+  <Avatar email="wzuoadjusted@gmail.com"/>
+  <Avatar email="wzuoadjusted@gmail.com" round/>
+  <Avatar email="wzuoadjusted@gmail.com" circle/>
+</div>`}
+</Example>
+
         <Example>
 {`<div className="example-avatars">
   <Avatar name="David"/>

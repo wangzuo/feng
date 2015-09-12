@@ -36,6 +36,10 @@
   margin-right: 8px;
 }
 
+.u-tabs .tabs-contents {
+  padding: 0 10px 10px 10px;
+}
+
 .u-tabs .tabs-content {
   height: 100%;
   display: none;
