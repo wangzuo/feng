@@ -36,6 +36,7 @@ module.exports = React.createClass({
     if(email) {
       var hash = md5(email);
       var size = 40;
+      if(this.props.size === 'lg') size = 80;
       return <img src={`http://www.gravatar.com/avatar/${hash}?s=${size}`}/>;
     }
   },
@@ -44,11 +45,13 @@ module.exports = React.createClass({
     var name = this.props.name;
     var round = this.props.round;
     var circle = this.props.circle;
+    var size = this.props.size;
     var style = this.getStyle();
 
-    var cn = cx('u-avatar', {
+    var cn = cx('u-avatar',
+      size ? `u-avatar-${size}` : null, {
       'is-round': round,
-      'is-circle': circle
+      'is-circle': circle,
     });
 
     return (

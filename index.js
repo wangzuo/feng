@@ -1,4 +1,5 @@
 module.exports = {
+  'Avatar': require('./lib/avatar'),
   'ButtonGroup': require('./lib/button-group'),
   'Button': require('./lib/button'),
   'Card': require('./lib/card'),
