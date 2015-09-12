@@ -4392,6 +4392,7 @@ var App =
 	    if (email) {
 	      var hash = md5(email);
 	      var size = 40;
+	      if (this.props.size === 'lg') size = 80;
 	      return React.createElement('img', { src: 'http://www.gravatar.com/avatar/' + hash + '?s=' + size });
 	    }
 	  },
@@ -4400,9 +4401,10 @@ var App =
 	    var name = this.props.name;
 	    var round = this.props.round;
 	    var circle = this.props.circle;
+	    var size = this.props.size;
 	    var style = this.getStyle();
 
-	    var cn = cx('u-avatar', {
+	    var cn = cx('u-avatar', size ? 'u-avatar-' + size : null, {
 	      'is-round': round,
 	      'is-circle': circle
 	    });
@@ -8501,24 +8503,44 @@ var App =
 	      'div',
 	      null,
 	      React.createElement(
-	        Example,
+	        'h3',
 	        null,
-	        '<div className="example-avatars">\n  <Avatar email="wzuoadjusted@gmail.com"/>\n  <Avatar email="wzuoadjusted@gmail.com" round/>\n  <Avatar email="wzuoadjusted@gmail.com" circle/>\n</div>'
+	        'Gravatar'
 	      ),
 	      React.createElement(
 	        Example,
 	        null,
-	        '<div className="example-avatars">\n  <Avatar name="David"/>\n  <Avatar name="唐僧"/>\n  <Avatar name="おだ"/>\n</div>'
+	        '<div className="example-avatars">\n  <Avatar email="wzuoadjusted@gmail.com"/>\n  <Avatar email="wzuoadjusted@gmail.com" round/>\n  <Avatar email="wzuoadjusted@gmail.com" circle/>\n  <Avatar email="wzuoadjusted@gmail.com" size="lg"/>\n  <Avatar email="wzuoadjusted@gmail.com" size="lg" round/>\n  <Avatar email="wzuoadjusted@gmail.com" size="lg" circle/>\n</div>'
+	      ),
+	      React.createElement(
+	        'h3',
+	        null,
+	        'Sqaure (default)'
 	      ),
 	      React.createElement(
 	        Example,
 	        null,
-	        '<div className="example-avatars">\n  <Avatar name="David" round/>\n  <Avatar name="唐僧" round/>\n  <Avatar name="おだ" round/>\n</div>'
+	        '<div className="example-avatars">\n  <Avatar name="David"/>\n  <Avatar name="唐僧"/>\n  <Avatar name="おだ"/>\n  <Avatar name="David" size="lg"/>\n  <Avatar name="唐僧" size="lg"/>\n  <Avatar name="おだ" size="lg"/>\n</div>'
+	      ),
+	      React.createElement(
+	        'h3',
+	        null,
+	        'Round'
 	      ),
 	      React.createElement(
 	        Example,
 	        null,
-	        '<div className="example-avatars">\n  <Avatar name="David" circle/>\n  <Avatar name="唐僧" circle/>\n  <Avatar name="おだ" circle/>\n</div>'
+	        '<div className="example-avatars">\n  <Avatar name="David" round/>\n  <Avatar name="唐僧" round/>\n  <Avatar name="おだ" round/>\n  <Avatar name="David" size="lg" round/>\n  <Avatar name="唐僧" size="lg" round/>\n  <Avatar name="おだ" size="lg" round/>\n</div>'
+	      ),
+	      React.createElement(
+	        'h3',
+	        null,
+	        'Circle'
+	      ),
+	      React.createElement(
+	        Example,
+	        null,
+	        '<div className="example-avatars">\n  <Avatar name="David" circle/>\n  <Avatar name="唐僧" circle/>\n  <Avatar name="おだ" circle/>\n  <Avatar name="David" size="lg" circle/>\n  <Avatar name="唐僧" size="lg" circle/>\n  <Avatar name="おだ" size="lg" circle/>\n</div>'
 	      )
 	    );
 	  }
