@@ -24,7 +24,7 @@ module.exports = [{
     text: 'Card',
     path: '/css/card'
   }, {
-    text: 'Avatar',
+    text: 'Avatars',
     path: '/css/avatars'
   }]
 }, {

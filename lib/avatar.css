@@ -6,13 +6,28 @@
   text-align: center;
   font-size: 21px;
   font-weight: bold;
+  vertical-align: bottom;
 }
+
 .u-avatar img {
   max-width: 100%;
 }
+
 .u-avatar.is-round, .u-avatar.is-round img {
   border-radius: 4px;
 }
-.u-avatar.is-circlr, .u-avatar.is-circle img {
+
+.u-avatar.is-circle, .u-avatar.is-circle img {
   border-radius: 50%;
+}
+
+.u-avatar-lg {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 42px;
+}
+
+.u-avatar-lg.is-round, .u-avatar-lg.is-round img {
+  border-radius: 7px;
 }
