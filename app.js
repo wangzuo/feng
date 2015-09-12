@@ -326,7 +326,7 @@ var App =
 	    text: 'Card',
 	    path: '/css/card'
 	  }, {
-	    text: 'Avatar',
+	    text: 'Avatars',
 	    path: '/css/avatars'
 	  }]
 	}, {
@@ -4325,15 +4325,26 @@ var App =
 
 	'use strict';
 
+	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
 
 	module.exports = React.createClass({
 	  displayName: 'Dialog',
 
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      open: false
+	    };
+	  },
+
 	  render: function render() {
+	    var cn = cx('u-dialog-wrap', {
+	      'is-open': this.props.open
+	    });
+
 	    return React.createElement(
 	      'div',
-	      { className: 'u-dialog-wrap' },
+	      { className: cn },
 	      React.createElement('div', { className: 'u-dialog-bg' }),
 	      React.createElement(
 	        'div',
@@ -8187,8 +8198,8 @@ var App =
 	      ),
 	      React.createElement(
 	        Example,
-	        null,
-	        '<Dialog/>'
+	        { html: false },
+	        'var App = React.createClass({\n  getInitialState() {\n    return {\n      open: false\n    };\n  },\n\n  render() {\n    return (\n      <div>\n        <Button onClick={this.toggleDialog}>Open dialog</Button>\n        <Dialog open={this.state.open}/>\n      </div>\n    );\n  },\n\n  toggleDialog() {\n    this.setState({open: !this.state.open});\n  }\n});\n\n<App/>;'
 	      )
 	    );
 	  }
