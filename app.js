@@ -4356,6 +4356,8 @@ var App =
 
 	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
+	var _md5 = __webpack_require__(19);
+	var md5 = _md5.md5 || _md5;
 
 	module.exports = React.createClass({
 	  displayName: 'Avatar',
@@ -4369,13 +4371,29 @@ var App =
 
 	  getStyle: function getStyle() {
 	    var name = this.props.name;
-	    var hex = backgroundColor(name);
-	    var style = {
-	      backgroundColor: '#' + hex,
-	      color: fontColor(hex + '')
-	    };
+	    var style = {};
+
+	    if (name && name.length) {
+	      var hex = backgroundColor(name);
+	      style = {
+	        backgroundColor: '#' + hex,
+	        color: fontColor(hex)
+	      };
+	    }
 
 	    return style;
+	  },
+
+	  renderInner: function renderInner() {
+	    var name = this.props.name;
+	    var email = this.props.email;
+
+	    if (name && name.length) return name[0];
+	    if (email) {
+	      var hash = md5(email);
+	      var size = 40;
+	      return React.createElement('img', { src: 'http://www.gravatar.com/avatar/' + hash + '?s=' + size });
+	    }
 	  },
 
 	  render: function render() {
@@ -4392,7 +4410,7 @@ var App =
 	    return React.createElement(
 	      'div',
 	      { className: cn, style: style },
-	      name[0]
+	      this.renderInner()
 	    );
 	  }
 	});
@@ -4402,7 +4420,7 @@ var App =
 	  for (var i = 0; i < str.length; i++) {
 	    hash = str.charCodeAt(i) + ((hash << 5) - hash);
 	  }
-	  return hash;
+	  return (hash + '').substr(0, 6);
 	}
 
 	function fontColor(hex) {
@@ -8482,6 +8500,11 @@ var App =
 	    return React.createElement(
 	      'div',
 	      null,
+	      React.createElement(
+	        Example,
+	        null,
+	        '<div className="example-avatars">\n  <Avatar email="wzuoadjusted@gmail.com"/>\n  <Avatar email="wzuoadjusted@gmail.com" round/>\n  <Avatar email="wzuoadjusted@gmail.com" circle/>\n</div>'
+	      ),
 	      React.createElement(
 	        Example,
 	        null,
