@@ -60,3 +60,7 @@
 .example-dropdown {
   height: 120px;
 }
+
+.example-avatars .u-avatar:not(:last-child) {
+  margin-right: 10px;
+}

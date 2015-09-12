@@ -59,17 +59,18 @@ var App =
 	  'getting-started': {},
 	  'react': {
 	    'feng-form': __webpack_require__(10),
-	    tabs: __webpack_require__(59),
-	    dropdown: __webpack_require__(60),
-	    dialogs: __webpack_require__(61)
+	    tabs: __webpack_require__(60),
+	    dropdown: __webpack_require__(61),
+	    dialogs: __webpack_require__(62)
 	  },
 	  css: {
-	    buttons: __webpack_require__(62),
-	    forms: __webpack_require__(63),
-	    card: __webpack_require__(64),
-	    grid: __webpack_require__(65),
-	    labels: __webpack_require__(66),
-	    typography: __webpack_require__(67)
+	    buttons: __webpack_require__(63),
+	    forms: __webpack_require__(64),
+	    card: __webpack_require__(65),
+	    grid: __webpack_require__(66),
+	    labels: __webpack_require__(67),
+	    typography: __webpack_require__(68),
+	    avatars: __webpack_require__(69)
 	  }
 	};
 
@@ -324,6 +325,9 @@ var App =
 	  }, {
 	    text: 'Card',
 	    path: '/css/card'
+	  }, {
+	    text: 'Avatar',
+	    path: '/css/avatars'
 	  }]
 	}, {
 	  text: 'React',
@@ -569,8 +573,9 @@ var App =
 	var FengForm = __webpack_require__(25);
 	var Dropdown = __webpack_require__(52);
 	var Dialog = __webpack_require__(53);
+	var Avatar = __webpack_require__(54);
 
-	var Code = __webpack_require__(54);
+	var Code = __webpack_require__(55);
 
 	module.exports = React.createClass({
 	  displayName: 'Example',
@@ -614,11 +619,13 @@ var App =
 	            { active: active === 0, onClick: this.changeTab.bind(null, 0) },
 	            'React'
 	          ),
-	          React.createElement(
+	          showHtml ? React.createElement(
 	            Tabs.Tab,
-	            { active: active === 1, onClick: this.changeTab.bind(null, 1) },
+	            {
+	              active: active === 1,
+	              onClick: this.changeTab.bind(null, 1) },
 	            'Html'
-	          )
+	          ) : null
 	        ),
 	        React.createElement(
 	          Tabs.Contents,
@@ -628,11 +635,11 @@ var App =
 	            { active: active === 0 },
 	            React.createElement(Code, { code: code })
 	          ),
-	          React.createElement(
+	          showHtml ? React.createElement(
 	            Tabs.Content,
 	            { active: active === 1 },
-	            showHtml ? React.createElement(Code, { code: React.renderToStaticMarkup(el), format: true }) : null
-	          )
+	            React.createElement(Code, { code: React.renderToStaticMarkup(el), format: true })
+	          ) : null
 	        )
 	      )
 	    );
@@ -1222,17 +1229,23 @@ var App =
 	    };
 	  },
 
+	  renderLabel: function renderLabel() {
+	    if (!this.props.label) return null;
+
+	    return React.createElement(
+	      'label',
+	      { className: 'label' },
+	      this.props.label
+	    );
+	  },
+
 	  render: function render() {
 	    var horizontal = this.props.horizontal;
 
 	    return React.createElement(
 	      'div',
 	      { className: cx('u-field', horizontal ? 'u-field-x' : null) },
-	      React.createElement(
-	        'label',
-	        { className: 'label' },
-	        this.props.label
-	      ),
+	      this.renderLabel(),
 	      this.props.children
 	    );
 	  }
@@ -4252,19 +4265,25 @@ var App =
 
 	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
+	var Button = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'Dropdown',
 
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      open: false,
-	      items: []
+	      items: ['dog', 'pig', 'moose']
+	    };
+	  },
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      open: true
 	    };
 	  },
 
 	  render: function render() {
-	    var open = this.props.open;
+	    var open = this.state.open;
 	    var items = this.props.items;
 	    var cn = cx('u-dropdown', {
 	      'is-open': open
@@ -4273,7 +4292,12 @@ var App =
 	    return React.createElement(
 	      'div',
 	      { className: cn },
-	      this.props.children,
+	      React.createElement(
+	        Button,
+	        { onClick: this.handleClick },
+	        'More ',
+	        React.createElement('i', { className: 'ion-chevron-down' })
+	      ),
 	      React.createElement(
 	        'ul',
 	        { className: 'items' },
@@ -4286,6 +4310,12 @@ var App =
 	        })
 	      )
 	    );
+	  },
+
+	  handleClick: function handleClick(e) {
+	    this.setState({
+	      open: !this.state.open
+	    });
 	  }
 	});
 
@@ -4326,7 +4356,73 @@ var App =
 
 	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
-	var beautify = __webpack_require__(55).html;
+
+	module.exports = React.createClass({
+	  displayName: 'Avatar',
+
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      round: false,
+	      circle: false
+	    };
+	  },
+
+	  getStyle: function getStyle() {
+	    var name = this.props.name;
+	    var hex = backgroundColor(name);
+	    var style = {
+	      backgroundColor: '#' + hex,
+	      color: fontColor(hex + '')
+	    };
+
+	    return style;
+	  },
+
+	  render: function render() {
+	    var name = this.props.name;
+	    var round = this.props.round;
+	    var circle = this.props.circle;
+	    var style = this.getStyle();
+
+	    var cn = cx('u-avatar', {
+	      'is-round': round,
+	      'is-circle': circle
+	    });
+
+	    return React.createElement(
+	      'div',
+	      { className: cn, style: style },
+	      name[0]
+	    );
+	  }
+	});
+
+	function backgroundColor(str) {
+	  var hash = 0;
+	  for (var i = 0; i < str.length; i++) {
+	    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+	  }
+	  return hash;
+	}
+
+	function fontColor(hex) {
+	  var r = parseInt(hex.substr(0, 2), 16);
+	  var g = parseInt(hex.substr(2, 2), 16);
+	  var b = parseInt(hex.substr(4, 2), 16);
+	  var yiq = (r * 299 + g * 587 + b * 114) / 1000;
+
+	  return yiq >= 128 ? 'black' : 'white';
+	}
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var cx = __webpack_require__(4);
+	var React = __webpack_require__(1);
+	var beautify = __webpack_require__(56).html;
 
 	module.exports = React.createClass({
 	  displayName: 'Code',
@@ -4375,7 +4471,7 @@ var App =
 	});
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -4416,9 +4512,9 @@ var App =
 	if (true) {
 	    // Add support for AMD ( https://github.com/amdjs/amdjs-api/wiki/AMD#defineamd-property- )
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(56),
 	        __webpack_require__(57),
-	        __webpack_require__(58)
+	        __webpack_require__(58),
+	        __webpack_require__(59)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(js_beautify, css_beautify, html_beautify) {
 	        return get_beautify(js_beautify, css_beautify, html_beautify);
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -4436,7 +4532,7 @@ var App =
 
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -6529,7 +6625,7 @@ var App =
 
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -7026,7 +7122,7 @@ var App =
 
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -7949,9 +8045,9 @@ var App =
 
 	    if (true) {
 	        // Add support for AMD ( https://github.com/amdjs/amdjs-api/wiki/AMD#defineamd-property- )
-	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, __webpack_require__(56), __webpack_require__(57)], __WEBPACK_AMD_DEFINE_RESULT__ = function(requireamd) {
-	            var js_beautify =  __webpack_require__(56);
-	            var css_beautify =  __webpack_require__(57);
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, __webpack_require__(57), __webpack_require__(58)], __WEBPACK_AMD_DEFINE_RESULT__ = function(requireamd) {
+	            var js_beautify =  __webpack_require__(57);
+	            var css_beautify =  __webpack_require__(58);
 
 	            return {
 	              html_beautify: function(html_source, options) {
@@ -7984,7 +8080,7 @@ var App =
 
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8024,7 +8120,7 @@ var App =
 	});
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8042,14 +8138,14 @@ var App =
 	      React.createElement(
 	        Example,
 	        null,
-	        '<div className="example-dropdown">\n    <Dropdown items={[\'dog\', \'pig\', \'moose\']} open>\n    <Button>More <i className="ion-chevron-down"></i></Button>\n  </Dropdown>\n</div>'
+	        '<div className="example-dropdown">\n  <Dropdown/>\n</div>'
 	      )
 	    );
 	  }
 	});
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8079,7 +8175,7 @@ var App =
 	});
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8189,7 +8285,7 @@ var App =
 	});
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8204,13 +8300,13 @@ var App =
 	    return React.createElement(
 	      Example,
 	      null,
-	      '<form className="u-form">\n  <Field>\n    <label>First Name</label>\n    <input type="text" placeholder="First Name"/>\n  </Field>\n  <Field>\n    <label>Last Name</label>\n    <input type="text" placeholder="Last Name"/>\n  </Field>\n  <Field>\n    <label>About</label>\n    <textarea placeholder="About" rows={4}></textarea>\n  </Field>\n  <Field>\n    <Checkbox>\n      I agree to Terms and Conditions\n    </Checkbox>\n  </Field>\n  <Button color="blue">Submit</Button>\n</form>'
+	      '<form className="u-form">\n  <Field label="First Name">\n    <input type="text" placeholder="First Name"/>\n  </Field>\n  <Field label="Last Name">\n    <input type="text" placeholder="Last Name"/>\n  </Field>\n  <Field label="About">\n    <textarea placeholder="About" rows={4}></textarea>\n  </Field>\n  <Field>\n    <Checkbox>\n      I agree to Terms and Conditions\n    </Checkbox>\n  </Field>\n  <Button color="blue">Submit</Button>\n</form>'
 	    );
 	  }
 	});
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8240,7 +8336,7 @@ var App =
 	});
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8275,7 +8371,7 @@ var App =
 	});
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8296,7 +8392,7 @@ var App =
 	});
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8365,6 +8461,41 @@ var App =
 	        'u',
 	        null,
 	        'Underlined'
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 69 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Example = __webpack_require__(11);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        Example,
+	        null,
+	        '<div className="example-avatars">\n  <Avatar name="David"/>\n  <Avatar name="唐僧"/>\n  <Avatar name="おだ"/>\n</div>'
+	      ),
+	      React.createElement(
+	        Example,
+	        null,
+	        '<div className="example-avatars">\n  <Avatar name="David" round/>\n  <Avatar name="唐僧" round/>\n  <Avatar name="おだ" round/>\n</div>'
+	      ),
+	      React.createElement(
+	        Example,
+	        null,
+	        '<div className="example-avatars">\n  <Avatar name="David" circle/>\n  <Avatar name="唐僧" circle/>\n  <Avatar name="おだ" circle/>\n</div>'
 	      )
 	    );
 	  }
