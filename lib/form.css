@@ -29,6 +29,10 @@
   border: 1px solid #1385e5;
 }
 
+.u-field .error {
+  color: #e74c3c;
+}
+
 .u-checkbox .label {
   display: inline-block;
   margin-left: 5px;
@@ -52,6 +56,10 @@
   display: table-cell;
   vertical-align: middle;
   text-align: right;
+}
+
+.u-field-err input, .u-field-err textarea {
+  border: 1px solid #e74c3c !important;
 }
 
 .u-slider-x {
