@@ -11,6 +11,12 @@ module.exports = React.createClass({
     }
   },
 
+  renderError() {
+    if(!this.props.error) return null;
+
+    return <span className="error">{this.props.error}</span>;
+  },
+
   renderLabel() {
     if(!this.props.label) return null;
 
@@ -24,6 +30,7 @@ module.exports = React.createClass({
 
     return (
       <div className={cx('u-field', horizontal ? 'u-field-x' : null)}>
+        {this.renderError()}
         {this.renderLabel()}
         {this.props.children}
       </div>
