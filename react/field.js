@@ -27,12 +27,16 @@ module.exports = React.createClass({
 
   render() {
     var horizontal = this.props.horizontal;
+    var cn = cx('u-field', {
+      'u-field-x' : horizontal,
+      'u-field-err': this.props.error
+    });
 
     return (
-      <div className={cx('u-field', horizontal ? 'u-field-x' : null)}>
-        {this.renderError()}
+      <div className={cn}>
         {this.renderLabel()}
         {this.props.children}
+        {this.renderError()}
       </div>
     );
   }
