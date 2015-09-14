@@ -52,6 +52,8 @@ function build(section, page, cb) {
 
 var fns = [];
 sections.map((section) => {
+  if(!section.pages) return;
+
   section.pages.map((page) => {
     fns.push(build.bind(null, section.path, page.path));
   });
