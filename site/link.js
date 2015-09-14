@@ -6,6 +6,7 @@ module.exports = React.createClass({
 
   render() {
     var href = this.props.href;
+    if(href[0] !== '/') href = '/' + href;
 
     return (
       <a href={`/feng-ui${href}.html`}

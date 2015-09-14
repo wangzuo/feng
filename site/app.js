@@ -41,11 +41,12 @@ var Panel = React.createClass({
     var section = ps[1];
     var page = ps[2];
     var current = sections.filter((page) => page.path === section)[0];
+    if(!page && current.pages) page = current.pages[0].path.split('/')[2];
 
     return (
       <Grid.Container>
         <Grid.Row>
-          <Grid.Column d={3}>
+          <Grid.Column d={page ? 3 : 0}>
             <Nav
               title={section}
               className="u-nav u-nav-y"
