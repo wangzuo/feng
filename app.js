@@ -56,21 +56,22 @@ var App =
 	var sections = __webpack_require__(6);
 
 	var pages = {
-	  'getting-started': __webpack_require__(10),
+	  '/': __webpack_require__(10),
+	  'getting-started': __webpack_require__(11),
 	  'react': {
-	    'feng-form': __webpack_require__(11),
-	    tabs: __webpack_require__(63),
-	    dropdown: __webpack_require__(64),
-	    dialogs: __webpack_require__(65)
+	    'feng-form': __webpack_require__(12),
+	    tabs: __webpack_require__(62),
+	    dropdown: __webpack_require__(63),
+	    dialogs: __webpack_require__(64)
 	  },
 	  css: {
-	    buttons: __webpack_require__(66),
-	    forms: __webpack_require__(67),
-	    card: __webpack_require__(68),
-	    grid: __webpack_require__(69),
-	    labels: __webpack_require__(70),
-	    typography: __webpack_require__(71),
-	    avatars: __webpack_require__(72)
+	    buttons: __webpack_require__(65),
+	    forms: __webpack_require__(66),
+	    card: __webpack_require__(67),
+	    grid: __webpack_require__(68),
+	    labels: __webpack_require__(69),
+	    typography: __webpack_require__(70),
+	    avatars: __webpack_require__(71)
 	  }
 	};
 
@@ -532,6 +533,31 @@ var App =
 
 	var React = __webpack_require__(1);
 
+	// todo: render with markdown
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h1',
+	        null,
+	        'feng-ui'
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
 	module.exports = React.createClass({
 	  displayName: 'exports',
 
@@ -549,13 +575,13 @@ var App =
 	});
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(12);
+	var Example = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -574,7 +600,7 @@ var App =
 	});
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -582,25 +608,25 @@ var App =
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var babel = __webpack_require__(13);
+	var babel = __webpack_require__(14);
 
 	var Grid = __webpack_require__(9);
-	var Button = __webpack_require__(14);
-	var ButtonGroup = __webpack_require__(16);
-	var Form = __webpack_require__(17);
-	var Card = __webpack_require__(18);
-	var Slat = __webpack_require__(21);
-	var Field = __webpack_require__(22);
-	var Checkbox = __webpack_require__(23);
-	var Label = __webpack_require__(24);
-	var Tabs = __webpack_require__(25);
-	var Spinner = __webpack_require__(15);
-	var FengForm = __webpack_require__(26);
-	var Dropdown = __webpack_require__(55);
-	var Dialog = __webpack_require__(56);
-	var Avatar = __webpack_require__(57);
+	var Button = __webpack_require__(15);
+	var ButtonGroup = __webpack_require__(17);
+	var Form = __webpack_require__(18);
+	var Card = __webpack_require__(19);
+	var Slat = __webpack_require__(22);
+	var Field = __webpack_require__(23);
+	var Checkbox = __webpack_require__(24);
+	var Label = __webpack_require__(25);
+	var Tabs = __webpack_require__(26);
+	var Spinner = __webpack_require__(16);
+	var FengForm = __webpack_require__(27);
+	var Dropdown = __webpack_require__(54);
+	var Dialog = __webpack_require__(55);
+	var Avatar = __webpack_require__(56);
 
-	var Code = __webpack_require__(58);
+	var Code = __webpack_require__(57);
 
 	module.exports = React.createClass({
 	  displayName: 'Example',
@@ -678,13 +704,13 @@ var App =
 	});
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 	module.exports = babel;
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -693,7 +719,7 @@ var App =
 
 	var React = __webpack_require__(1);
 	var cx = __webpack_require__(4);
-	var Spinner = __webpack_require__(15);
+	var Spinner = __webpack_require__(16);
 
 	module.exports = React.createClass({
 	  displayName: 'Button',
@@ -756,7 +782,7 @@ var App =
 	});
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -787,7 +813,7 @@ var App =
 	});
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -807,7 +833,7 @@ var App =
 	});
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -836,14 +862,14 @@ var App =
 	});
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
-	var Gravatar = __webpack_require__(19);
+	var Gravatar = __webpack_require__(20);
 
 	module.exports = React.createClass({
 	  displayName: 'Card',
@@ -900,7 +926,7 @@ var App =
 	});
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -908,7 +934,7 @@ var App =
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var _md5 = __webpack_require__(20);
+	var _md5 = __webpack_require__(21);
 	var md5 = _md5.md5 || _md5;
 
 	module.exports = React.createClass({
@@ -926,7 +952,7 @@ var App =
 	});
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -1206,7 +1232,7 @@ var App =
 
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1236,7 +1262,7 @@ var App =
 	});
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1292,7 +1318,7 @@ var App =
 	});
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1317,7 +1343,7 @@ var App =
 	});
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1343,7 +1369,7 @@ var App =
 	});
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1427,24 +1453,24 @@ var App =
 	});
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Select = __webpack_require__(27);
-	var Switch = __webpack_require__(30);
-	var Textarea = __webpack_require__(32);
-	var InputColor = __webpack_require__(34);
+	var Select = __webpack_require__(28);
+	var Switch = __webpack_require__(31);
+	var Textarea = __webpack_require__(33);
+	var InputColor = __webpack_require__(36);
 	// var InputNumber = require('react-input-number');
-	var InputSlider = __webpack_require__(48);
+	var InputSlider = __webpack_require__(46);
 
 	// todo: avoid e.target.value
 	// var InputText = require('./input-text');
 
-	var Field = __webpack_require__(22);
-	var Form = __webpack_require__(17);
+	var Field = __webpack_require__(23);
+	var Form = __webpack_require__(18);
 
 	function renderElement(attr, value, onChange) {
 	  var type = attr.type;
@@ -1637,7 +1663,7 @@ var App =
 	});
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* disable some rules until we refactor more completely; fixing them now would
@@ -1649,9 +1675,9 @@ var App =
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var Input = __webpack_require__(28);
+	var Input = __webpack_require__(29);
 	var classes = __webpack_require__(4);
-	var Value = __webpack_require__(29);
+	var Value = __webpack_require__(30);
 
 	var requestId = 0;
 
@@ -2465,7 +2491,7 @@ var App =
 	module.exports = Select;
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2573,7 +2599,7 @@ var App =
 	module.exports = AutosizeInput;
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2644,14 +2670,14 @@ var App =
 	module.exports = Value;
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(31);
+	module.exports = __webpack_require__(32);
 
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2667,20 +2693,20 @@ var App =
 	  render: function render() {
 	    var name = this.props.name;
 	    var checked = !!this.props.checked;
+	    var classes = { 'is-checked': checked };
+	    classes['u-switch'] = true;
 	    this.checked = checked;
 
 	    return React.createElement(
 	      'label',
-	      { className: cx('u-switch', {
-	          'is-checked': checked
-	        }, this.props.className) },
+	      { className: cx(classes) },
 	      React.createElement('input', {
-	        type: "checkbox",
+	        type: 'checkbox',
 	        name: name,
 	        onClick: this.handleClick
 	      }),
-	      React.createElement('span', { className: "track" }),
-	      React.createElement('span', { className: "button" })
+	      React.createElement('span', { className: 'track' }),
+	      React.createElement('span', { className: 'button' })
 	    );
 	  },
 
@@ -2692,7 +2718,7 @@ var App =
 	});
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2722,11 +2748,13 @@ var App =
 
 	var _React2 = _interopRequireWildcard(_React);
 
-	var _calculateNodeHeight = __webpack_require__(33);
+	var _emptyFunction = __webpack_require__(34);
+
+	var _emptyFunction2 = _interopRequireWildcard(_emptyFunction);
+
+	var _calculateNodeHeight = __webpack_require__(35);
 
 	var _calculateNodeHeight2 = _interopRequireWildcard(_calculateNodeHeight);
-
-	var emptyFunction = function emptyFunction() {};
 
 	var TextareaAutosize = (function (_React$Component) {
 	  function TextareaAutosize(props) {
@@ -2885,8 +2913,8 @@ var App =
 	  }, {
 	    key: 'defaultProps',
 	    value: {
-	      onChange: emptyFunction,
-	      onHeightChange: emptyFunction,
+	      onChange: _emptyFunction2['default'],
+	      onHeightChange: _emptyFunction2['default'],
 	      useCacheForDOMMeasurements: false
 	    },
 	    enumerable: true
@@ -2915,7 +2943,45 @@ var App =
 
 
 /***/ },
-/* 33 */
+/* 34 */
+/***/ function(module, exports) {
+
+	/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule emptyFunction
+	 */
+
+	function makeEmptyFunction(arg) {
+	  return function() {
+	    return arg;
+	  };
+	}
+
+	/**
+	 * This function accepts and discards inputs; it has no side effects. This is
+	 * primarily useful idiomatically for overridable function endpoints which
+	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+	 */
+	function emptyFunction() {}
+
+	emptyFunction.thatReturns = makeEmptyFunction;
+	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+	emptyFunction.thatReturnsThis = function() { return this; };
+	emptyFunction.thatReturnsArgument = function(arg) { return arg; };
+
+	module.exports = emptyFunction;
+
+
+/***/ },
+/* 35 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3033,28 +3099,27 @@ var App =
 
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(35);
+	module.exports = __webpack_require__(37);
 
 
 /***/ },
-/* 35 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var cx = __webpack_require__(4);
+	var cx = __webpack_require__(38);
 	var React = __webpack_require__(1);
-	var assign = __webpack_require__(36);
-	var cssColor = __webpack_require__(37);
+	var assign = __webpack_require__(39);
+	var colorParser = __webpack_require__(40);
 	var rgbaColor = __webpack_require__(42);
 	var rgb2hsv = __webpack_require__(43);
 	var rgb2hex = __webpack_require__(44);
-	var rgba2hex = __webpack_require__(45);
 
-	var ColorPicker = __webpack_require__(47);
+	var ColorPicker = __webpack_require__(45);
 
 	var KEY_ENTER = 13;
 
@@ -3082,14 +3147,14 @@ var App =
 	    };
 	  },
 
-	  getColor: function getColor(color) {
-	    color = color || this.props.defaultValue;
+	  getColor: function getColor(cssColor) {
+	    cssColor = cssColor || this.props.defaultValue;
 
-	    var rgba = cssColor(color);
+	    var rgba = colorParser(cssColor);
 	    var r = rgba.r,
 	        g = rgba.g,
 	        b = rgba.b,
-	        a = rgba.a;
+	        a = rgba.a * 100;
 	    var hsv = rgb2hsv(r, g, b);
 
 	    return assign(hsv, {
@@ -3116,18 +3181,18 @@ var App =
 
 	    return React.createElement(
 	      'span',
-	      { className: cx('m-input-color', {
+	      { className: cx({
+	          'm-input-color': true,
 	          'color-picker-open': this.state.colorPicker
 	        }) },
 	      React.createElement('span', {
-	        className: 'css-color',
+	        className: "css-color",
 	        style: { background: rgbaBackground },
-	        onClick: this._onClick
-	      }),
+	        onClick: this._onClick }),
 	      React.createElement(
 	        'span',
 	        {
-	          className: 'remove',
+	          className: "remove",
 	          onClick: this.handleClickRemove },
 	        '×'
 	      ),
@@ -3174,9 +3239,8 @@ var App =
 	      cssColor: '#' + color.hex,
 	      color: color
 	    });
-
 	    this._updated = true;
-	    this.change('#' + rgba2hex(color.r, color.g, color.b, color.a));
+	    this.change('#' + color.hex);
 	  },
 
 	  _onClick: function _onClick(e) {
@@ -3205,7 +3269,56 @@ var App =
 	});
 
 /***/ },
-/* 36 */
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2015 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+
+	function classNames() {
+		var classes = '';
+		var arg;
+
+		for (var i = 0; i < arguments.length; i++) {
+			arg = arguments[i];
+			if (!arg) {
+				continue;
+			}
+
+			if ('string' === typeof arg || 'number' === typeof arg) {
+				classes += ' ' + arg;
+			} else if (Object.prototype.toString.call(arg) === '[object Array]') {
+				classes += ' ' + classNames.apply(null, arg);
+			} else if ('object' === typeof arg) {
+				for (var key in arg) {
+					if (!arg.hasOwnProperty(key) || !arg[key]) {
+						continue;
+					}
+					classes += ' ' + key;
+				}
+			}
+		}
+		return classes.substr(1);
+	}
+
+	// safely export classNames for node / browserify
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	}
+
+	// safely export classNames for RequireJS
+	if (true) {
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+			return classNames;
+		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}
+
+
+/***/ },
+/* 39 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3237,34 +3350,63 @@ var App =
 
 
 /***/ },
-/* 37 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// based on component/color-parser
+	
+	/**
+	 * Module dependencies.
+	 */
 
-	var hsl2rgb = __webpack_require__(38);
 	var colors = __webpack_require__(41);
+
+	/**
+	 * Expose `parse`.
+	 */
+
+	module.exports = parse;
+
+	/**
+	 * Parse `str`.
+	 *
+	 * @param {String} str
+	 * @return {Object}
+	 * @api public
+	 */
 
 	function parse(str) {
 	  return named(str)
 	    || hex3(str)
 	    || hex6(str)
 	    || rgb(str)
-	    || rgba(str)
-	    || hsl(str)
-	    || hsla(str);
+	    || rgba(str);
 	}
+
+	/**
+	 * Parse named css color `str`.
+	 *
+	 * @param {String} str
+	 * @return {Object}
+	 * @api private
+	 */
 
 	function named(str) {
 	  var c = colors[str.toLowerCase()];
-	  if(!c) return;
+	  if (!c) return;
 	  return {
 	    r: c[0],
 	    g: c[1],
-	    b: c[2],
-	    a: 100
-	  };
+	    b: c[2]
+	  }
 	}
+
+	/**
+	 * Parse rgb(n, n, n)
+	 *
+	 * @param {String} str
+	 * @return {Object}
+	 * @api private
+	 */
 
 	function rgb(str) {
 	  if (0 == str.indexOf('rgb(')) {
@@ -3274,314 +3416,226 @@ var App =
 	      r: parts[0],
 	      g: parts[1],
 	      b: parts[2],
-	      a: 100
-	    };
+	      a: 1
+	    }
 	  }
 	}
 
+	/**
+	 * Parse rgba(n, n, n, n)
+	 *
+	 * @param {String} str
+	 * @return {Object}
+	 * @api private
+	 */
+
 	function rgba(str) {
-	  if(str.indexOf('rgba(') === 0) {
+	  if (0 == str.indexOf('rgba(')) {
 	    str = str.match(/rgba\(([^)]+)\)/)[1];
 	    var parts = str.split(/ *, */).map(Number);
-
 	    return {
 	      r: parts[0],
 	      g: parts[1],
 	      b: parts[2],
-	      a: parts[3] * 100
-	    };
+	      a: parts[3]
+	    }
 	  }
 	}
 
+	/**
+	 * Parse #nnnnnn
+	 *
+	 * @param {String} str
+	 * @return {Object}
+	 * @api private
+	 */
+
 	function hex6(str) {
-	  if('#' === str[0] && 7 === str.length) {
+	  if ('#' == str[0] && 7 == str.length) {
 	    return {
 	      r: parseInt(str.slice(1, 3), 16),
 	      g: parseInt(str.slice(3, 5), 16),
 	      b: parseInt(str.slice(5, 7), 16),
-	      a: 100
-	    };
+	      a: 1
+	    }
 	  }
 	}
 
+	/**
+	 * Parse #nnn
+	 *
+	 * @param {String} str
+	 * @return {Object}
+	 * @api private
+	 */
+
 	function hex3(str) {
-	  if('#' === str[0] && 4 === str.length) {
+	  if ('#' == str[0] && 4 == str.length) {
 	    return {
 	      r: parseInt(str[1] + str[1], 16),
 	      g: parseInt(str[2] + str[2], 16),
 	      b: parseInt(str[3] + str[3], 16),
-	      a: 100
-	    };
+	      a: 1
+	    }
 	  }
 	}
 
-	function hsl(str) {
-	  if(str.indexOf('hsl(') === 0) {
-	    str = str.match(/hsl\(([^)]+)\)/)[1];
-	    var parts = str.split(/ *, */);
-
-	    var h = parseInt(parts[0], 10);
-	    var s = parseInt(parts[1], 10);
-	    var l = parseInt(parts[2], 10);
-
-	    var rgba = hsl2rgb(h, s, l);
-	    rgba.a = 100;
-
-	    return rgba;
-	  }
-	}
-
-	function hsla(str) {
-	  if(str.indexOf('hsla(') === 0) {
-	    str = str.match(/hsla\(([^)]+)\)/)[1];
-	    var parts = str.split(/ *, */);
-
-	    var h = parseInt(parts[0], 10);
-	    var s = parseInt(parts[1], 10);
-	    var l = parseInt(parts[2], 10);
-	    var a = parseInt(parts[3] * 100, 10);
-
-	    var rgba = hsl2rgb(h, s, l);
-	    rgba.a = a;
-
-	    return rgba;
-	  }
-	}
-
-	module.exports = parse;
-
-
-/***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var hsl2hsv = __webpack_require__(39);
-	var hsv2rgb = __webpack_require__(40);
-
-	module.exports = function(h, s, l) {
-	  var hsv = hsl2hsv(h, s, l);
-	  return hsv2rgb(hsv.h, hsv.s, hsv.v);
-	};
-
-/***/ },
-/* 39 */
-/***/ function(module, exports) {
-
-	module.exports = function(h, s, l) {
-	  s *= ((l < 50) ? l : (100 - l)) / 100;
-
-	  console.log('s', s);
-
-	  return {
-	    h: h,
-	    s: 2 * s / (l+s) * 100,
-	    v: l + s
-	  };
-	};
-
-/***/ },
-/* 40 */
-/***/ function(module, exports) {
-
-	// http://www.rapidtables.com/convert/color/hsv-to-rgb.htm
-	module.exports = function(h, s, v) {
-	  var s = s/100, v = v/100;
-	  var rgb = [];
-
-	  var c = v * s;
-	  var hh = h/60;
-	  var x = c * (1 - Math.abs(hh%2-1));
-	  var m = v - c;
-
-	  switch(parseInt(hh, 10)) {
-	    case 0:
-	      rgb = [c, x, 0];
-	    break;
-
-	    case 1:
-	      rgb = [x, c, 0];
-	    break;
-
-	    case 2:
-	      rgb = [0, c, x];
-	    break;
-
-	    case 3:
-	      rgb = [0, x, c];
-	    break;
-
-	    case 4:
-	      rgb = [x, 0, c];
-	    break;
-
-	    case 5:
-	      rgb = [c, 0, x];
-	    break;
-	  }
-
-	  return {
-	    r: Math.round(255*(rgb[0]+m)),
-	    g: Math.round(255*(rgb[1]+m)),
-	    b: Math.round(255*(rgb[2]+m))
-	  };
-	};
 
 
 /***/ },
 /* 41 */
 /***/ function(module, exports) {
 
+	
 	module.exports = {
-	  aliceblue: [240, 248, 255],
-	  antiquewhite: [250, 235, 215],
-	  aqua: [0, 255, 255],
-	  aquamarine: [127, 255, 212],
-	  azure: [240, 255, 255],
-	  beige: [245, 245, 220],
-	  bisque: [255, 228, 196],
-	  black: [0, 0, 0],
-	  blanchedalmond: [255, 235, 205],
-	  blue: [0, 0, 255],
-	  blueviolet: [138, 43, 226],
-	  brown: [165, 42, 42],
-	  burlywood: [222, 184, 135],
-	  cadetblue: [95, 158, 160],
-	  chartreuse: [127, 255, 0],
-	  chocolate: [210, 105, 30],
-	  coral: [255, 127, 80],
-	  cornflowerblue: [100, 149, 237],
-	  cornsilk: [255, 248, 220],
-	  crimson: [220, 20, 60],
-	  cyan: [0, 255, 255],
-	  darkblue: [0, 0, 139],
-	  darkcyan: [0, 139, 139],
-	  darkgoldenrod: [184, 132, 11],
-	  darkgray: [169, 169, 169],
-	  darkgreen: [0, 100, 0],
-	  darkgrey: [169, 169, 169],
-	  darkkhaki: [189, 183, 107],
-	  darkmagenta: [139, 0, 139],
-	  darkolivegreen: [85, 107, 47],
-	  darkorange: [255, 140, 0],
-	  darkorchid: [153, 50, 204],
-	  darkred: [139, 0, 0],
-	  darksalmon: [233, 150, 122],
-	  darkseagreen: [143, 188, 143],
-	  darkslateblue: [72, 61, 139],
-	  darkslategray: [47, 79, 79],
-	  darkslategrey: [47, 79, 79],
-	  darkturquoise: [0, 206, 209],
-	  darkviolet: [148, 0, 211],
-	  deeppink: [255, 20, 147],
-	  deepskyblue: [0, 191, 255],
-	  dimgray: [105, 105, 105],
-	  dimgrey: [105, 105, 105],
-	  dodgerblue: [30, 144, 255],
-	  firebrick: [178, 34, 34],
-	  floralwhite: [255, 255, 240],
-	  forestgreen: [34, 139, 34],
-	  fuchsia: [255, 0, 255],
-	  gainsboro: [220, 220, 220],
-	  ghostwhite: [248, 248, 255],
-	  gold: [255, 215, 0],
-	  goldenrod: [218, 165, 32],
-	  gray: [128, 128, 128],
-	  green: [0, 128, 0],
-	  greenyellow: [173, 255, 47],
-	  grey: [128, 128, 128],
-	  honeydew: [240, 255, 240],
-	  hotpink: [255, 105, 180],
-	  indianred: [205, 92, 92],
-	  indigo: [75, 0, 130],
-	  ivory: [255, 255, 240],
-	  khaki: [240, 230, 140],
-	  lavender: [230, 230, 250],
-	  lavenderblush: [255, 240, 245],
-	  lawngreen: [124, 252, 0],
-	  lemonchiffon: [255, 250, 205],
-	  lightblue: [173, 216, 230],
-	  lightcoral: [240, 128, 128],
-	  lightcyan: [224, 255, 255],
-	  lightgoldenrodyellow: [250, 250, 210],
-	  lightgray: [211, 211, 211],
-	  lightgreen: [144, 238, 144],
-	  lightgrey: [211, 211, 211],
-	  lightpink: [255, 182, 193],
-	  lightsalmon: [255, 160, 122],
-	  lightseagreen: [32, 178, 170],
-	  lightskyblue: [135, 206, 250],
-	  lightslategray: [119, 136, 153],
-	  lightslategrey: [119, 136, 153],
-	  lightsteelblue: [176, 196, 222],
-	  lightyellow: [255, 255, 224],
-	  lime: [0, 255, 0],
-	  limegreen: [50, 205, 50],
-	  linen: [250, 240, 230],
-	  magenta: [255, 0, 255],
-	  maroon: [128, 0, 0],
-	  mediumaquamarine: [102, 205, 170],
-	  mediumblue: [0, 0, 205],
-	  mediumorchid: [186, 85, 211],
-	  mediumpurple: [147, 112, 219],
-	  mediumseagreen: [60, 179, 113],
-	  mediumslateblue: [123, 104, 238],
-	  mediumspringgreen: [0, 250, 154],
-	  mediumturquoise: [72, 209, 204],
-	  mediumvioletred: [199, 21, 133],
-	  midnightblue: [25, 25, 112],
-	  mintcream: [245, 255, 250],
-	  mistyrose: [255, 228, 225],
-	  moccasin: [255, 228, 181],
-	  navajowhite: [255, 222, 173],
-	  navy: [0, 0, 128],
-	  oldlace: [253, 245, 230],
-	  olive: [128, 128, 0],
-	  olivedrab: [107, 142, 35],
-	  orange: [255, 165, 0],
-	  orangered: [255, 69, 0],
-	  orchid: [218, 112, 214],
-	  palegoldenrod: [238, 232, 170],
-	  palegreen: [152, 251, 152],
-	  paleturquoise: [175, 238, 238],
-	  palevioletred: [219, 112, 147],
-	  papayawhip: [255, 239, 213],
-	  peachpuff: [255, 218, 185],
-	  peru: [205, 133, 63],
-	  pink: [255, 192, 203],
-	  plum: [221, 160, 203],
-	  powderblue: [176, 224, 230],
-	  purple: [128, 0, 128],
-	  rebeccapurple: [102, 51, 153],
-	  red: [255, 0, 0],
-	  rosybrown: [188, 143, 143],
-	  royalblue: [65, 105, 225],
-	  saddlebrown: [139, 69, 19],
-	  salmon: [250, 128, 114],
-	  sandybrown: [244, 164, 96],
-	  seagreen: [46, 139, 87],
-	  seashell: [255, 245, 238],
-	  sienna: [160, 82, 45],
-	  silver: [192, 192, 192],
-	  skyblue: [135, 206, 235],
-	  slateblue: [106, 90, 205],
-	  slategray: [119, 128, 144],
-	  slategrey: [119, 128, 144],
-	  snow: [255, 255, 250],
-	  springgreen: [0, 255, 127],
-	  steelblue: [70, 130, 180],
-	  tan: [210, 180, 140],
-	  teal: [0, 128, 128],
-	  thistle: [216, 191, 216],
-	  tomato: [255, 99, 71],
-	  turquoise: [64, 224, 208],
-	  violet: [238, 130, 238],
-	  wheat: [245, 222, 179],
-	  white: [255, 255, 255],
-	  whitesmoke: [245, 245, 245],
-	  yellow: [255, 255, 0],
-	  yellowgreen: [154, 205, 5]
+	    aliceblue: [240, 248, 255]
+	  , antiquewhite: [250, 235, 215]
+	  , aqua: [0, 255, 255]
+	  , aquamarine: [127, 255, 212]
+	  , azure: [240, 255, 255]
+	  , beige: [245, 245, 220]
+	  , bisque: [255, 228, 196]
+	  , black: [0, 0, 0]
+	  , blanchedalmond: [255, 235, 205]
+	  , blue: [0, 0, 255]
+	  , blueviolet: [138, 43, 226]
+	  , brown: [165, 42, 42]
+	  , burlywood: [222, 184, 135]
+	  , cadetblue: [95, 158, 160]
+	  , chartreuse: [127, 255, 0]
+	  , chocolate: [210, 105, 30]
+	  , coral: [255, 127, 80]
+	  , cornflowerblue: [100, 149, 237]
+	  , cornsilk: [255, 248, 220]
+	  , crimson: [220, 20, 60]
+	  , cyan: [0, 255, 255]
+	  , darkblue: [0, 0, 139]
+	  , darkcyan: [0, 139, 139]
+	  , darkgoldenrod: [184, 132, 11]
+	  , darkgray: [169, 169, 169]
+	  , darkgreen: [0, 100, 0]
+	  , darkgrey: [169, 169, 169]
+	  , darkkhaki: [189, 183, 107]
+	  , darkmagenta: [139, 0, 139]
+	  , darkolivegreen: [85, 107, 47]
+	  , darkorange: [255, 140, 0]
+	  , darkorchid: [153, 50, 204]
+	  , darkred: [139, 0, 0]
+	  , darksalmon: [233, 150, 122]
+	  , darkseagreen: [143, 188, 143]
+	  , darkslateblue: [72, 61, 139]
+	  , darkslategray: [47, 79, 79]
+	  , darkslategrey: [47, 79, 79]
+	  , darkturquoise: [0, 206, 209]
+	  , darkviolet: [148, 0, 211]
+	  , deeppink: [255, 20, 147]
+	  , deepskyblue: [0, 191, 255]
+	  , dimgray: [105, 105, 105]
+	  , dimgrey: [105, 105, 105]
+	  , dodgerblue: [30, 144, 255]
+	  , firebrick: [178, 34, 34]
+	  , floralwhite: [255, 255, 240]
+	  , forestgreen: [34, 139, 34]
+	  , fuchsia: [255, 0, 255]
+	  , gainsboro: [220, 220, 220]
+	  , ghostwhite: [248, 248, 255]
+	  , gold: [255, 215, 0]
+	  , goldenrod: [218, 165, 32]
+	  , gray: [128, 128, 128]
+	  , green: [0, 128, 0]
+	  , greenyellow: [173, 255, 47]
+	  , grey: [128, 128, 128]
+	  , honeydew: [240, 255, 240]
+	  , hotpink: [255, 105, 180]
+	  , indianred: [205, 92, 92]
+	  , indigo: [75, 0, 130]
+	  , ivory: [255, 255, 240]
+	  , khaki: [240, 230, 140]
+	  , lavender: [230, 230, 250]
+	  , lavenderblush: [255, 240, 245]
+	  , lawngreen: [124, 252, 0]
+	  , lemonchiffon: [255, 250, 205]
+	  , lightblue: [173, 216, 230]
+	  , lightcoral: [240, 128, 128]
+	  , lightcyan: [224, 255, 255]
+	  , lightgoldenrodyellow: [250, 250, 210]
+	  , lightgray: [211, 211, 211]
+	  , lightgreen: [144, 238, 144]
+	  , lightgrey: [211, 211, 211]
+	  , lightpink: [255, 182, 193]
+	  , lightsalmon: [255, 160, 122]
+	  , lightseagreen: [32, 178, 170]
+	  , lightskyblue: [135, 206, 250]
+	  , lightslategray: [119, 136, 153]
+	  , lightslategrey: [119, 136, 153]
+	  , lightsteelblue: [176, 196, 222]
+	  , lightyellow: [255, 255, 224]
+	  , lime: [0, 255, 0]
+	  , limegreen: [50, 205, 50]
+	  , linen: [250, 240, 230]
+	  , magenta: [255, 0, 255]
+	  , maroon: [128, 0, 0]
+	  , mediumaquamarine: [102, 205, 170]
+	  , mediumblue: [0, 0, 205]
+	  , mediumorchid: [186, 85, 211]
+	  , mediumpurple: [147, 112, 219]
+	  , mediumseagreen: [60, 179, 113]
+	  , mediumslateblue: [123, 104, 238]
+	  , mediumspringgreen: [0, 250, 154]
+	  , mediumturquoise: [72, 209, 204]
+	  , mediumvioletred: [199, 21, 133]
+	  , midnightblue: [25, 25, 112]
+	  , mintcream: [245, 255, 250]
+	  , mistyrose: [255, 228, 225]
+	  , moccasin: [255, 228, 181]
+	  , navajowhite: [255, 222, 173]
+	  , navy: [0, 0, 128]
+	  , oldlace: [253, 245, 230]
+	  , olive: [128, 128, 0]
+	  , olivedrab: [107, 142, 35]
+	  , orange: [255, 165, 0]
+	  , orangered: [255, 69, 0]
+	  , orchid: [218, 112, 214]
+	  , palegoldenrod: [238, 232, 170]
+	  , palegreen: [152, 251, 152]
+	  , paleturquoise: [175, 238, 238]
+	  , palevioletred: [219, 112, 147]
+	  , papayawhip: [255, 239, 213]
+	  , peachpuff: [255, 218, 185]
+	  , peru: [205, 133, 63]
+	  , pink: [255, 192, 203]
+	  , plum: [221, 160, 203]
+	  , powderblue: [176, 224, 230]
+	  , purple: [128, 0, 128]
+	  , red: [255, 0, 0]
+	  , rosybrown: [188, 143, 143]
+	  , royalblue: [65, 105, 225]
+	  , saddlebrown: [139, 69, 19]
+	  , salmon: [250, 128, 114]
+	  , sandybrown: [244, 164, 96]
+	  , seagreen: [46, 139, 87]
+	  , seashell: [255, 245, 238]
+	  , sienna: [160, 82, 45]
+	  , silver: [192, 192, 192]
+	  , skyblue: [135, 206, 235]
+	  , slateblue: [106, 90, 205]
+	  , slategray: [119, 128, 144]
+	  , slategrey: [119, 128, 144]
+	  , snow: [255, 255, 250]
+	  , springgreen: [0, 255, 127]
+	  , steelblue: [70, 130, 180]
+	  , tan: [210, 180, 140]
+	  , teal: [0, 128, 128]
+	  , thistle: [216, 191, 216]
+	  , tomato: [255, 99, 71]
+	  , turquoise: [64, 224, 208]
+	  , violet: [238, 130, 238]
+	  , wheat: [245, 222, 179]
+	  , white: [255, 255, 255]
+	  , whitesmoke: [245, 245, 245]
+	  , yellow: [255, 255, 0]
+	  , yellowgreen: [154, 205, 5]
 	};
-
 
 /***/ },
 /* 42 */
@@ -3652,47 +3706,18 @@ var App =
 /* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var rgba2rgb = __webpack_require__(46);
-	var rgb2hex = __webpack_require__(44);
-
-	module.exports = function(r, g, b, a) {
-	  var rgb = rgba2rgb(r, g, b, a);
-	  return rgb2hex(rgb.r, rgb.g, rgb.b);
-	};
-
-
-/***/ },
-/* 46 */
-/***/ function(module, exports) {
-
-	// https://en.wikipedia.org/wiki/Alpha_compositing#Alpha_blending
-	module.exports = function(r, g, b, a) {
-	  a = a / 100;
-
-	  return {
-	    r: parseInt((1 - a) * 255 + a * r, 10),
-	    g: parseInt((1 - a) * 255 + a * g, 10),
-	    b: parseInt((1 - a) * 255 + a * b, 10)
-	  };
-	};
-
-
-/***/ },
-/* 47 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var objectAssign = __webpack_require__(36);
-	var InputSlider = __webpack_require__(48);
-	var InputNumber = __webpack_require__(50);
+	var objectAssign = __webpack_require__(39);
+	var InputSlider = __webpack_require__(46);
+	var InputNumber = __webpack_require__(48);
 
 	var rgb2hsv = __webpack_require__(43);
-	var hsv2hex = __webpack_require__(53);
-	var hsv2rgb = __webpack_require__(40);
+	var hsv2hex = __webpack_require__(51);
+	var hsv2rgb = __webpack_require__(52);
 	var rgb2hex = __webpack_require__(44);
-	var hex2rgb = __webpack_require__(54);
+	var hex2rgb = __webpack_require__(53);
 	var rgba = __webpack_require__(42);
 
 	var KEY_ENTER = 13;
@@ -3724,16 +3749,16 @@ var App =
 
 	    return React.createElement(
 	      'div',
-	      { className: 'm-color-picker', style: { left: this.props.left }, onClick: this._onClick },
+	      { className: "m-color-picker", style: { left: this.props.left }, onClick: this._onClick },
 	      React.createElement(
 	        'div',
-	        { className: 'selector',
+	        { className: "selector",
 	          style: { backgroundColor: hueBackground } },
-	        React.createElement('div', { className: 'gradient white' }),
-	        React.createElement('div', { className: 'gradient dark' }),
+	        React.createElement('div', { className: "gradient white" }),
+	        React.createElement('div', { className: "gradient dark" }),
 	        React.createElement(InputSlider, {
-	          className: 'slider slider-xy',
-	          axis: 'xy',
+	          className: "slider slider-xy",
+	          axis: "xy",
 	          x: s, xmax: 100,
 	          y: 100 - v, ymax: 100,
 	          onChange: this._onSVChange
@@ -3741,31 +3766,31 @@ var App =
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: 'sliders' },
+	        { className: "sliders" },
 	        React.createElement(InputSlider, {
-	          className: 'slider slider-x hue',
-	          axis: 'x', x: h, xmax: 359,
+	          className: "slider slider-x hue",
+	          axis: "x", x: h, xmax: 359,
 	          onChange: this._onHueChange
 	        }),
 	        React.createElement(InputSlider, {
-	          className: 'slider slider-x opacity',
-	          axis: 'x', x: a, xmax: 100,
+	          className: "slider slider-x opacity",
+	          axis: "x", x: a, xmax: 100,
 	          style: { background: opacityGradient },
 	          onChange: this._onAlphaChange
 	        }),
-	        React.createElement('div', { className: 'color', style: { backgroundColor: rgbaBackground } })
+	        React.createElement('div', { className: "color", style: { backgroundColor: rgbaBackground } })
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: 'inputs' },
+	        { className: "inputs" },
 	        React.createElement(
 	          'div',
-	          { className: 'input hex' },
-	          React.createElement('input', { type: 'text', className: 'value', value: this.state.hex,
+	          { className: "input hex" },
+	          React.createElement('input', { type: "text", className: "value", value: this.state.hex,
 	            onChange: this._onHexChange, onKeyUp: this._onHexKeyUp }),
 	          React.createElement(
 	            'span',
-	            { className: 'label' },
+	            { className: "label" },
 	            'Hex'
 	          )
 	        ),
@@ -3774,37 +3799,37 @@ var App =
 	          null,
 	          React.createElement(
 	            'div',
-	            { className: 'input r' },
+	            { className: "input r" },
 	            React.createElement(InputNumber, {
-	              className: 'value', value: r,
+	              className: "value", value: r,
 	              onChange: this.changeRGB.bind(null, 'r') }),
 	            React.createElement(
 	              'span',
-	              { className: 'label' },
+	              { className: "label" },
 	              'R'
 	            )
 	          ),
 	          React.createElement(
 	            'div',
-	            { className: 'input g' },
+	            { className: "input g" },
 	            React.createElement(InputNumber, {
-	              className: 'value', value: g,
+	              className: "value", value: g,
 	              onChange: this.changeRGB.bind(null, 'g') }),
 	            React.createElement(
 	              'span',
-	              { className: 'label' },
+	              { className: "label" },
 	              'G'
 	            )
 	          ),
 	          React.createElement(
 	            'div',
-	            { className: 'input b' },
+	            { className: "input b" },
 	            React.createElement(InputNumber, {
-	              className: 'value', value: b,
+	              className: "value", value: b,
 	              onChange: this.changeRGB.bind(null, 'b') }),
 	            React.createElement(
 	              'span',
-	              { className: 'label' },
+	              { className: "label" },
 	              'B'
 	            )
 	          )
@@ -3813,50 +3838,50 @@ var App =
 	          null,
 	          React.createElement(
 	            'div',
-	            { className: 'input h' },
+	            { className: "input h" },
 	            React.createElement(InputNumber, {
-	              className: 'value', value: h,
+	              className: "value", value: h,
 	              onChange: this.changeHSV.bind(null, 'h') }),
 	            React.createElement(
 	              'span',
-	              { className: 'label' },
+	              { className: "label" },
 	              'H'
 	            )
 	          ),
 	          React.createElement(
 	            'div',
-	            { className: 'input s' },
+	            { className: "input s" },
 	            React.createElement(InputNumber, {
-	              className: 'value', value: s,
+	              className: "value", value: s,
 	              onChange: this.changeHSV.bind(null, 's') }),
 	            React.createElement(
 	              'span',
-	              { className: 'label' },
+	              { className: "label" },
 	              'S'
 	            )
 	          ),
 	          React.createElement(
 	            'div',
-	            { className: 'input v' },
+	            { className: "input v" },
 	            React.createElement(InputNumber, {
-	              className: 'value', value: v,
+	              className: "value", value: v,
 	              onChange: this.changeHSV.bind(null, 'v') }),
 	            React.createElement(
 	              'span',
-	              { className: 'label' },
+	              { className: "label" },
 	              'V'
 	            )
 	          )
 	        ),
 	        React.createElement(
 	          'div',
-	          { className: 'input a' },
+	          { className: "input a" },
 	          React.createElement(InputNumber, {
-	            className: 'value', value: a,
+	            className: "value", value: a,
 	            onChange: this.changeAlpha }),
 	          React.createElement(
 	            'span',
-	            { className: 'label' },
+	            { className: "label" },
 	            'A'
 	          )
 	        )
@@ -3922,7 +3947,7 @@ var App =
 
 	  _onAlphaChange: function _onAlphaChange(pos) {
 	    this.changeHSV({
-	      a: parseInt(pos.x, 10)
+	      a: pos.x
 	    });
 	  },
 
@@ -3947,14 +3972,14 @@ var App =
 	});
 
 /***/ },
-/* 48 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(49);
+	module.exports = __webpack_require__(47);
 
 
 /***/ },
-/* 49 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4100,18 +4125,18 @@ var App =
 	});
 
 /***/ },
-/* 50 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(51);
+	module.exports = __webpack_require__(49);
 
 
 /***/ },
-/* 51 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
-	var _parse = __webpack_require__(52);
+	var _parse = __webpack_require__(50);
 
 	var KEY_UP = 38;
 	var KEY_DOWN = 40;
@@ -4193,7 +4218,7 @@ var App =
 	});
 
 /***/ },
-/* 52 */
+/* 50 */
 /***/ function(module, exports) {
 
 	module.exports = function(value, step, max, min) {
@@ -4215,10 +4240,10 @@ var App =
 	};
 
 /***/ },
-/* 53 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hsv2rgb = __webpack_require__(40);
+	var hsv2rgb = __webpack_require__(52);
 	var rgb2hex = __webpack_require__(44);
 
 	module.exports = function(h, s, v) {
@@ -4228,7 +4253,55 @@ var App =
 
 
 /***/ },
-/* 54 */
+/* 52 */
+/***/ function(module, exports) {
+
+	// http://www.rapidtables.com/convert/color/hsv-to-rgb.htm
+	module.exports = function(h, s, v) {
+	  var s = s/100, v = v/100;
+	  var rgb = [];
+
+	  var c = v * s;
+	  var hh = h/60;
+	  var x = c * (1 - Math.abs(hh%2-1));
+	  var m = v - c;
+
+	  switch(parseInt(hh, 10)) {
+	    case 0:
+	      rgb = [c, x, 0];
+	    break;
+
+	    case 1:
+	      rgb = [x, c, 0];
+	    break;
+
+	    case 2:
+	      rgb = [0, c, x];
+	    break;
+
+	    case 3:
+	      rgb = [0, x, c];
+	    break;
+
+	    case 4:
+	      rgb = [x, 0, c];
+	    break;
+
+	    case 5:
+	      rgb = [c, 0, x];
+	    break;
+	  }
+
+	  return {
+	    r: Math.round(255*(rgb[0]+m)),
+	    g: Math.round(255*(rgb[1]+m)),
+	    b: Math.round(255*(rgb[2]+m))
+	  };
+	};
+
+
+/***/ },
+/* 53 */
 /***/ function(module, exports) {
 
 	module.exports = function(hex) {
@@ -4251,14 +4324,14 @@ var App =
 
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
-	var Button = __webpack_require__(14);
+	var Button = __webpack_require__(15);
 
 	module.exports = React.createClass({
 	  displayName: 'Dropdown',
@@ -4313,20 +4386,31 @@ var App =
 	});
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
+	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
 
 	module.exports = React.createClass({
 	  displayName: 'Dialog',
 
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      open: false
+	    };
+	  },
+
 	  render: function render() {
+	    var cn = cx('u-dialog-wrap', {
+	      'is-open': this.props.open
+	    });
+
 	    return React.createElement(
 	      'div',
-	      { className: 'u-dialog-wrap' },
+	      { className: cn },
 	      React.createElement('div', { className: 'u-dialog-bg' }),
 	      React.createElement(
 	        'div',
@@ -4334,22 +4418,31 @@ var App =
 	        React.createElement(
 	          'div',
 	          { className: 'content' },
-	          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'
+	          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+	          React.createElement(
+	            'span',
+	            { onClick: this.handleClickClose },
+	            'x'
+	          )
 	        )
 	      )
 	    );
+	  },
+
+	  handleClickClose: function handleClickClose() {
+	    if (this.props.onClose) this.props.onClose();
 	  }
 	});
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
-	var _md5 = __webpack_require__(20);
+	var _md5 = __webpack_require__(21);
 	var md5 = _md5.md5 || _md5;
 
 	module.exports = React.createClass({
@@ -4428,14 +4521,14 @@ var App =
 	}
 
 /***/ },
-/* 58 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var cx = __webpack_require__(4);
 	var React = __webpack_require__(1);
-	var beautify = __webpack_require__(59).html;
+	var beautify = __webpack_require__(58).html;
 
 	module.exports = React.createClass({
 	  displayName: 'Code',
@@ -4484,7 +4577,7 @@ var App =
 	});
 
 /***/ },
-/* 59 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -4525,9 +4618,9 @@ var App =
 	if (true) {
 	    // Add support for AMD ( https://github.com/amdjs/amdjs-api/wiki/AMD#defineamd-property- )
 	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(59),
 	        __webpack_require__(60),
-	        __webpack_require__(61),
-	        __webpack_require__(62)
+	        __webpack_require__(61)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(js_beautify, css_beautify, html_beautify) {
 	        return get_beautify(js_beautify, css_beautify, html_beautify);
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -4545,7 +4638,7 @@ var App =
 
 
 /***/ },
-/* 60 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -6638,7 +6731,7 @@ var App =
 
 
 /***/ },
-/* 61 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -7135,7 +7228,7 @@ var App =
 
 
 /***/ },
-/* 62 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
@@ -8058,9 +8151,9 @@ var App =
 
 	    if (true) {
 	        // Add support for AMD ( https://github.com/amdjs/amdjs-api/wiki/AMD#defineamd-property- )
-	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, __webpack_require__(60), __webpack_require__(61)], __WEBPACK_AMD_DEFINE_RESULT__ = function(requireamd) {
-	            var js_beautify =  __webpack_require__(60);
-	            var css_beautify =  __webpack_require__(61);
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, __webpack_require__(59), __webpack_require__(60)], __WEBPACK_AMD_DEFINE_RESULT__ = function(requireamd) {
+	            var js_beautify =  __webpack_require__(59);
+	            var css_beautify =  __webpack_require__(60);
 
 	            return {
 	              html_beautify: function(html_source, options) {
@@ -8093,13 +8186,13 @@ var App =
 
 
 /***/ },
-/* 63 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(12);
+	var Example = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8133,13 +8226,13 @@ var App =
 	});
 
 /***/ },
-/* 64 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(12);
+	var Example = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8158,13 +8251,13 @@ var App =
 	});
 
 /***/ },
-/* 65 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(12);
+	var Example = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8180,21 +8273,21 @@ var App =
 	      ),
 	      React.createElement(
 	        Example,
-	        null,
-	        '<Dialog/>'
+	        { html: false },
+	        'var App = React.createClass({\n  getInitialState() {\n    return {\n      open: false\n    };\n  },\n\n  render() {\n    return (\n      <div>\n        <Button onClick={this.toggleDialog}>Open dialog</Button>\n        <Dialog open={this.state.open} onClose={this.handleClose}/>\n      </div>\n    );\n  },\n\n  handleClose() {\n    this.setState({open: false});\n  },\n\n  toggleDialog() {\n    this.setState({open: !this.state.open});\n  }\n});\n\n<App/>;'
 	      )
 	    );
 	  }
 	});
 
 /***/ },
-/* 66 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(12);
+	var Example = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8298,13 +8391,13 @@ var App =
 	});
 
 /***/ },
-/* 67 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(12);
+	var Example = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8338,13 +8431,13 @@ var App =
 	});
 
 /***/ },
-/* 68 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(12);
+	var Example = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8368,13 +8461,13 @@ var App =
 	});
 
 /***/ },
-/* 69 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(12);
+	var Example = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8403,13 +8496,13 @@ var App =
 	});
 
 /***/ },
-/* 70 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(12);
+	var Example = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
@@ -8424,7 +8517,7 @@ var App =
 	});
 
 /***/ },
-/* 71 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8499,13 +8592,13 @@ var App =
 	});
 
 /***/ },
-/* 72 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Example = __webpack_require__(12);
+	var Example = __webpack_require__(13);
 
 	module.exports = React.createClass({
 	  displayName: 'exports',
