@@ -1,7 +1,6 @@
 module.exports = [{
   text: 'Getting started',
-  path: 'getting-started',
-  pages: []
+  path: 'getting-started'
 }, {
   text: 'CSS',
   path: 'css',

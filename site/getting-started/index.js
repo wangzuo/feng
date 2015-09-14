@@ -2,6 +2,10 @@ var React = require('react');
 
 module.exports = React.createClass({
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <h1>Getting started</h1>
+      </div>
+    );
   }
 });

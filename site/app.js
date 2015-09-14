@@ -7,7 +7,7 @@ var Grid = require('../react/grid');
 var sections = require('./pages');
 
 var pages = {
-  'getting-started': {},
+  'getting-started': require('./getting-started'),
   'react': {
     'feng-form': require('./react/feng-form'),
     tabs: require('./react/tabs'),
@@ -29,7 +29,7 @@ var Panel = React.createClass({
   displayName: 'Panel',
 
   renderPage(section, page) {
-    var component = pages[section][page];
+    var component = page ? pages[section][page] : pages[section];
     if(!component) throw new Error(`${section}/${page} not found`);
 
     return React.createElement(component);

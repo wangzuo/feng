@@ -27,6 +27,8 @@ var React = require('react');
 var App = require('./app');
 
 function route(path) {
+  console.log('route', path);
+
   React.render(
     <App path={path}></App>,
     document.getElementById('app')
