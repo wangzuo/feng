@@ -47,7 +47,7 @@ history2.on('change', function(path) {
 document.body.addEventListener('click', function(e) {
   if(e.target.classList.contains('j-link')) {
     e.preventDefault();
-    var href = e.target.getAttribute('href');
+    var href = e.target.dataset.href;
     route(href);
     history2.change(href);
   }

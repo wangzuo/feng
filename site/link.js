@@ -8,8 +8,8 @@ module.exports = React.createClass({
     var href = this.props.href;
 
     return (
-      <a
-        href={`/feng-ui${href}.html`}
+      <a href={`/feng-ui${href}.html`}
+        data-href={href}
         target={this.props.target}
         className={cx('j-link', this.props.classNams)}>
         {this.props.children}
