@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './site/index.js',
+  entry: './site/route.js',
   output: {
     path: __dirname + '/builds',
     filename: 'index.js',

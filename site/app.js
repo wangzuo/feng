@@ -7,6 +7,7 @@ var Grid = require('../react/grid');
 var sections = require('./pages');
 
 var pages = {
+  '/': require('./'),
   'getting-started': require('./getting-started'),
   'react': {
     'feng-form': require('./react/feng-form'),
