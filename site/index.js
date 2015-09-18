@@ -1,7 +1,6 @@
 var React = require('react');
 var Markdown = require('../react/markdown');
 
-// todo: render with markdown
 module.exports = React.createClass({
   render() {
     return (

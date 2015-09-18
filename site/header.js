@@ -10,7 +10,7 @@ module.exports = React.createClass({
       <div className="m-header">
         <div className="g-c">
           <a to="/">feng-ui</a>
-          <Nav className="nav" items={pages}/>
+          {/*<Nav className="nav" items={pages}/>*/}
         </div>
       </div>
     );

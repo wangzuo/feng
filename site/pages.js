@@ -6,44 +6,44 @@ module.exports = [{
   path: 'css',
   pages: [{
     text: 'Grid',
-    path: '/css/grid'
+    path: 'grid'
   }, {
     text: 'Typography',
-    path: '/css/typography'
+    path: 'typography'
   }, {
     text: 'Buttons',
-    path: '/css/buttons'
+    path: 'buttons'
   }, {
     text: 'Labels',
-    path: '/css/labels'
+    path: 'labels'
   }, {
     text: 'Forms',
-    path: '/css/forms'
+    path: 'forms'
   }, {
     text: 'Card',
-    path: '/css/card'
+    path: 'card'
   }, {
     text: 'Avatars',
-    path: '/css/avatars'
+    path: 'avatars'
   }]
 }, {
   text: 'React',
   path: 'react',
   pages: [{
     text: 'Tabs',
-    path: '/react/tabs'
+    path: 'tabs'
   }, {
     text: 'Dropdown',
-    path: '/react/dropdown'
+    path: 'dropdown'
   }, {
     text: 'Dialog',
-    path: '/react/dialogs'
+    path: 'dialogs'
   }, {
     text: 'Markdown',
-    path: '/react/markdown'
+    path: 'markdown'
   }, {
     text: 'Feng Form',
-    path: '/react/feng-form'
+    path: 'feng-form'
   }]
 }, {
   text: 'About',
