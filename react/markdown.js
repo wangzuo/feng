@@ -4,7 +4,7 @@ var MarkdownIt = require('markdown-it');
 var md = new MarkdownIt();
 
 module.exports = React.createClass({
-  displayName: 'React',
+  displayName: 'Markdown',
 
   render() {
     var text = this.props.children;
