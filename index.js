@@ -16,5 +16,6 @@ module.exports = {
   'InputSlider': require('./lib/input-slider'),
   'InputSwitch': require('./lib/input-switch'),
   'Select': require('./lib/select'),
-  'Slat': require('./lib/slat')
+  'Slat': require('./lib/slat'),
+  'Markdown': require('./lib/markdown')
 };
