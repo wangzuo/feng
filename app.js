@@ -59,6 +59,7 @@ var App =
 	  '/': __webpack_require__(10),
 	  'getting-started': __webpack_require__(79),
 	  'react': {
+	    'index': __webpack_require__(80),
 	    'feng-form': __webpack_require__(80),
 	    tabs: __webpack_require__(132),
 	    dropdown: __webpack_require__(133),
@@ -66,6 +67,7 @@ var App =
 	    markdown: __webpack_require__(135)
 	  },
 	  css: {
+	    index: __webpack_require__(136),
 	    buttons: __webpack_require__(136),
 	    forms: __webpack_require__(137),
 	    card: __webpack_require__(138),
@@ -79,22 +81,37 @@ var App =
 	var Panel = React.createClass({
 	  displayName: 'Panel',
 
-	  renderPage: function renderPage(section, page) {
-	    var component = page ? pages[section][page] : pages[section];
-	    if (!component) throw new Error(section + '/' + page + ' not found');
+	  getPageComponent: function getPageComponent() {
+	    var path = this.props.path;
 
-	    return React.createElement(component);
+	    if (pages[path]) return pages[path];
+
+	    var ps = path.split('/');
+	    if (ps.length === 3) return pages[ps[1]][ps[2]];else if (ps.length === 2) return pages[ps[1]]['index'];
+	  },
+
+	  renderNav: function renderNav() {
+	    var path = this.props.path;
+	    var ps = path.split('/');
+
+	    if (!ps[1]) return null;
+
+	    var section = sections.filter(function (s) {
+	      return s.path === ps[1];
+	    })[0];
+
+	    if (!section) return null;
+
+	    return React.createElement(Nav, {
+	      title: section.text,
+	      className: 'u-nav u-nav-y',
+	      section: section,
+	      pages: section.pages
+	    });
 	  },
 
 	  render: function render() {
-	    var path = this.props.path;
-	    var ps = path.split('/');
-	    var section = ps[1];
-	    var page = ps[2];
-	    var current = sections.filter(function (page) {
-	      return page.path === section;
-	    })[0];
-	    if (!page && current.pages) page = current.pages[0].path.split('/')[2];
+	    var component = this.getPageComponent();
 
 	    return React.createElement(
 	      Grid.Container,
@@ -104,17 +121,13 @@ var App =
 	        null,
 	        React.createElement(
 	          Grid.Column,
-	          { d: page ? 3 : 0 },
-	          React.createElement(Nav, {
-	            title: section,
-	            className: 'u-nav u-nav-y',
-	            items: current.pages
-	          })
+	          { d: 3 },
+	          this.renderNav()
 	        ),
 	        React.createElement(
 	          Grid.Column,
 	          { d: 9 },
-	          this.renderPage(section, page)
+	          React.createElement(component)
 	        )
 	      )
 	    );
@@ -165,12 +178,12 @@ var App =
 	          'a',
 	          { to: '/' },
 	          'feng-ui'
-	        ),
-	        React.createElement(Nav, { className: 'nav', items: pages })
+	        )
 	      )
 	    );
 	  }
 	});
+	/*<Nav className="nav" items={pages}/>*/
 
 /***/ },
 /* 3 */
@@ -187,12 +200,14 @@ var App =
 
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      items: []
+	      section: null,
+	      pages: []
 	    };
 	  },
 
 	  render: function render() {
-	    var items = this.props.items;
+	    var section = this.props.section;
+	    var pages = this.props.pages;
 
 	    return React.createElement(
 	      'nav',
@@ -200,16 +215,16 @@ var App =
 	      React.createElement(
 	        'a',
 	        { href: 'javascript:void(0)', className: 'title' },
-	        this.props.title
+	        section.text
 	      ),
-	      items.map(function (item, i) {
+	      pages.map(function (page, i) {
 	        return React.createElement(
 	          Link,
 	          {
 	            key: i,
-	            href: item.path,
-	            target: item.target },
-	          item.text
+	            href: '/' + section.path + '/' + page.path,
+	            target: page.target },
+	          page.text
 	        );
 	      })
 	    );
@@ -312,44 +327,44 @@ var App =
 	  path: 'css',
 	  pages: [{
 	    text: 'Grid',
-	    path: '/css/grid'
+	    path: 'grid'
 	  }, {
 	    text: 'Typography',
-	    path: '/css/typography'
+	    path: 'typography'
 	  }, {
 	    text: 'Buttons',
-	    path: '/css/buttons'
+	    path: 'buttons'
 	  }, {
 	    text: 'Labels',
-	    path: '/css/labels'
+	    path: 'labels'
 	  }, {
 	    text: 'Forms',
-	    path: '/css/forms'
+	    path: 'forms'
 	  }, {
 	    text: 'Card',
-	    path: '/css/card'
+	    path: 'card'
 	  }, {
 	    text: 'Avatars',
-	    path: '/css/avatars'
+	    path: 'avatars'
 	  }]
 	}, {
 	  text: 'React',
 	  path: 'react',
 	  pages: [{
 	    text: 'Tabs',
-	    path: '/react/tabs'
+	    path: 'tabs'
 	  }, {
 	    text: 'Dropdown',
-	    path: '/react/dropdown'
+	    path: 'dropdown'
 	  }, {
 	    text: 'Dialog',
-	    path: '/react/dialogs'
+	    path: 'dialogs'
 	  }, {
 	    text: 'Markdown',
-	    path: '/react/markdown'
+	    path: 'markdown'
 	  }, {
 	    text: 'Feng Form',
-	    path: '/react/feng-form'
+	    path: 'feng-form'
 	  }]
 	}, {
 	  text: 'About',
@@ -538,7 +553,6 @@ var App =
 	var React = __webpack_require__(1);
 	var Markdown = __webpack_require__(11);
 
-	// todo: render with markdown
 	module.exports = React.createClass({
 	  displayName: 'exports',
 
