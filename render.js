@@ -12,6 +12,7 @@ function site(path) {
 
 var dir = 'feng-ui';
 
+// todo: sharing html templates ?
 function html(str, page) {
   return `<!DOCTYPE html>
 <html>
@@ -42,7 +43,7 @@ function build(section, page, cb) {
   console.log('building', section, page);
   mkdirp(path.join(dir, section), function(err) {
     if(err) return cb(err);
-    fs.writeFile(`${dir}${page}.html`, html(site(`${page}`), page), function(err) {
+    fs.writeFile(`${dir}/${section}/${page}.html`, html(site(`/${section}/${page}`), page), function(err) {
       if(err) return cb(err);
       console.log('done', section, page);
       if(cb) cb();
