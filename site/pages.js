@@ -39,6 +39,9 @@ module.exports = [{
     text: 'Dialog',
     path: '/react/dialogs'
   }, {
+    text: 'Markdown',
+    path: '/react/markdown'
+  }, {
     text: 'Feng Form',
     path: '/react/feng-form'
   }]

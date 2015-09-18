@@ -16,6 +16,7 @@ var FengForm = require('../react/feng-form');
 var Dropdown = require('../react/dropdown');
 var Dialog = require('../react/dialog');
 var Avatar = require('../react/avatar');
+var Markdown = require('../react/markdown');
 
 var Code = require('./code');
 

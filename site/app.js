@@ -13,7 +13,8 @@ var pages = {
     'feng-form': require('./react/feng-form'),
     tabs: require('./react/tabs'),
     dropdown: require('./react/dropdown'),
-    dialogs: require('./react/dialogs')
+    dialogs: require('./react/dialogs'),
+    markdown: require('./react/markdown')
   },
   css: {
     buttons: require('./css/buttons'),
