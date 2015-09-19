@@ -12,7 +12,7 @@ module.exports = React.createClass({
         <Grid.Container>
           <Grid.Row>
             <Grid.Column d={3}>
-              <nav>
+              <nav className="u-nav-x">
                 <a href="https://github.com/wangzuo/feng-ui">Github</a>
                 <a href="https://npmjs.com/package/feng-ui">NPM</a>
                 <a href="#">About</a>

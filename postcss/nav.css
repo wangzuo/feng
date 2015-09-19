@@ -8,7 +8,16 @@
     &.is-active {
       font-weight: bold;
     }
+  }
+}
 
+.u-nav-x {
+  a {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 }
 

@@ -1,12 +1,22 @@
 @import '_variables';
 
 .m-header {
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding: 15px 0;
   margin-bottom: 18px;
   border-bottom: 1px solid var(--color-light-gray);
 
   .nav {
     float: right;
+  }
+
+  h1 {
+    margin: 0;
+    float: left;
+
+    a {
+      display: block;
+      font-size: 18px;
+      line-height: 1;
+    }
   }
 }
