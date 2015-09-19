@@ -56,75 +56,18 @@ var App =
 	var sitemap = __webpack_require__(9);
 	var pages = __webpack_require__(143)(sitemap);
 
-	// var Panel = React.createClass({
-	//   displayName: 'Panel',
-	//
-	//   getPageComponent() {
-	//     var path = this.props.path;
-	//
-	//     if(pages[path]) return pages[path];
-	//
-	//     var ps = path.split('/');
-	//     if(ps.length === 3) return pages[ps[1]][ps[2]]
-	//     else if(ps.length === 2) return pages[ps[1]]['index'];
-	//   },
-	//
-	//   renderNav() {
-	//     return null;
-	//
-	//     var path = this.props.path;
-	//     var ps = path.split('/');
-	//
-	//     if(!ps[1]) return null;
-	//
-	//     var section = sections.filter(function(s) {
-	//       return s.path === ps[1]
-	//     })[0];
-	//
-	//     if(!section) return null;
-	//
-	//     return (
-	//       <Nav
-	//         title={section.text}
-	//         className="u-nav u-nav-y"
-	//         section={section}
-	//         pages={section.pages}
-	//       />
-	//     );
-	//   },
-	//
-	//   render() {
-	//     // var component = this.getPageComponent();
-	//     var component = this.props.component;
-	//     console.log(component);
-	//
-	//     return (
-	//       <Grid.Container>
-	//         <Grid.Row>
-	//           <Grid.Column d={3}>
-	//             {this.renderNav()}
-	//           </Grid.Column>
-	//           <Grid.Column d={9}>
-	//             {React.createElement(component)}
-	//           </Grid.Column>
-	//         </Grid.Row>
-	//       </Grid.Container>
-	//     );
-	//   }
-	// });
-
 	module.exports = React.createClass({
 	  displayName: 'App',
 
-	  renderNav: function renderNav() {
-	    return null;
-	  },
-
 	  render: function render() {
 	    var path = this.props.path;
-	    var component = pages.filter(function (page) {
-	      return page.path === path;
-	    })[0].component;
+	    var page = pages.filter(function (p) {
+	      return p.path === path;
+	    })[0];
+	    var items = pages.filter(function (p) {
+	      return p.dir === page.dir;
+	    });
+	    var component = page.component;
 
 	    return React.createElement(
 	      'div',
@@ -139,7 +82,10 @@ var App =
 	          React.createElement(
 	            Grid.Column,
 	            { d: 3 },
-	            this.renderNav()
+	            React.createElement(Nav, {
+	              title: page.dir,
+	              className: 'u-nav u-nav-y',
+	              items: items })
 	          ),
 	          React.createElement(
 	            Grid.Column,
@@ -210,31 +156,28 @@ var App =
 
 	  getDefaultProps: function getDefaultProps() {
 	    return {
-	      section: null,
-	      pages: []
+	      title: null,
+	      items: []
 	    };
 	  },
 
 	  render: function render() {
-	    var section = this.props.section;
-	    var pages = this.props.pages;
-
 	    return React.createElement(
 	      'nav',
 	      { className: cx('u-nav', this.props.className) },
 	      React.createElement(
 	        'a',
 	        { href: 'javascript:void(0)', className: 'title' },
-	        section.text
+	        this.props.title
 	      ),
-	      pages.map(function (page, i) {
+	      this.props.items.map(function (item, i) {
 	        return React.createElement(
 	          Link,
 	          {
 	            key: i,
-	            href: '/' + section.path + '/' + page.path,
-	            target: page.target },
-	          page.text
+	            href: item.html,
+	            path: item.path },
+	          item.text
 	        );
 	      })
 	    );
@@ -310,13 +253,14 @@ var App =
 
 	  render: function render() {
 	    var href = this.props.href;
-	    if (href[0] !== '/') href = '/' + href;
+	    var path = this.props.path;
+	    var target = this.props.target;
 
 	    return React.createElement(
 	      'a',
-	      { href: '/feng-ui' + href + '.html',
-	        'data-href': href,
-	        target: this.props.target,
+	      { href: '/feng-ui' + href,
+	        'data-href': path,
+	        target: target,
 	        className: cx('j-link', this.props.classNams) },
 	      this.props.children
 	    );
@@ -18593,37 +18537,36 @@ var App =
 	  function renderPage(page, prefix) {
 	    var subpages = page.pages;
 	    var component = page.component;
+	    var text = page.text;
 
 	    if (prefix === undefined) {
 	      // index page
 	      res.push({
+	        text: text,
 	        dir: '/',
 	        path: '/',
 	        html: 'index.html',
 	        component: component
 	      });
-	      // fns.push(build.bind(null, '/', '/', 'index.html', component));
 	    } else {
-	        if (subpages && subpages.length) {
-
-	          res.push({
-	            dir: prefix,
-	            path: prefix + '/' + page.path,
-	            html: prefix + '/' + page.path + '/index.html',
-	            component: component
-	          });
-
-	          // fns.push(build.bind(null, prefix, `${prefix}/${page.path}`, `${prefix}/${page.path}/index.html`, component));
-	        } else {
-	            res.push({
-	              dir: prefix,
-	              path: prefix + '/' + page.path,
-	              html: prefix + '/' + page.path + '.html',
-	              component: component
-	            });
-	            // fns.push(build.bind(null, prefix, `${prefix}/${page.path}`, `${prefix}/${page.path}.html`, component));
-	          }
+	      if (subpages && subpages.length) {
+	        res.push({
+	          text: text,
+	          dir: prefix,
+	          path: prefix + '/' + page.path,
+	          html: prefix + '/' + page.path + '/index.html',
+	          component: component
+	        });
+	      } else {
+	        res.push({
+	          text: text,
+	          dir: prefix,
+	          path: prefix + '/' + page.path,
+	          html: prefix + '/' + page.path + '.html',
+	          component: component
+	        });
 	      }
+	    }
 
 	    if (subpages && subpages.length) {
 	      var _prefix = prefix === undefined ? '' : prefix + '/' + page.path;
