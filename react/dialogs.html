@@ -10,14 +10,40 @@
     <link rel="stylesheet" href="/feng-ui/example.css" type="text/css"/>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app"><div class="app" data-reactid=".xipwhx1jwg" data-react-checksum="1327952619"><div class="m-header" data-reactid=".xipwhx1jwg.0"><div class="g-c" data-reactid=".xipwhx1jwg.0.0"><h1 data-reactid=".xipwhx1jwg.0.0.0"><a href="/feng-ui/.html" data-href="/" class="j-link" data-reactid=".xipwhx1jwg.0.0.0.0">feng-ui</a></h1></div></div><div class="g-c" data-reactid=".xipwhx1jwg.1"><div class="g-r" data-reactid=".xipwhx1jwg.1.0"><div d="3" class="g-3 g-t-12 g-m-12" data-reactid=".xipwhx1jwg.1.0.0"></div><div d="9" class="g-9 g-t-12 g-m-12" data-reactid=".xipwhx1jwg.1.0.1"><div data-reactid=".xipwhx1jwg.1.0.1.0"><h3 data-reactid=".xipwhx1jwg.1.0.1.0.0">Dialogs</h3><div class="m-example" data-reactid=".xipwhx1jwg.1.0.1.0.1"><div class="preview" data-reactid=".xipwhx1jwg.1.0.1.0.1.0"><div data-reactid=".xipwhx1jwg.1.0.1.0.1.0.0"><button class="u-btn" type="button" data-reactid=".xipwhx1jwg.1.0.1.0.1.0.0.0"><span data-reactid=".xipwhx1jwg.1.0.1.0.1.0.0.0.1">Open dialog</span></button><div class="u-dialog-wrap" data-reactid=".xipwhx1jwg.1.0.1.0.1.0.0.1"><div class="u-dialog-bg" data-reactid=".xipwhx1jwg.1.0.1.0.1.0.0.1.0"></div><div class="u-dialog" data-reactid=".xipwhx1jwg.1.0.1.0.1.0.0.1.1"><div class="content" data-reactid=".xipwhx1jwg.1.0.1.0.1.0.0.1.1.0"><span data-reactid=".xipwhx1jwg.1.0.1.0.1.0.0.1.1.0.0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</span><span data-reactid=".xipwhx1jwg.1.0.1.0.1.0.0.1.1.0.1">x</span></div></div></div></div></div><div class="u-tabs codes" data-reactid=".xipwhx1jwg.1.0.1.0.1.1"><div class="tabs-nav" data-reactid=".xipwhx1jwg.1.0.1.0.1.1.0"><div class="tab is-active" data-reactid=".xipwhx1jwg.1.0.1.0.1.1.0.0">React</div></div><div class="tabs-contents" data-reactid=".xipwhx1jwg.1.0.1.0.1.1.1"><div class="tabs-content is-active" data-reactid=".xipwhx1jwg.1.0.1.0.1.1.1.0"><pre data-reactid=".xipwhx1jwg.1.0.1.0.1.1.1.0.0">
+<code class="language-markup" data-reactid=".xipwhx1jwg.1.0.1.0.1.1.1.0.0.0">var App = React.createClass({
+  getInitialState() {
+    return {
+      open: false
+    };
+  },
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button onClick={this.toggleDialog}&gt;Open dialog&lt;/Button&gt;
+        &lt;Dialog open={this.state.open} onClose={this.handleClose}/&gt;
+      &lt;/div&gt;
+    );
+  },
+
+  handleClose() {
+    this.setState({open: false});
+  },
+
+  toggleDialog() {
+    this.setState({open: !this.state.open});
+  }
+});
+
+&lt;App/&gt;;</code></pre></div></div></div></div></div></div></div></div><div class="m-footer" data-reactid=".xipwhx1jwg.2"><div class="g-c" data-reactid=".xipwhx1jwg.2.0"><div class="g-r" data-reactid=".xipwhx1jwg.2.0.0"><div d="12" class="g-12 g-t-12 g-m-12" data-reactid=".xipwhx1jwg.2.0.0.0"><nav class="u-nav-x" data-reactid=".xipwhx1jwg.2.0.0.0.0"><a href="https://github.com/wangzuo/feng-ui" data-reactid=".xipwhx1jwg.2.0.0.0.0.0">Github</a><a href="https://npmjs.com/package/feng-ui" data-reactid=".xipwhx1jwg.2.0.0.0.0.1">NPM</a><a href="#" data-reactid=".xipwhx1jwg.2.0.0.0.0.2">About</a></nav><div class="leadtext" data-reactid=".xipwhx1jwg.2.0.0.0.1">Copyright © 2015 (ISC) License</div></div></div></div></div></div></div>
 
   <script src="https://fb.me/react-0.13.3.js"></script>
   <script src="/feng-ui/vendors/prism.js" data-manual></script>
   <script src="/feng-ui/vendors/babel-browser.min.js"></script>
   <script src="/feng-ui/app.js"></script>
   <script>
-    React.render(React.createElement(App, {path: 'undefined'}), document.getElementById('app'));
+    React.render(React.createElement(App, {path: '/react/dialogs'}), document.getElementById('app'));
   </script>
   </body>
 </html>
