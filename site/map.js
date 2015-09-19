@@ -1,13 +1,13 @@
-modules.exports = {
-  path: '/',
+module.exports = {
   component: require('./index'),
   pages: [{
-    name: 'Getting started',
+    text: 'Getting started',
     path: 'getting-started',
     component: require('./getting-started')
   }, {
-    text: 'CSS'
-    name: '/css',
+    text: 'CSS',
+    path: 'css',
+    component: require('./css'),
     pages: [{
       text: 'Grid',
       path: 'grid',
@@ -40,24 +40,27 @@ modules.exports = {
   }, {
     text: 'React',
     path: 'react',
+    component: require('./react'),
     pages: [{
       text: 'Tabs',
-      path: 'tabs'
+      path: 'tabs',
+      component: require('./react/tabs')
     }, {
       text: 'Dropdown',
-      path: 'dropdown'
+      path: 'dropdown',
+      component: require('./react/dropdown')
     }, {
       text: 'Dialog',
-      path: 'dialogs'
+      path: 'dialogs',
+      component: require('./react/dialogs')
     }, {
       text: 'Markdown',
-      path: 'markdown'
+      path: 'markdown',
+      component: require('./react/markdown')
     }, {
       text: 'Feng Form',
-      path: 'feng-form'
+      path: 'feng-form',
+      component: require('./react/feng-form')
     }]
-  }, {
-    text: 'About',
-    path: 'about'
   }]
 };

@@ -1,16 +1,35 @@
 var fs = require('fs');
-var path = require('path');
 var async = require('async');
 var mkdirp = require('mkdirp');
 var React = require('react');
-var sections = require('./site/pages');
+
 var App = require('./site/app');
+var sitemap = require('./site/map');
+var pages = require('./pages')(sitemap);
+
+var fns = pages.map((page) => {
+  return build.bind(null, page.dir, page.path, page.html, page.component)
+});
+
+function build(dir, path, filePath, component, cb) {
+  mkdirp('feng-ui/' + dir, function(err) {
+    if(err) return cb(err);
+
+    console.log(dir, path, '->', filePath);
+
+    fs.writeFile('feng-ui/' + filePath, html(site(path), path), function(err) {
+      if(err) return cb(err);
+
+      console.log('output to', filePath);
+
+      if(cb) cb();
+    });
+  });
+}
 
 function site(path) {
   return React.renderToString(<App path={path}/>);
 };
-
-var dir = 'feng-ui';
 
 // todo: sharing html templates ?
 function html(str, page) {
@@ -39,29 +58,7 @@ function html(str, page) {
 </html>`;
 }
 
-function build(section, page, cb) {
-  console.log('building', section, page);
-  mkdirp(path.join(dir, section), function(err) {
-    if(err) return cb(err);
-    fs.writeFile(`${dir}/${section}/${page}.html`, html(site(`/${section}/${page}`), page), function(err) {
-      if(err) return cb(err);
-      console.log('done', section, page);
-      if(cb) cb();
-    });
- });
-}
 
-var fns = [];
-sections.map((section) => {
-  if(!section.pages) return;
-
-  section.pages.map((page) => {
-    fns.push(build.bind(null, section.path, page.path));
-  });
+async.parallel(fns, (err, results) =>  {
+  if(err) throw err;
 });
-
-//module.exports = function(cb) {
-  async.parallel(fns, (err, results) =>  {
-    console.log('done');
-  });
-// }
