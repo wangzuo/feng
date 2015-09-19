@@ -1,5 +1,5 @@
 var React = require('react');
-var Grid = require('../lib/grid');
+var Grid = require('../react/grid');
 
 module.exports = React.createClass({
   displayName: 'Footer',
@@ -11,7 +11,7 @@ module.exports = React.createClass({
       <div className="m-footer">
         <Grid.Container>
           <Grid.Row>
-            <Grid.Column d={3}>
+            <Grid.Column d={12}>
               <nav className="u-nav-x">
                 <a href="https://github.com/wangzuo/feng-ui">Github</a>
                 <a href="https://npmjs.com/package/feng-ui">NPM</a>

@@ -32,17 +32,17 @@ exports.Column = React.createClass({
 
   getDefaultProps() {
     return {
-      d: 1,
-      t: 1,
-      m: 1
+      d: 12,
+      t: 12,
+      m: 12
     }
   },
 
   render() {
     var cn = cx(
       `g-${this.props.d}`,
-      `t-${this.props.t}`,
-      `m-${this.props.m}`,
+      `g-t-${this.props.t}`,
+      `g-m-${this.props.m}`,
       this.props.className
     );
 
