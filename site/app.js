@@ -70,11 +70,11 @@ var Panel = React.createClass({
     return (
       <Grid.Container>
         <Grid.Row>
-          <Grid.Column d={9}>
-            {React.createElement(component)}
-          </Grid.Column>
           <Grid.Column d={3}>
             {this.renderNav()}
+          </Grid.Column>
+          <Grid.Column d={9}>
+            {React.createElement(component)}
           </Grid.Column>
         </Grid.Row>
       </Grid.Container>
