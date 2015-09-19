@@ -7,24 +7,21 @@ module.exports = React.createClass({
 
   getDefaultProps() {
     return {
-      section: null,
-      pages: []
+      title: null,
+      items: []
     };
   },
 
   render() {
-    var section = this.props.section;
-    var pages = this.props.pages;
-
     return (
       <nav className={cx('u-nav', this.props.className)}>
-        <a href="javascript:void(0)" className="title">{section.text}</a>
-        {pages.map((page, i) => (
+        <a href="javascript:void(0)" className="title">{this.props.title}</a>
+        {this.props.items.map((item, i) => (
           <Link
             key={i}
-            href={`/${section.path}/${page.path}`}
-            target={page.target}>
-            {page.text}
+            href={item.html}
+            path={item.path}>
+            {item.text}
           </Link>
         ))}
       </nav>

@@ -6,12 +6,13 @@ module.exports = React.createClass({
 
   render() {
     var href = this.props.href;
-    if(href[0] !== '/') href = '/' + href;
+    var path = this.props.path;
+    var target = this.props.target;
 
     return (
-      <a href={`/feng-ui${href}.html`}
-        data-href={href}
-        target={this.props.target}
+      <a href={`/feng-ui${href}`}
+        data-href={path}
+        target={target}
         className={cx('j-link', this.props.classNams)}>
         {this.props.children}
       </a>
