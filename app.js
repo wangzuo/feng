@@ -81,7 +81,7 @@ var App =
 	          null,
 	          React.createElement(
 	            Grid.Column,
-	            { d: 3 },
+	            { d: items.length > 1 ? 3 : 0 },
 	            React.createElement(Nav, {
 	              title: page.dir,
 	              className: 'u-nav u-nav-y',
