@@ -21,9 +21,9 @@ module.exports = React.createClass({
     return (
       <Grid.Column d={3}>
         <Nav
-          title={page.dir}
+          title={items[0].text}
           className="u-nav u-nav-y"
-          items={items}>
+          items={items.slice(1)}>
         </Nav>
       </Grid.Column>
     );
