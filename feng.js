@@ -15,9 +15,9 @@ function build(dir, path, filePath, component, cb) {
   mkdirp('feng-ui/' + dir, function(err) {
     if(err) return cb(err);
 
-    console.log(dir, path, '->', filePath);
+    console.log(dir, path, filePath);
 
-    fs.writeFile('feng-ui/' + filePath, html(site(path), path), function(err) {
+    fs.writeFile(`feng-ui${filePath}`, html(site(path), path), function(err) {
       if(err) return cb(err);
 
       console.log('output to', filePath);
@@ -57,7 +57,6 @@ function html(str, page) {
   </body>
 </html>`;
 }
-
 
 async.parallel(fns, (err, results) =>  {
   if(err) throw err;

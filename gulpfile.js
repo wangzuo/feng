@@ -127,4 +127,4 @@ gulp.task('gh-pages', ['site'], function() {
 
 gulp.task('dist', ['dist:css', 'dist:js']);
 gulp.task('clean', ['clean:postcss', 'clean:react', 'clean:site', 'clean:dist']);
-gulp.task('default', ['dist', 'site']);
+gulp.task('default', ['clean', 'dist', 'site']);

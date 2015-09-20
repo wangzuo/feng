@@ -10,10 +10,28 @@ var pages = require('../pages')(sitemap);
 module.exports = React.createClass({
   displayName: 'App',
 
+  renderNav() {
+    var path = this.props.path;
+    var page = pages.filter((p) => (p.path === path))[0];
+    if(page.dir === '/') return null;
+
+    var items = pages.filter((p) => (p.dir === page.dir));
+    if(items.length <= 1) return nul;
+
+    return (
+      <Grid.Column d={3}>
+        <Nav
+          title={page.dir}
+          className="u-nav u-nav-y"
+          items={items}>
+        </Nav>
+      </Grid.Column>
+    );
+  },
+
   render() {
     var path = this.props.path;
     var page = pages.filter((p) => (p.path === path))[0];
-    var items = pages.filter((p) => (p.dir === page.dir));
     var component = page.component;
 
     return (
@@ -21,13 +39,7 @@ module.exports = React.createClass({
         <Header/>
         <Grid.Container>
           <Grid.Row>
-            <Grid.Column d={items.length > 1 ? 3 : 0}>
-              <Nav
-                title={page.dir}
-                className="u-nav u-nav-y"
-                items={items}>
-              </Nav>
-            </Grid.Column>
+            {this.renderNav()}
             <Grid.Column d={9}>
               {React.createElement(component)}
             </Grid.Column>

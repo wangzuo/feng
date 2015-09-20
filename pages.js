@@ -11,14 +11,14 @@ module.exports = function(sitemap) {
         text: text,
         dir: '/',
         path: '/',
-        html: 'index.html',
+        html: '/index.html',
         component: component
       });
     } else {
       if(subpages && subpages.length) {
         res.push({
           text: text,
-          dir: prefix,
+          dir: `/${page.path}`,
           path: `${prefix}/${page.path}`,
           html: `${prefix}/${page.path}/index.html`,
           component: component
@@ -26,7 +26,7 @@ module.exports = function(sitemap) {
       } else {
         res.push({
           text: text,
-          dir: prefix,
+          dir: prefix || '/',
           path: `${prefix}/${page.path}`,
           html: `${prefix}/${page.path}.html`,
           component: component
