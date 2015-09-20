@@ -59,14 +59,33 @@ var App =
 	module.exports = React.createClass({
 	  displayName: 'App',
 
+	  renderNav: function renderNav() {
+	    var path = this.props.path;
+	    var page = pages.filter(function (p) {
+	      return p.path === path;
+	    })[0];
+	    if (page.dir === '/') return null;
+
+	    var items = pages.filter(function (p) {
+	      return p.dir === page.dir;
+	    });
+	    if (items.length <= 1) return nul;
+
+	    return React.createElement(
+	      Grid.Column,
+	      { d: 3 },
+	      React.createElement(Nav, {
+	        title: page.dir,
+	        className: 'u-nav u-nav-y',
+	        items: items })
+	    );
+	  },
+
 	  render: function render() {
 	    var path = this.props.path;
 	    var page = pages.filter(function (p) {
 	      return p.path === path;
 	    })[0];
-	    var items = pages.filter(function (p) {
-	      return p.dir === page.dir;
-	    });
 	    var component = page.component;
 
 	    return React.createElement(
@@ -79,14 +98,7 @@ var App =
 	        React.createElement(
 	          Grid.Row,
 	          null,
-	          React.createElement(
-	            Grid.Column,
-	            { d: items.length > 1 ? 3 : 0 },
-	            React.createElement(Nav, {
-	              title: page.dir,
-	              className: 'u-nav u-nav-y',
-	              items: items })
-	          ),
+	          this.renderNav(),
 	          React.createElement(
 	            Grid.Column,
 	            { d: 9 },
@@ -18545,14 +18557,14 @@ var App =
 	        text: text,
 	        dir: '/',
 	        path: '/',
-	        html: 'index.html',
+	        html: '/index.html',
 	        component: component
 	      });
 	    } else {
 	      if (subpages && subpages.length) {
 	        res.push({
 	          text: text,
-	          dir: prefix,
+	          dir: '/' + page.path,
 	          path: prefix + '/' + page.path,
 	          html: prefix + '/' + page.path + '/index.html',
 	          component: component
@@ -18560,7 +18572,7 @@ var App =
 	      } else {
 	        res.push({
 	          text: text,
-	          dir: prefix,
+	          dir: prefix || '/',
 	          path: prefix + '/' + page.path,
 	          html: prefix + '/' + page.path + '.html',
 	          component: component
