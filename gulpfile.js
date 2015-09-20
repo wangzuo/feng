@@ -77,6 +77,15 @@ gulp.task('site:app', function(cb) {
       filename: 'app.js',
       library: 'App'
     },
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env': {
+          'NODE_ENV': JSON.stringify('production')
+        }
+      }),
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin()
+    ],
     module: {
       loaders: [
         {test: /\.json$/, loader: 'json-loader'},
