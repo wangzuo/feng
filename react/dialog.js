@@ -13,7 +13,7 @@ module.exports = React.createClass({
   render() {
     var cn = cx('u-dialog-wrap', {
       'is-open': this.props.open
-    });
+    }, this.props.className);
 
     return (
       <div className={cn}>

@@ -11,7 +11,7 @@ module.exports = React.createClass({
 {`var App = React.createClass({
   getInitialState() {
     return {
-      open: false
+      open: true
     };
   },
 
