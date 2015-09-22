@@ -3,7 +3,6 @@ var Header = require('./header');
 var Footer = require('./footer');
 var Nav = require('./nav');
 var Grid = require('../react/grid');
-
 var sitemap = require('./map');
 var pages = require('../pages')(sitemap);
 
@@ -36,7 +35,7 @@ module.exports = React.createClass({
 
     return (
       <div className="app">
-        <Header/>
+        <Header pages={pages}/>
         <Grid.Container>
           <Grid.Row>
             {this.renderNav()}

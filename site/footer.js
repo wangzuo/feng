@@ -1,5 +1,6 @@
 var React = require('react');
 var Grid = require('../react/grid');
+var packageInfo = require('../package.json');
 
 module.exports = React.createClass({
   displayName: 'Footer',
@@ -8,8 +9,8 @@ module.exports = React.createClass({
     var year = new Date().getFullYear();
 
     return (
-      <div className="m-footer">
-        <Grid.Container>
+      <Grid.Container>
+        <div className="m-footer">
           <Grid.Row>
             <Grid.Column d={12}>
               <nav className="u-nav-x">
@@ -17,13 +18,14 @@ module.exports = React.createClass({
                 <a href="https://npmjs.com/package/feng-ui">NPM</a>
                 <a href="#">About</a>
               </nav>
+              <b>Ver {packageInfo.version}</b>
               <div className="leadtext">
                 Copyright &copy; 2015 (ISC) License
               </div>
             </Grid.Column>
           </Grid.Row>
-        </Grid.Container>
-      </div>
+        </div>
+      </Grid.Container>
     );
   }
 });
