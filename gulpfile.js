@@ -134,6 +134,11 @@ gulp.task('gh-pages', ['site'], function() {
     .pipe(ghPages());
 });
 
+gulp.task('watch', function() {
+  gulp.watch('react/*.js', ['react']);
+  gulp.watch('postcss/*.css', ['postcss']);
+});
+
 gulp.task('dist', ['dist:css', 'dist:js']);
 gulp.task('clean', ['clean:postcss', 'clean:react', 'clean:site', 'clean:dist']);
 gulp.task('default', ['clean', 'dist', 'site']);

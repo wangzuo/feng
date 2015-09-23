@@ -11,6 +11,7 @@ var InputSlider = require('react-input-slider');
 
 var Field = require('./field');
 var Form = require('./form');
+var Button = require('./button');
 
 function renderElement(attr, value, onChange) {
   var type = attr.type;
@@ -138,6 +139,29 @@ function renderElement(attr, value, onChange) {
           />
         </Field>
       );
+
+    case 'Email':
+      return (
+        <Field label={label}>
+          <input
+            type="email"
+            value={value}
+            name={name}
+            onChange={handleChange}
+          />
+        </Field>
+      );
+    case 'Password':
+      return (
+        <Field label={label}>
+          <input
+            type="password"
+            value={value}
+            name={name}
+            onChange={handleChange}
+          />
+        </Field>
+      );
   }
 }
 
@@ -179,6 +203,8 @@ module.exports = React.createClass({
             onChange={this.handleChange}
           />
         )}
+
+        <Button type="submit" color="blue">Submit</Button>
       </Form>
     );
   },

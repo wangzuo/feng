@@ -12,7 +12,8 @@ module.exports = React.createClass({
       active: false,
       hover: false,
       disabled: false,
-      loading: false
+      loading: false,
+      type: 'button'
     };
   },
 
@@ -60,7 +61,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <button {... this.props} className={cn} type="button">
+      <button {... this.props} className={cn} type={this.props.type}>
         {this.renderSpinner()}
         {this.props.children}
       </button>
