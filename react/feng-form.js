@@ -71,6 +71,19 @@ function renderElement(attr, value, onChange) {
           />
         </Field>
       );
+
+
+    case 'File':
+      return (
+        <Field label={label}>
+          <input
+            type="file"
+            value={value}
+            name={name}
+            onChange={handleChange}
+          />
+        </Field>
+      );
     case 'Color':
       return (
         <Field label={label} horizontal>
