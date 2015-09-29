@@ -10,6 +10,11 @@ module.exports = React.createClass({
     var text = this.props.children;
     var html = md.render(text);
 
-    return <div dangerouslySetInnerHTML={{__html: html}}/>;
+    return (
+      <div
+        className={this.props.className}
+        dangerouslySetInnerHTML={{__html: html}}
+      />
+    );
   }
 });
