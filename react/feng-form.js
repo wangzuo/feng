@@ -73,6 +73,7 @@ function renderElement(attr, value, onChange) {
       );
 
 
+    case 'Image':
     case 'File':
       return (
         <Field label={label}>

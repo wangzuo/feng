@@ -9,7 +9,8 @@ module.exports = React.createClass({
   getDefaultProps() {
     return {
       round: false,
-      circle: false
+      circle: false,
+      src: null
     };
   },
 
@@ -31,6 +32,7 @@ module.exports = React.createClass({
   renderInner() {
     var name = this.props.name;
     var email = this.props.email;
+    var src = this.props.src;
 
     if(name && name.length) return name[0];
     if(email) {
@@ -39,6 +41,8 @@ module.exports = React.createClass({
       if(this.props.size === 'lg') size = 80;
       return <img src={`http://www.gravatar.com/avatar/${hash}?s=${size}`}/>;
     }
+
+    if(src) return <img src={src}/>;
   },
 
   render() {
