@@ -1,4 +1,9 @@
 :root {
+  --base-font-size: 13;
+  --base-line-height: 1.5;
+  --leading: calc(var(--base-line-height) * 1rem);
+  --scale: 1.414;
+
   --color-white: #ffffff;
   --color-blue: #1385e5;
   --color-green: #27ae60;

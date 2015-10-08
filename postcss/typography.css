@@ -1,51 +1,124 @@
 @import '_variables';
 
-body {
-  font-family: var(--body-font-family);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.5;
-  font-size: 13px;
-  color: var(--body-font-color);
+html {
+    font-family: var(--body-font-family);
+    font-size: calc(var(--base-font-size) - 0px);
+    font-size: calc(var(--base-font-size) / 16 * 100%);
+
+    /* Make everything look a little nicer in webkit */
+    -webkit-font-smoothing: antialiased;
+    /* -webkit-text-size-adjust: auto
+    // -moz-text-size-adjust: auto
+    // -ms-text-size-adjust: auto
+    // -o-text-size-adjust: auto
+    // text-size-adjust: auto */
+
+}
+/* Copy & Lists */
+
+p {
+  line-height: var(--leading);
+  margin-top: var(--leading);
+  margin-bottom: 0;
 }
 
-h1, h2, h3, h4, h5 {
-  margin-top: 1em;
-  margin-bottom: 0.6em;
-  line-height: 1.3;
+ul,
+ol {
+  margin-top: var(--leading);
+  margin-bottom: var(--leading);
+}
+
+ul li,
+ol li {
+  line-height: var(--leading);
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+blockquote {
+  line-height: var(--leading);
+  margin-top: var(--leading);
+  margin-bottom: var(--leading);
+}
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Change heading typefaces here */
+  font-family: sans-serif;
+  margin-top: var(--leading);
+  margin-bottom: 0;
+  line-height: var(--leading);
+}
+
+h1 {
+  font-size: calc(3 * var(--scale) * 1rem);
+  line-height: calc(3 * var(--leading));
+  margin-top: calc(2 * var(--leading));
+}
+
+h2 {
+  font-size: calc(2 * var(--scale) * 1rem);
+  line-height: calc(2 * var(--leading));
+  margin-top: calc(2 * var(--leading));
+}
+
+h3 {
+  font-size: calc(1 * var(--scale) * 1rem);
+}
+
+h4 {
+  font-size: calc(var(--scale) / 2 * 1rem);
+}
+
+h5 {
+  font-size: calc(var(--scale) / 3 * 1rem);
+}
+
+h6 {
+  font-size: calc(var(--scale) / 4 * 1rem);
+}
+/* Tables */
+
+table {
+  margin-top: var(--leading);
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 0;
+  line-height: calc(var(--base-line-height) * var(--base-font-size) - 0px);
+}
+/* Code blocks */
+
+code {
+  font-family: var(--code-font-family);
+  /* Forces text to constrain to the line-height. Not ideal, but works. */
+  vertical-align: bottom;
+}
+/* Leading paragraph text */
+
+.lead {
+  font-size: calc(var(--scale) * 1rem);
+}
+/* Hug a the block above you */
+
+.hug {
+  margin-top: 0;
 }
 
 a {
   color: var(--link-color);
   text-decoration: none;
-}
-
-hr {
-  background: #eeeeee;
-  border: none;
-  height: 1px;
-  margin-bottom: 20px;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 12px;
-}
-
-table {
-  margin-top: 1.5rem;
-  border-spacing: 0px;
-  border-collapse: collapse;
-
-  td,
-  th {
-    padding: 0;
-    line-height: 33px;
-  }
-}
-
-pre,
-code {
-  font-family: var(--code-font-family);
-  font-size: 12px;
 }

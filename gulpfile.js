@@ -47,6 +47,10 @@ gulp.task('dist:css', ['postcss'], function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('watch-css', function() {
+  gulp.watch('postcss/*.css', ['dist:css']);
+});
+
 gulp.task('webpack', ['react'], function(cb) {
   webpack({
     entry: './index.js',
