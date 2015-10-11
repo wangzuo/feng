@@ -1,0 +1,30 @@
+@import '_variables';
+
+.u-table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 13px;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  thead {
+    th {
+      padding: 12px 5px;
+      border-bottom-width: 1px;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: var(--color-light-gray);
+    }
+
+    td {
+      padding: 12px 8px;
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.u-table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 13px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.u-table thead th {
+  padding: 12px 5px;
+  border-bottom-width: 1px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+}
+.u-table tbody tr:nth-of-type(odd) {
+  background-color: #eaeaea;
+}
+.u-table tbody td {
+  padding: 12px 8px;
+  vertical-align: middle;
+}
