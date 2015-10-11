@@ -72,7 +72,6 @@ function renderElement(attr, value, onChange) {
         </Field>
       );
 
-
     case 'Image':
     case 'File':
       return (
@@ -82,6 +81,7 @@ function renderElement(attr, value, onChange) {
             value={value}
             name={name}
             onChange={handleChange}
+            multiple={attr.multiple}
           />
         </Field>
       );
@@ -198,14 +198,17 @@ module.exports = React.createClass({
 
   getDefaultProps() {
     return {
-      attrs: [],
-      values: {}
+      model: {
+        attrs: [],
+        values: {}
+      }
     };
   },
 
   render() {
-    var attrs = this.props.attrs;
-    var values = this.props.values;
+    var model = this.props.model;
+    var attrs = model.attrs;
+    var values = model.values || {};
 
     return (
       <Form {... this.props}>
@@ -217,7 +220,7 @@ module.exports = React.createClass({
             onChange={this.handleChange}
           />
         )}
-
+        <input name="_model" type="hidden" value={model.table}/>
         <Button type="submit" color="blue">Submit</Button>
       </Form>
     );
