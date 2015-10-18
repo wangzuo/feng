@@ -220,21 +220,29 @@ module.exports = React.createClass({
     };
   },
 
+  renderAttr(attr, i) {
+    var model = this.props.model;
+    var values = model.values || {};
+
+    if(attr.name === model.user) return null;
+
+    return (
+      <Element
+        key={i}
+        attr={attr}
+        value={values[attr.name]}
+        onChange={this.handleChange}
+      />
+    );
+  },
+
   render() {
     var model = this.props.model;
     var attrs = model.attrs;
-    var values = model.values || {};
 
     return (
       <Form {... this.props}>
-        {attrs.map((attr, i) =>
-          <Element
-            key={i}
-            attr={attr}
-            value={values[attr.name]}
-            onChange={this.handleChange}
-          />
-        )}
+        {attrs.map(this.renderAttr)}
         <input name="_model" type="hidden" value={model.table}/>
         <Button type="submit" color="blue">Submit</Button>
       </Form>
