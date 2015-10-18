@@ -189,6 +189,7 @@ function renderElement(attr, value, onChange) {
       return (
         <Field label={label}>
           <input
+            autoComplete="new-password"
             type="password"
             value={value}
             name={name}
