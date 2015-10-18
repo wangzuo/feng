@@ -140,7 +140,7 @@ gulp.task('gh-pages', ['site'], function() {
 
 gulp.task('watch', function() {
   gulp.watch('react/*.js', ['react']);
-  gulp.watch('postcss/*.css', ['postcss']);
+  gulp.watch('postcss/*.css', ['dist:css']);
 });
 
 gulp.task('dist', ['dist:css', 'dist:js']);

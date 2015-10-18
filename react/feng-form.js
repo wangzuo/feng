@@ -23,22 +23,22 @@ function renderElement(attr, value, onChange) {
   };
 
   // fix react-select options
-  if(attr.options) {
-    attr.options = attr.options.map((option) => ({
-      value: option,
-      label: option
-    }));
+  // if(attr.options) {
+  //   attr.options = attr.options.map((option) => ({
+  //     value: option,
+  //     label: option
+  //   }));
 
-    if(type === 'Array') {
-      handleChange = function(value, selected) {
-        onChange(name, selected.map((s) => s.value));
-      };
-    } else if(type === 'Enum') {
-      handleChange = function(value, selected) {
-        onChange(name, value);
-      };
-    }
-  }
+  //   if(type === 'Array') {
+  //     handleChange = function(value, selected) {
+  //       onChange(name, selected.map((s) => s.value));
+  //     };
+  //   } else if(type === 'Enum') {
+  //     handleChange = function(value, selected) {
+  //       onChange(name, value);
+  //     };
+  //   }
+  // }
 
   if(type === 'Boolean' || type === 'Color') {
     handleChange = function(value) {
@@ -139,6 +139,21 @@ function renderElement(attr, value, onChange) {
             multi={true}
             onChange={handleChange}
           />
+        </Field>
+      );
+
+    case 'Model':
+      return (
+        <Field label={label}>
+          <select
+            name={name}
+            onChange={handleChange}>
+
+            {attr.options.map((option, i) => (
+              <option value={option.id} key={i}>{option.name}</option>
+            ))}
+
+          </select>
         </Field>
       );
 
