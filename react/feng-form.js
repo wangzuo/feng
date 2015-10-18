@@ -150,7 +150,12 @@ function renderElement(attr, value, onChange) {
             onChange={handleChange}>
 
             {attr.options.map((option, i) => (
-              <option value={option.id} key={i}>{option.name}</option>
+              <option
+                selected={option.id === value}
+                value={option.id}
+                key={i}>
+                {option.name}
+              </option>
             ))}
 
           </select>
