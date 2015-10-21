@@ -9,3 +9,20 @@
   border-radius: 3px;
   background-color: var(--color-white);
 }
+
+.u-box-center {
+  max-width: 360px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  padding: 16px 15px 20px 15px;
+  border-radius: 3px;
+}
+
+.u-box-title {
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-gray);
+  font-size: 18px;
+  font-weight: bold;
+}

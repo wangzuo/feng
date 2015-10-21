@@ -4,8 +4,19 @@ var React = require('react');
 module.exports = React.createClass({
   displayName: 'Box',
 
-  render: function () {
-    var cn = cx(this.props.className, 'u-box');
+  getDefaultProps() {
+    return {
+      center: false
+    };
+  },
+
+  render() {
+    var cn = cx(
+      this.props.className,
+      'u-box',
+      this.props.center ? 'u-box-center' : null
+    );
+
     return (
       <div className={cn}>
         {this.props.children}

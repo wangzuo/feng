@@ -1,16 +1,18 @@
 .u-slat {
   position: relative;
   /*padding-left: 90px;*/
+
+/*  .title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+*/
 }
-.u-slat .img {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  /*width: 80px;*/
+.u-slat .img, .u-slat .right {
+  display: inline-block;
+  vertical-align: top;
 }
-.u-slat .title {
-  margin-bottom: 5px;
-  font-size: 18px;
-  font-weight: bold;
+.u-slat .right {
+  margin-left: 8px;
 }

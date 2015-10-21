@@ -20,7 +20,7 @@
 
 .u-nav-y {
   margin-bottom: 20px;
-  border: 1px solid #bdc3c7;
+  border: 1px solid #dfe0e4;
   border-radius: 3px;
 }
 
@@ -35,5 +35,5 @@
 
 .u-nav-y .title {
   font-weight: bold;
-  border-bottom: 1px solid #bdc3c7 !important;
+  border-bottom: 1px solid #dfe0e4 !important;
 }

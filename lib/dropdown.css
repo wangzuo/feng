@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   border-radius: 5px;
-  border: 1px solid #bdc3c7;
+  border: 1px solid #dfe0e4;
   background-color: #ffffff;
   list-style: none;
   z-index: 1000;
@@ -19,7 +19,7 @@
   display: inline-block;
   top: -11px;
   left: 12px;
-  border-bottom: 11px solid #bdc3c7;
+  border-bottom: 11px solid #dfe0e4;
   border-left: 11px solid transparent;
   border-right: 11px solid transparent;
   content: "";
@@ -39,7 +39,7 @@
   cursor: pointer;
 }
 .u-dropdown .items li:not(:last-child) {
-  border-bottom: 1px solid #bdc3c7;
+  border-bottom: 1px solid #dfe0e4;
 }
 .u-dropdown.is-open .items {
   display: inline-block;

@@ -49,11 +49,13 @@ module.exports = React.createClass({
       this.props.className
     );
 
+    delete this.props.className;
     delete this.props.disabled;
+    delete this.props.type;
 
     if(a) {
       return (
-        <a {... this.props} className={cn} role="button">
+        <a className={cn} role="button" {... this.props}>
           {this.renderSpinner()}
           {this.props.children}
         </a>

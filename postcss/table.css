@@ -20,7 +20,6 @@
 
   tbody {
     tr:nth-of-type(odd) {
-      background-color: var(--color-light-gray);
     }
 
     td {
