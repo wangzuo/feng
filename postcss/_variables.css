@@ -1,5 +1,5 @@
 :root {
-  --base-font-size: 13;
+  --base-font-size: 14;
   --base-line-height: 1.5;
   --leading: calc(var(--base-line-height) * 1rem);
   --scale: 1.414;

@@ -1,7 +1,7 @@
 html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    font-size: 81.25%;
+    font-size: 14px;
+    font-size: 87.5%;
 
     /* Make everything look a little nicer in webkit */
     -webkit-font-smoothing: antialiased;
@@ -96,7 +96,7 @@ table {
 td,
 th {
   padding: 0;
-  line-height: 19.5px;
+  line-height: 21px;
 }
 /* Code blocks */
 
