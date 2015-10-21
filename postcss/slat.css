@@ -2,13 +2,13 @@
 
 .u-slat {
   position: relative;
-  padding-left: 90px;
+  /*padding-left: 90px;*/
 
   .img {
     display: block;
     position: absolute;
     top: 0; left: 0;
-    width: 80px;
+    /*width: 80px;*/
   }
 
   .title {

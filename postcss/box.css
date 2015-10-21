@@ -1,0 +1,10 @@
+@import '_variables';
+
+.u-box {
+  position: relative;
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 14px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray);
+}

@@ -1,6 +1,8 @@
 @import '_variables';
 
 .u-nav {
+  background-color: var(--color-white);
+
   a {
     display: inline-block;
 

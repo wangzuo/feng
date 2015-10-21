@@ -52,11 +52,14 @@ module.exports = React.createClass({
     var size = this.props.size;
     var style = this.getStyle();
 
-    var cn = cx('u-avatar',
+    var cn = cx(
+      this.props.className,
+      'u-avatar',
       size ? `u-avatar-${size}` : null, {
-      'is-round': round,
-      'is-circle': circle,
-    });
+        'is-round': round,
+        'is-circle': circle,
+      }
+    );
 
     return (
       <div className={cn} style={style}>
