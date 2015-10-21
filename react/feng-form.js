@@ -147,6 +147,7 @@ function renderElement(attr, value, onChange) {
         <Field label={label}>
           <select
             name={name}
+            multiple={attr.multiple}
             onChange={handleChange}>
 
             {attr.options.map((option, i) => (
