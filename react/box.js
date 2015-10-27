@@ -10,6 +10,12 @@ module.exports = React.createClass({
     };
   },
 
+  renderTitle() {
+    if(!this.props.title) return null;
+
+    return <div className="u-box-title"><h3>{this.props.title}</h3></div>;
+  },
+
   render() {
     var cn = cx(
       this.props.className,
@@ -19,7 +25,10 @@ module.exports = React.createClass({
 
     return (
       <div className={cn}>
-        {this.props.children}
+        {this.renderTitle()}
+        <div className="u-box-inner">
+          {this.props.children}
+        </div>
       </div>
     );
   }
