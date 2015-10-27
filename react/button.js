@@ -1,5 +1,6 @@
-var React = require('react');
+var blacklist = require('blacklist');
 var cx = require('classnames');
+var React = require('react');
 var Spinner = require('./spinner');
 
 module.exports = React.createClass({
@@ -7,7 +8,6 @@ module.exports = React.createClass({
 
   getDefaultProps() {
     return {
-      a: false,
       block: false,
       active: false,
       hover: false,
@@ -20,7 +20,9 @@ module.exports = React.createClass({
   renderSpinner() {
     if(!this.props.loading) return null;
     var color = this.props.color;
-    return <Spinner className="spinner" inverted={['yellow', 'red', 'blue'].indexOf(color) >= 0}/>
+    var inverted = ['yellow', 'red', 'blue'].indexOf(color) >= 0;
+
+    return <Spinner className="spinner" inverted={inverted}/>;
   },
 
   render() {
@@ -31,10 +33,15 @@ module.exports = React.createClass({
     var active = this.props.active;
     var hover = this.props.hover;
     var disabled = this.props.disabled;
-    var a = this.props.a;
     var loading = this.props.loading;
+    var href = this.props.href;
+    var type = this.props.type;
 
-    var cn = cx(
+    var props = blacklist(this.props,
+      'children', 'color', 'size', 'block', 'type',
+      'icon', 'active', 'hover', 'disabled', 'loading');
+
+    props.className = cx(
       'u-btn',
       color ? `u-btn-${color}` : null,
       size ? `u-btn-${size}` : null,
@@ -49,13 +56,9 @@ module.exports = React.createClass({
       this.props.className
     );
 
-    delete this.props.className;
-    delete this.props.disabled;
-    delete this.props.type;
-
-    if(a) {
+    if(href) {
       return (
-        <a className={cn} role="button" {... this.props}>
+        <a role="button" {... props}>
           {this.renderSpinner()}
           {this.props.children}
         </a>
@@ -63,7 +66,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <button {... this.props} className={cn} type={this.props.type}>
+      <button {... props} type={this.props.type}>
         {this.renderSpinner()}
         {this.props.children}
       </button>
