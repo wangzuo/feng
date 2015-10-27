@@ -9,7 +9,7 @@ module.exports = React.createClass({
         <Example>
 {`<div className="example-buttons">
   <Button>Button</Button>
-  <Button href="https://github.com" target="_blank" a>Link</Button>
+  <Button href="https://github.com" target="_blank">Link</Button>
 </div>`}
         </Example>
 
@@ -63,7 +63,7 @@ module.exports = React.createClass({
   <Button icon="ion-checkmark-round"/>
   <Button icon="ion-checkmark-round" size="lg"/>
   <Button icon="ion-checkmark-round" size="xlg"/>
-  <Button color="blue" icon="ion-social-github" size="lg" href="https://github.com" target="_blank" a>github</Button>
+  <Button color="blue" icon="ion-social-github" size="lg" href="https://github.com" target="_blank">github</Button>
 </div>`}
         </Example>
 
