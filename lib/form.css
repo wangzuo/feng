@@ -12,8 +12,7 @@
   font-weight: bold;
 }
 
-.u-field textarea, .u-field input[type]
-  input[type="text"], .u-field input[type="search"], .u-field input[type="password"], .u-field input[type="datetime"], .u-field input[type="datetime-local"], .u-field input[type="date"], .u-field input[type="month"], .u-field input[type="time"], .u-field input[type="week"], .u-field input[type="number"], .u-field input[type="email"], .u-field input[type="url"], .u-field input[type="tel"], .u-field input[type="color"] {
+.u-field textarea, .u-field input[type="text"], .u-field input[type="search"], .u-field input[type="password"], .u-field input[type="datetime"], .u-field input[type="datetime-local"], .u-field input[type="date"], .u-field input[type="month"], .u-field input[type="time"], .u-field input[type="week"], .u-field input[type="number"], .u-field input[type="email"], .u-field input[type="url"], .u-field input[type="tel"], .u-field input[type="color"] {
   width: 100%;
   -webkit-appearance: none;
   padding: 6px 10px;
@@ -25,8 +24,7 @@
   color: #333;
 }
 
-.u-field textarea:focus, .u-field input[type]
-  input[type="text"]:focus, .u-field input[type="search"]:focus, .u-field input[type="password"]:focus, .u-field input[type="datetime"]:focus, .u-field input[type="datetime-local"]:focus, .u-field input[type="date"]:focus, .u-field input[type="month"]:focus, .u-field input[type="time"]:focus, .u-field input[type="week"]:focus, .u-field input[type="number"]:focus, .u-field input[type="email"]:focus, .u-field input[type="url"]:focus, .u-field input[type="tel"]:focus, .u-field input[type="color"]:focus {
+.u-field textarea:focus, .u-field input[type="text"]:focus, .u-field input[type="search"]:focus, .u-field input[type="password"]:focus, .u-field input[type="datetime"]:focus, .u-field input[type="datetime-local"]:focus, .u-field input[type="date"]:focus, .u-field input[type="month"]:focus, .u-field input[type="time"]:focus, .u-field input[type="week"]:focus, .u-field input[type="number"]:focus, .u-field input[type="email"]:focus, .u-field input[type="url"]:focus, .u-field input[type="tel"]:focus, .u-field input[type="color"]:focus {
   background-color: white;
   border: 1px solid #1385e5;
 }
