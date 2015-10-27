@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   margin-bottom: 14px;
-  padding: 11px 12px;
   border: 1px solid #dfe0e4;
   border-radius: 3px;
   background-color: #ffffff;
@@ -13,8 +12,27 @@
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 50px;
-  padding: 16px 15px 20px 15px;
-  border-radius: 3px;
+}
+
+.u-box-title {
+  padding: 10px 12px;
+  border-bottom: 1px solid #dfe0e4;
+  border-radius: 3px 3px 0 0;
+  background-color: #f6f7f8;
+  color: #141823;
+  font-weight: bold;
+  line-height: 19px;
+}
+
+.u-box-title h3 {
+  margin: 0;
+  padding: 0;
+  color: #141823;
+  font-size: 14px;
+}
+
+.u-box-inner {
+  padding: 11px 12px;
 }
 
 .u-box-title {

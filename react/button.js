@@ -31,7 +31,7 @@ module.exports = React.createClass({
     var active = this.props.active;
     var hover = this.props.hover;
     var disabled = this.props.disabled;
-    var a = this.props.a;
+    var a = this.props.a || this.props.href;
     var loading = this.props.loading;
 
     var cn = cx(
@@ -49,13 +49,14 @@ module.exports = React.createClass({
       this.props.className
     );
 
-    delete this.props.className;
-    delete this.props.disabled;
-    delete this.props.type;
+    // todo:
+    // delete this.props.className;
+    // delete this.props.disabled;
+    // delete this.props.type;
 
     if(a) {
       return (
-        <a className={cn} role="button" {... this.props}>
+        <a {... this.props} className={cn} role="button">
           {this.renderSpinner()}
           {this.props.children}
         </a>
