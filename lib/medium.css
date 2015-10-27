@@ -1,5 +1,6 @@
 .u-medium {
   position: relative;
+  display: block;
 }
 
 .u-medium-video .btn-play {
