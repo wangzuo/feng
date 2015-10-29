@@ -32,9 +32,9 @@ exports.Column = React.createClass({
 
   getDefaultProps() {
     return {
-      d: 12,
-      t: 12,
-      m: 12
+      d: 24,
+      t: 24,
+      m: 24
     }
   },
 

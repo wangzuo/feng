@@ -25,9 +25,9 @@ body:after {
 .g-container {
   position: relative;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 940px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  width: 1040px;
   max-width: 100%;
   zoom: 1;
 }
@@ -43,8 +43,8 @@ body:after {
 
 .g-r,
 .g-row {
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -7.5px;
+  margin-right: -7.5px;
   zoom: 1;
 }
 
@@ -62,97 +62,193 @@ body:after {
     position: relative;
     display: inline;
     float: left;
-    width: 8.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 4.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-2 {
     position: relative;
     display: inline;
     float: left;
-    width: 16.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 8.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-3 {
     position: relative;
     display: inline;
     float: left;
-    width: 25%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 12.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-4 {
     position: relative;
     display: inline;
     float: left;
-    width: 33.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 16.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-5 {
     position: relative;
     display: inline;
     float: left;
-    width: 41.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 20.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-6 {
     position: relative;
     display: inline;
     float: left;
-    width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 25%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-7 {
     position: relative;
     display: inline;
     float: left;
-    width: 58.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 29.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-8 {
     position: relative;
     display: inline;
     float: left;
-    width: 66.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 33.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-9 {
     position: relative;
     display: inline;
     float: left;
-    width: 75%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 37.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-10 {
     position: relative;
     display: inline;
     float: left;
-    width: 83.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 41.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-11 {
     position: relative;
     display: inline;
     float: left;
-    width: 91.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 45.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-12 {
     position: relative;
     display: inline;
     float: left;
+    width: 50%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-13 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 54.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-14 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 58.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-15 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 62.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-16 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 66.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-17 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 70.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-18 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 75%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-19 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 79.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-20 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 83.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-21 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 87.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-22 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 91.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-23 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 95.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-24 {
+    position: relative;
+    display: inline;
+    float: left;
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
  .g-0 { display: none; }
 }
@@ -164,108 +260,216 @@ body:after {
     position: relative;
     display: inline;
     float: left;
-    width: 8.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 4.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-2 {
     position: relative;
     display: inline;
     float: left;
-    width: 16.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 8.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-3 {
     position: relative;
     display: inline;
     float: left;
-    width: 25%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 12.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-4 {
     position: relative;
     display: inline;
     float: left;
-    width: 33.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 16.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-5 {
     position: relative;
     display: inline;
     float: left;
-    width: 41.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 20.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-6 {
     position: relative;
     display: inline;
     float: left;
-    width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 25%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-7 {
     position: relative;
     display: inline;
     float: left;
-    width: 58.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 29.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-8 {
     position: relative;
     display: inline;
     float: left;
-    width: 66.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 33.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-9 {
     position: relative;
     display: inline;
     float: left;
-    width: 75%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 37.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-10 {
     position: relative;
     display: inline;
     float: left;
-    width: 83.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 41.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-11 {
     position: relative;
     display: inline;
     float: left;
-    width: 91.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 45.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
 
   .g-t-12 {
     position: relative;
     display: inline;
     float: left;
+    width: 50%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-13 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 54.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-14 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 58.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-15 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 62.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-16 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 66.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-17 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 70.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-18 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 75%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-19 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 79.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-20 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 83.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-21 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 87.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-22 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 91.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-23 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 95.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+
+  .g-t-24 {
+    position: relative;
+    display: inline;
+    float: left;
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
  .g-t-0 { display: none; }
 }
@@ -276,97 +480,193 @@ body:after {
     position: relative;
     display: inline;
     float: left;
-    width: 8.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 4.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-2 {
     position: relative;
     display: inline;
     float: left;
-    width: 16.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 8.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-3 {
     position: relative;
     display: inline;
     float: left;
-    width: 25%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 12.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-4 {
     position: relative;
     display: inline;
     float: left;
-    width: 33.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 16.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-5 {
     position: relative;
     display: inline;
     float: left;
-    width: 41.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 20.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-6 {
     position: relative;
     display: inline;
     float: left;
-    width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 25%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-7 {
     position: relative;
     display: inline;
     float: left;
-    width: 58.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 29.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-8 {
     position: relative;
     display: inline;
     float: left;
-    width: 66.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 33.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-9 {
     position: relative;
     display: inline;
     float: left;
-    width: 75%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 37.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-10 {
     position: relative;
     display: inline;
     float: left;
-    width: 83.33333%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 41.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-11 {
     position: relative;
     display: inline;
     float: left;
-    width: 91.66667%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 45.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
   .g-m-12 {
     position: relative;
     display: inline;
     float: left;
+    width: 50%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-13 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 54.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-14 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 58.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-15 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 62.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-16 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 66.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-17 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 70.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-18 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 75%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-19 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 79.16667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-20 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 83.33333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-21 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 87.5%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-22 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 91.66667%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-23 {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 95.83333%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .g-m-24 {
+    position: relative;
+    display: inline;
+    float: left;
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
   }
  .g-m-0 { display: none; }
 }
