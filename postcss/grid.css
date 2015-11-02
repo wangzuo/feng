@@ -78,7 +78,7 @@ body {
 }
 
 @media (--desktop) {
-  @for $i from 1 to 12 {
+  @for $i from 1 to 24 {
     @mixin column-d $i;
   }
  .g-0 { display: none; }
@@ -87,7 +87,7 @@ body {
 @media (--tablet) {
   .g-container { width: 100% };
 
-  @for $i from 1 to 12 {
+  @for $i from 1 to 24 {
     @mixin column-t $i;
   }
  .g-t-0 { display: none; }
@@ -95,7 +95,7 @@ body {
 
 @media (--mobile) {
   .g-container { width: 100% };
-  @for $i from 1 to 12 {
+  @for $i from 1 to 24 {
     @mixin column-m $i;
   }
  .g-m-0 { display: none; }
