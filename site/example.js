@@ -1,5 +1,5 @@
 var React = require('react');
-var babel = require('babel-core/browser');
+var babel = require('babel-core');
 
 var Grid = require('../react/grid');
 var Button = require('../react/button');
@@ -12,7 +12,6 @@ var Checkbox = require('../react/checkbox');
 var Label = require('../react/label');
 var Tabs = require('../react/tabs');
 var Spinner = require('../react/spinner');
-var FengForm = require('../react/feng-form');
 var Dropdown = require('../react/dropdown');
 var Dialog = require('../react/dialog');
 var Avatar = require('../react/avatar');
@@ -40,7 +39,7 @@ module.exports = React.createClass({
     var code = this.props.children;
     var active = this.state.active;
 
-    var transformed = babel.transform(code).code;
+    var transformed = babel.transform(code, {presets: ['react']}).code;
     var el = eval(transformed);
 
     return (

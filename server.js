@@ -16,6 +16,18 @@ app.get('/', function(req, res, next) {
   res.render('index');
 });
 
+app.get('/getting-started', function(req, res) { res.render('getting-started'); });
+
+// app.get('/css/grid', function(req, res) { res.render('css/grid'); });
+// app.get('/css/typography', function(req, res) { res.render('css/typography'); });
+// app.get('/css/buttons', function(req, res) { res.render('css/buttons'); });
+// app.get('/css/labels', function(req, res) { res.render('css/labels'); });
+// app.get('/css/forms', function(req, res) { res.render('css/forms'); });
+
+app.use(function(req, res) {
+  res.render(req.path.substr(1));
+});
+
 app.listen(8888, function() {
   console.log('server listen on 8888');
 });
