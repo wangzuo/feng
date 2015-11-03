@@ -8,7 +8,7 @@ var Html = require('./html');
 var pages = require('../pages')(sitemap);
 
 module.exports = React.createClass({
-  displayName: 'App',
+  displayName: 'Layout',
 
   renderNav() {
     var path = this.props.path;

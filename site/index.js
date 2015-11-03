@@ -1,11 +1,11 @@
 var React = require('react');
-var Html = require('./app');
+var Layout = require('./Layout');
 var Markdown = require('../react/markdown');
 
 module.exports = React.createClass({
   render() {
     return (
-      <App>
+      <Layout>
         <Markdown>
 {`# feng-ui
 
@@ -31,7 +31,7 @@ Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Morbi leo r
 ### License
 ISC`}
         </Markdown>
-      </App>
+      </Layout>
     );
   }
 });
