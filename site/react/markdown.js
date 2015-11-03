@@ -1,14 +1,17 @@
 var React = require('react');
 var Example = require('../example');
+var Layout = require('../layout');
 
 module.exports = React.createClass({
   render() {
     return (
-      <Example html={false}>
+      <Layout>
+        <Example html={false}>
 {`<Markdown>
-{\`### hello world\`}
+  {\`### hello world\`}
 </Markdown>`}
-      </Example>
+        </Example>
+      </Layout>
     );
   }
 });
