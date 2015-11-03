@@ -9,9 +9,9 @@ module.exports = React.createClass({
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
           <title>Feng UI</title>
           <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" type="text/css"/>
-          <link rel="stylesheet" type="text/css" href="/feng-ui/vendors/prism.css"/>
-          <link rel="stylesheet" href="/feng-ui/feng.min.css" type="text/css"/>
-          <link rel="stylesheet" href="/feng-ui/example.css" type="text/css"/>
+          <link rel="stylesheet" type="text/css" href="/vendors/prism.css"/>
+          <link rel="stylesheet" href="/feng.min.css" type="text/css"/>
+          <link rel="stylesheet" href="/example.css" type="text/css"/>
         </head>
         <body>
           {this.props.children}

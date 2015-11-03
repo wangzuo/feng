@@ -11,6 +11,7 @@ app.set('view engine', 'js');
 app.set('views', __dirname + '/site');
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/feng-ui'));
 
 app.get('/', function(req, res, next) {
   res.render('index');
