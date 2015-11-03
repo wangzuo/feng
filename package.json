@@ -26,11 +26,11 @@
   "devDependencies": {
     "async": "^1.4.2",
     "autoprefixer": "^5.2.0",
-    "babel-loader": "^5.3.2",
+    "babel-core": "^6.0.20",
+    "babel-preset-react": "^6.0.15",
     "css-loader": "^0.15.6",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.0",
     "gulp-concat": "^2.6.0",
     "gulp-gh-pages": "^0.5.2",
     "gulp-minify-css": "^1.2.0",
@@ -53,6 +53,7 @@
     "postcss-nested": "^0.3.2",
     "react": "^0.14.1",
     "react-dom": "^0.14.1",
+    "react-engine": "^2.5.0",
     "style-loader": "^0.12.3",
     "webpack": "^1.10.5"
   },
