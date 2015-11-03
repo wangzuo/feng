@@ -4,6 +4,7 @@ var Footer = require('./footer');
 var Nav = require('./nav');
 var Grid = require('../react/grid');
 var sitemap = require('./map');
+var Html = require('./html');
 var pages = require('../pages')(sitemap);
 
 module.exports = React.createClass({
@@ -31,21 +32,28 @@ module.exports = React.createClass({
   render() {
     var path = this.props.path;
     var page = pages.filter((p) => (p.path === path))[0];
-    var component = page.component;
 
     return (
-      <div className="app">
-        <Header pages={pages}/>
-        <Grid.Container>
-          <Grid.Row>
-            {this.renderNav()}
-            <Grid.Column d={9}>
-              {React.createElement(component)}
-            </Grid.Column>
-          </Grid.Row>
-        </Grid.Container>
-        <Footer/>
-     </div>
+      <Html>
+        <div className="app">
+          <Header/>
+
+          <Grid.Container>
+            <Grid.Row>
+              <Grid.Column d={3}>
+                <nav className="u-nav u-nav-y">
+                  <a href="/css/buttons">buttons</a>
+                </nav>
+              </Grid.Column>
+
+              <Grid.Column d={9}>
+              {this.props.children}
+              </Grid.Column>
+            </Grid.Row>
+          </Grid.Container>
+          <Footer/>
+        </div>
+      </Html>
     );
   }
 });

@@ -1,11 +1,11 @@
 var React = require('react');
-var Html = require('../html');
+var App = require('../app');
 var Example = require('../example');
 
 module.exports = React.createClass({
   render() {
     return (
-      <Html>
+      <App>
         <h3>Basic</h3>
         <Example>
 {`<div className="example-buttons">
@@ -110,7 +110,7 @@ module.exports = React.createClass({
   <Button color="red" loading disabled>Saving</Button>
 </div>`}
         </Example>
-      </Html>
+      </App>
     )
   }
 });

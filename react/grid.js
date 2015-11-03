@@ -1,13 +1,16 @@
-var React = require('react');
 var cx = require('classnames');
+var blacklist = require('blacklist');
+var React = require('react');
 
 exports.Container = React.createClass({
   displayName: 'Container',
 
   render() {
+    var props = blacklist(this.props, 'className', 'children');
+    props.className = cx('g-c', this.props.className);
+
     return (
-      <div {... this.props}
-        className={cx('g-c', this.props.className)}>
+      <div {... props}>
         {this.props.children}
       </div>
     );
