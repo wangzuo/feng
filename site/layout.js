@@ -50,13 +50,13 @@ module.exports = React.createClass({
 
           <Grid.Container>
             <Grid.Row>
-              <Grid.Column d={3}>
+              <Grid.Column d={6}>
                 <nav className="u-nav u-nav-y">
                   <a href="/css/buttons">buttons</a>
                 </nav>
               </Grid.Column>
 
-              <Grid.Column d={9}>
+              <Grid.Column d={18}>
               {this.props.children}
               </Grid.Column>
             </Grid.Row>
