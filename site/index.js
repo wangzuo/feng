@@ -16,9 +16,9 @@ module.exports = React.createClass({
 
 feng-ui is a styleguide built with reactjs and postcss
 
-- [Getting started](/feng-ui/getting-started)
-- [CSS](/feng-ui/css)
-- [React](/feng-ui/react)
+- [Getting started](/getting-started)
+- [CSS](/css)
+- [React](/react)
 
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.
 
