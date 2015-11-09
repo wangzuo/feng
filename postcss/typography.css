@@ -4,6 +4,7 @@ html {
     font-family: var(--body-font-family);
     font-size: calc(var(--base-font-size) - 0px);
     font-size: calc(var(--base-font-size) / 16 * 100%);
+    text-rendering: optimizeLegibility;
 
     /* Make everything look a little nicer in webkit */
     -webkit-font-smoothing: antialiased;

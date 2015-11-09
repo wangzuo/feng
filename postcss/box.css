@@ -7,6 +7,16 @@
   border: 1px solid var(--color-gray);
   border-radius: 3px;
   background-color: var(--color-white);
+
+  /*&:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear:both;
+  }*/
 }
 
 .u-box-center {
@@ -35,12 +45,4 @@
 
 .u-box-inner {
   padding: 11px 12px;
-}
-
-.u-box-title {
-  margin-bottom: 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--color-gray);
-  font-size: 18px;
-  font-weight: bold;
 }

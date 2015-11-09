@@ -47,6 +47,10 @@
   .error {
     color: var(--color-red);
   }
+
+  textarea {
+    resize: none;
+  }
 }
 
 .u-checkbox {

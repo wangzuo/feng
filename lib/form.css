@@ -33,6 +33,10 @@
   color: #e74c3c;
 }
 
+.u-field textarea {
+  resize: none;
+}
+
 .u-checkbox .label {
   display: inline-block;
   margin-left: 5px;
