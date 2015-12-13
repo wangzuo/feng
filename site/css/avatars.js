@@ -1,10 +1,11 @@
 var React = require('react');
 var Example = require('../example');
+var Layout = require('../layout');
 
 module.exports = React.createClass({
   render() {
     return (
-      <div>
+      <Layout>
         <h3>Gravatar</h3>
 <Example>
 {`<div className="example-avatars">
@@ -52,7 +53,7 @@ module.exports = React.createClass({
   <Avatar name="おだ" size="lg" circle/>
 </div>`}
         </Example>
-      </div>
+      </Layout>
     );
   }
 });

@@ -1,10 +1,11 @@
 var React = require('react');
 var Example = require('../example');
+var Layout = require('../layout');
 
 module.exports = React.createClass({
   render() {
     return (
-      <div>
+      <Layout>
         <h3>Quick form</h3>
         <Example>
 {`<form className="u-form">
@@ -46,7 +47,7 @@ module.exports = React.createClass({
   <Button color="blue">Submit</Button>
 </form>`}
         </Example>
-      </div>
+      </Layout>
     );
   }
 });

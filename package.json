@@ -6,7 +6,7 @@
   "scripts": {
     "pages": "gulp site && babel-node feng",
     "publish": "gulp site && babel-node feng && gulp gh-pages",
-    "start": "webpack-dev-server -c --port=7788",
+    "start": "nodemon server.js",
     "test": "exit 0"
   },
   "author": "Wang Zuo",
@@ -30,8 +30,10 @@
     "babel-preset-react": "^6.1.2",
     "css-loader": "^0.15.6",
     "del": "^1.2.0",
+    "express": "^4.13.3",
+    "express-engine": "^1.0.0",
     "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.0",
+    "gulp-babel": "^6.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-gh-pages": "^0.5.2",
     "gulp-minify-css": "^1.2.0",
@@ -39,11 +41,10 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.2.0",
     "highlights": "^1.2.0",
-    "history2": "^1.0.2",
     "js-beautify": "^1.5.10",
     "json-loader": "^0.5.3",
     "mkdirp": "^0.5.1",
-    "postcss-calc": "^4.1.0",
+    "postcss-calc": "^5.0.0",
     "postcss-color-function": "^1.3.2",
     "postcss-custom-media": "^4.1.0",
     "postcss-custom-properties": "^4.2.0",
@@ -52,8 +53,11 @@
     "postcss-loader": "^0.5.1",
     "postcss-mixins": "^0.4.0",
     "postcss-nested": "^0.3.2",
-    "style-loader": "^0.12.3",
-    "webpack": "^1.10.5"
+    "react": "^0.14.1",
+    "react-dom": "^0.14.1",
+    "react-engine": "^2.6.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9"
   },
   "repository": {
     "type": "git",

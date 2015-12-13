@@ -1,13 +1,16 @@
-var React = require('react');
 var cx = require('classnames');
+var blacklist = require('blacklist');
+var React = require('react');
 
 exports.Container = React.createClass({
   displayName: 'Container',
 
   render() {
+    var props = blacklist(this.props, 'className', 'children');
+    props.className = cx('g-c', this.props.className);
+
     return (
-      <div {... this.props}
-        className={cx('g-c', this.props.className)}>
+      <div {... props}>
         {this.props.children}
       </div>
     );
@@ -18,9 +21,11 @@ exports.Row = React.createClass({
   displayName: 'Row',
 
   render() {
+    var props = blacklist(this.props, 'className', 'children');
+    props.className = cx('g-r', this.props.className);
+
     return (
-      <div {... this.props}
-        className={cx('g-r', this.props.className)}>
+      <div {... props}>
         {this.props.children}
       </div>
     );
@@ -39,7 +44,8 @@ exports.Column = React.createClass({
   },
 
   render() {
-    var cn = cx(
+    var props = blacklist(this.props, 'className', 'children', 'd', 't', 'm');
+    props.className = cx(
       `g-${this.props.d}`,
       `g-t-${this.props.t}`,
       `g-m-${this.props.m}`,
@@ -47,7 +53,7 @@ exports.Column = React.createClass({
     );
 
     return (
-      <div {... this.props} className={cn}>
+      <div {... props}>
         {this.props.children}
       </div>
     );
