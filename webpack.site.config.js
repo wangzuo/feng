@@ -20,7 +20,7 @@ module.exports = {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader' },
       { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.css$/, loader: 'style-loader!css-loader!cssnext-loader' },
+      { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
     ]
   },
 
@@ -31,6 +31,10 @@ module.exports = {
     'babel-core/browser': 'babel'
   },
   */
+
+  postcss: function() {
+    return require('./processors');
+  },
 
   plugins: [
     new StaticSiteGeneratorPlugin('site.bundle.js', paths, {})
