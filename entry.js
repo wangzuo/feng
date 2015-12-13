@@ -8,8 +8,6 @@ import template from './template';
 
 if(typeof document !== 'undefined') {
   const history = createHistory();
-  
-  console.log('render');
 
   ReactDOM.render(<Router history={history}>{routes}</Router>, document.getElementById('app'));
 }

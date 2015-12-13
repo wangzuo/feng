@@ -1,11 +1,10 @@
 var React = require('react');
-var Layout = require('../layout');
 var Example = require('../example');
 
 module.exports = React.createClass({
   render() {
     return (
-      <Layout>
+      <div>
         <h3>Basic</h3>
         <Example>
 {`<div className="example-buttons">
@@ -110,7 +109,7 @@ module.exports = React.createClass({
   <Button color="red" loading disabled>Saving</Button>
 </div>`}
         </Example>
-      </Layout>
+      </div>
     )
   }
 });
