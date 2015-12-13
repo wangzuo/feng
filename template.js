@@ -13,11 +13,8 @@ module.exports = function(html) {
   <body>
     <div id="app">${html}</div>
 
-  <script src="https://fb.me/react-0.13.3.js"></script>
-  <script src="/feng-ui/vendors/prism.js" data-manual></script>
-  <script src="/feng-ui/vendors/babel-browser.min.js"></script>
-  <script src="/feng-ui/app.js"></script>
-  <script src="/bundle.js"></script>
+    <script src="/styles.bundle.js"></script>
+    <script src="/site.bundle.js"></script>
   </body>
 </html>`;
 }

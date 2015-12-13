@@ -1,11 +1,17 @@
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-var data = require('./data');
+
+var paths = [
+  '/'
+];
 
 module.exports = {
-  entry: './entry.js',
+  entry: {
+    site: './entry.js',
+    styles: './styles.js'
+  },
 
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: __dirname,
     libraryTarget: 'umd'
   },
@@ -27,7 +33,7 @@ module.exports = {
   */
 
   plugins: [
-    new StaticSiteGeneratorPlugin('bundle.js', data.routes, {})
+    new StaticSiteGeneratorPlugin('site.bundle.js', paths, {})
   ]
 };
 
