@@ -6,7 +6,7 @@ module.exports = {
 
   output: {
     filename: 'bundle.js',
-    path: 'dist',
+    path: __dirname,
     libraryTarget: 'umd'
   },
 
@@ -18,10 +18,13 @@ module.exports = {
     ]
   },
 
+  /*
   externals: {
     'react': 'React',
+    'react-dom': 'ReactDOM',
     'babel-core/browser': 'babel'
   },
+  */
 
   plugins: [
     new StaticSiteGeneratorPlugin('bundle.js', data.routes, {})
