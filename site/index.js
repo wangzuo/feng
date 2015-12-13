@@ -1,11 +1,10 @@
 var React = require('react');
-var Layout = require('./Layout');
 var Markdown = require('../react/markdown');
 
 module.exports = React.createClass({
   render() {
     return (
-      <Layout>
+      <div>
         <Markdown>
 {`# feng-ui
 
@@ -13,6 +12,8 @@ module.exports = React.createClass({
 
 - [github](http://github.com/wangzuo/feng-ui)
 - [npm](https://www.npmjs.com/package/feng-ui)
+
+### Hello world
 
 feng-ui is a styleguide built with reactjs and postcss
 
@@ -31,7 +32,7 @@ Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Morbi leo r
 ### License
 ISC`}
         </Markdown>
-      </Layout>
+      </div>
     );
   }
 });
