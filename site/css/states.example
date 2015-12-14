@@ -1,0 +1,4 @@
+<Button color="blue">normal</Button>
+<Button color="blue" active>active</Button>
+<Button color="blue" hover>hover</Button>
+<Button color="blue" disabled>disabled</Button>

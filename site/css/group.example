@@ -1,0 +1,25 @@
+<ButtonGroup>
+  <Button>hello</Button>
+  <Button>hello</Button>
+  <Button>hello</Button>
+  <Button>hello</Button>
+</ButtonGroup>
+
+<ButtonGroup>
+  <Button size="lg">hello</Button>
+  <Button size="lg">hello</Button>
+  <Button size="lg">hello</Button>
+  <Button size="lg">hello</Button>
+</ButtonGroup>
+
+<ButtonGroup>
+  <Button icon="ion-laptop">Desktop</Button>
+  <Button icon="ion-ipad">Tablet</Button>
+  <Button icon="ion-iphone">Mobile</Button>
+</ButtonGroup>
+
+<ButtonGroup>
+  <Button color="blue" icon="ion-laptop">Desktop</Button>
+  <Button color="blue" icon="ion-ipad">Tablet</Button>
+  <Button color="blue" icon="ion-iphone">Mobile</Button>
+</ButtonGroup>

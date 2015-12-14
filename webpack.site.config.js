@@ -20,10 +20,17 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader' },
+      { test: /\.js$/, ignore: /node_modules/, loader: 'babel-loader' },
+      { test: /\.example$/, loader: 'babel-loader!example-loader' },
       { test: /\.json$/, loader: 'json-loader' },
       { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
     ]
+  },
+
+  example: {
+    'Spinner': '../../react/spinner',
+    'ButtonGroup': '../../react/button-group',
+    'Button': '../../react/button'
   },
 
   /*

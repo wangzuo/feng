@@ -1,0 +1,5 @@
+<Button><Spinner/></Button>
+<Button loading disabled>Saving</Button>
+<Button color="blue" loading disabled>Saving</Button>
+<Button color="yellow" loading disabled>Saving</Button>
+<Button color="red" loading disabled>Saving</Button>

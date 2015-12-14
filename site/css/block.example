@@ -1,0 +1,2 @@
+<Button size="lg" block>hello world</Button>
+<Button size="lg" color="blue" block>hello world</Button>

@@ -6,7 +6,7 @@ var Buttons = require('./site/css/buttons');
 
 var routes = (
   <Route path="/" component={App}>
-    <Route path="/buttons" component={Buttons}/>
+    <Route path="/css/buttons" component={Buttons}/>
     <IndexRoute component={Index} />
   </Route>
 );

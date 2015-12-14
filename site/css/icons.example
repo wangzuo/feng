@@ -1,0 +1,8 @@
+<Button icon="ion-checkmark-round">hello world</Button>
+<Button icon="ion-checkmark-round" size="lg">hello world</Button>
+<Button icon="ion-checkmark-round" size="xlg">hello world</Button>
+<Button icon="ion-checkmark-round" size="xlg" block>hello world</Button>
+<Button icon="ion-checkmark-round"/>
+<Button icon="ion-checkmark-round" size="lg"/>
+<Button icon="ion-checkmark-round" size="xlg"/>
+<Button color="blue" icon="ion-social-github" size="lg" href="https://github.com" target="_blank">github</Button>
