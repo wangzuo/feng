@@ -13,8 +13,8 @@ module.exports = function(html) {
   <body>
     <div id="app">${html}</div>
 
-    <script src="/styles.bundle.js"></script>
-    <script src="/site.bundle.js"></script>
+    <script src="styles.bundle.js"></script>
+    <script src="site.bundle.js"></script>
   </body>
 </html>`;
 }
