@@ -9,12 +9,12 @@ module.exports = function(html) {
     <link rel="stylesheet" type="text/css" href="/feng-ui/vendors/prism.css">
     <link rel="stylesheet" href="/feng-ui/feng.min.css" type="text/css"/>
     <link rel="stylesheet" href="/feng-ui/example.css" type="text/css"/>
+    <script src="/styles.bundle.js"></script>
   </head>
   <body>
     <div id="app">${html}</div>
 
-    <script src="styles.bundle.js"></script>
-    <script src="site.bundle.js"></script>
+    <script src="/site.bundle.js"></script>
   </body>
 </html>`;
 }
