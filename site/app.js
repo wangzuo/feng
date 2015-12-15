@@ -16,7 +16,9 @@ module.exports = React.createClass({
             <Row>
               <Column d={6}>
                 <nav className="u-nav u-nav-y">
+                  <a href="/css/avatars">avatars</a>
                   <a href="/css/buttons">buttons</a>
+                  <a href="/css/forms">forms</a>
                 </nav>
               </Column>
 

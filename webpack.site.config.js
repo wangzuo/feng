@@ -2,8 +2,9 @@ var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 var paths = [
   '/',
-  '/css',
-  '/css/buttons'
+  '/css/buttons',
+  '/css/forms',
+  '/css/avatars'
 ];
 
 module.exports = {
@@ -28,9 +29,12 @@ module.exports = {
   },
 
   example: {
+    'Avatar': '../../react/avatar',
     'Spinner': '../../react/spinner',
     'ButtonGroup': '../../react/button-group',
-    'Button': '../../react/button'
+    'Button': '../../react/button',
+    'Field': '../../react/field',
+    'Checkbox': '../../react/checkbox'
   },
 
   /*
