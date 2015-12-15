@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack -p --progress --config webpack.site.config.js",
-    "deploy": "npm run build && github-pages-deploy",
+    "deploy": "npm run build && cp CNAME builds/ && github-pages-deploy",
     "start": "webpack-dev-server --config webpack.site.config.js --progress --colors --port=8888",
     "test": "exit 0"
   },
