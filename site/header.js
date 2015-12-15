@@ -20,7 +20,6 @@ module.exports = React.createClass({
           <h1>
             <Link to="/">feng-ui</Link>
           </h1>
-            <Link to="/buttons">button</Link>
 
           {/*<Nav className="u-nav-x f-fr" items={pages}/>*/}
         </div>
