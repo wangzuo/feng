@@ -1,14 +1,17 @@
 var React = require('react');
 import { Route, IndexRoute } from 'react-router';
 import App from './site/app';
-// var Index = require('./site/index');
+import Index from './site/index';
+import Avatars from './site/css/avatars';
 import Buttons from './site/css/buttons';
-// var Forms = require('./site/css/forms');
-// var Avatars = require('./site/css/avatars');
+import Forms from './site/css/forms';
 
 var routes = (
   <Route path="/" component={App}>
-    <Route path="/css/buttons" component={Buttons}/>
+    <IndexRoute component={Index} />
+    <Route path="/css/avatars" component={Avatars} />
+    <Route path="/css/forms" component={Forms} />
+    <Route path="/css/buttons" component={Buttons} />
   </Route>
 );
 

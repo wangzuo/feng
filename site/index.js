@@ -1,11 +1,9 @@
-var React = require('react');
-var Markdown = require('../react/markdown');
+import React from 'react';
+import Markdown from '../react/markdown';
 
-module.exports = React.createClass({
-  render() {
-    return (
-      <div>
-        <Markdown>
+const Index = () => (
+  <div>
+    <Markdown>
 {`# feng-ui
 
 [![Build Status](https://travis-ci.org/wangzuo/feng-ui.svg)](https://travis-ci.org/wangzuo/feng-ui)
@@ -31,8 +29,8 @@ Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Morbi leo r
 
 ### License
 ISC`}
-        </Markdown>
-      </div>
-    );
-  }
-});
+    </Markdown>
+  </div>
+);
+
+export default Index

@@ -2,6 +2,8 @@ var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 var paths = [
   '/',
+  '/css/forms',
+  '/css/avatars',
   '/css/buttons'
 ];
 

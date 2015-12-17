@@ -1,25 +1,23 @@
-var React = require('react');
-var Gravatar = require('./avatars-gravatar.example');
-var Sqaure = require('./avatars-square.example');
-var Round = require('./avatars-round.example');
-var Circle = require('./avatars-circle.example');
+import React from 'react';
+import Gravatar from './avatars-gravatar.example';
+import Sqaure from './avatars-square.example';
+import Round from './avatars-round.example';
+import Circle from './avatars-circle.example';
 
-module.exports = React.createClass({
-  render() {
-    return (
-      <div>
-        <h3>Gravatar</h3>
-        <Gravatar/>
+const Avatars = () => (
+  <div>
+    <h3>Gravatar</h3>
+    <Gravatar/>
 
-        <h3>Sqaure (default)</h3>
-        <Sqaure/>
+    <h3>Sqaure (default)</h3>
+    <Sqaure/>
 
-        <h3>Round</h3>
-        <Round/>
+    <h3>Round</h3>
+    <Round/>
 
-        <h3>Circle</h3>
-        <Circle/>
-      </div>
-    );
-  }
-});
+    <h3>Circle</h3>
+    <Circle/>
+  </div>
+);
+
+export default Avatars

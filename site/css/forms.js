@@ -1,21 +1,19 @@
-var React = require('react');
-var Simple = require('./forms-simple.example');
-var ErrorField = require('./forms-error.example');
-var Horizontal = require('./forms-horizontal.example');
+import React from 'react';
+import Simple from './forms-simple.example';
+import ErrorField from './forms-error.example';
+import Horizontal from './forms-horizontal.example';
 
-module.exports = React.createClass({
-  render() {
-    return (
-      <div>
-        <h3>Simple form</h3>
-        <Simple/>
+const Forms = () => (
+  <div>
+    <h3>Simple form</h3>
+    <Simple/>
 
-        <h3>Error fields</h3>
-        <ErrorField/>
+    <h3>Error fields</h3>
+    <ErrorField/>
 
-        <h3>Horizontal</h3>
-        <Horizontal/>
-      </div>
-    );
-  }
-});
+    <h3>Horizontal</h3>
+    <Horizontal/>
+  </div>
+);
+
+export default Forms
