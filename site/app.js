@@ -1,34 +1,31 @@
-var React = require('react');
-var Header = require('./header');
-var Footer = require('./footer');
-var Nav = require('./nav');
+import React from 'react';
+import Header from './header';
+import Footer from './footer';
+import Nav from './nav';
+import { Link } from 'react-router';
 import { Container, Row, Column } from '../react/grid';
 
-module.exports = React.createClass({
-  displayName: 'App',
+const App = (props) => (
+  <div>
+    <Header/>
 
-  render() {
-    return (
-      <div>
-         <Header/>
+    <Container>
+      <Row>
+        <Column d={6}>
+          <nav className="u-nav u-nav-y">
+            <Link to="/css/avatars">avatars</Link>
+            <Link to="/css/buttons">buttons</Link>
+            <Link to="/css/forms">forms</Link>
+          </nav>
+        </Column>
 
-          <Container>
-            <Row>
-              <Column d={6}>
-                <nav className="u-nav u-nav-y">
-                  <a href="/css/avatars">avatars</a>
-                  <a href="/css/buttons">buttons</a>
-                  <a href="/css/forms">forms</a>
-                </nav>
-              </Column>
+        <Column d={18}>
+        {props.children}
+        </Column>
+      </Row>
+    </Container>
+    <Footer/>
+  </div>
+);
 
-              <Column d={18}>
-              {this.props.children}
-              </Column>
-            </Row>
-          </Container>
-          <Footer/>
-      </div>
-    );
-  }
-});
+export default App
