@@ -1,4 +1,4 @@
-<form className="u-form">
+<Form>
   <Field label="First Name">
     <input type="text" placeholder="First Name"/>
   </Field>
@@ -14,4 +14,4 @@
     </Checkbox>
   </Field>
   <Button color="blue">Submit</Button>
-</form>
+</Form>

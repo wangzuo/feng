@@ -34,6 +34,7 @@ module.exports = {
     'ButtonGroup': '../../react/button-group',
     'Button': '../../react/button',
     'Field': '../../react/field',
+    'Form': '../../react/form',
     'Checkbox': '../../react/checkbox'
   },
 

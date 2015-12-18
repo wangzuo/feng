@@ -1,9 +1,9 @@
-import React from 'react';
-import Simple from './forms-simple.example';
-import ErrorField from './forms-error.example';
-import Horizontal from './forms-horizontal.example';
+var React = require('react');
+var Simple = require('./forms-simple.example');
+var ErrorField = require('./forms-error.example');
+var Horizontal = require('./forms-horizontal.example');
 
-const Forms = () => (
+module.exports = () => (
   <div>
     <h3>Simple form</h3>
     <Simple/>
@@ -15,5 +15,3 @@ const Forms = () => (
     <Horizontal/>
   </div>
 );
-
-export default Forms

@@ -1,4 +1,5 @@
 var cx = require('classnames');
+var blacklist = require('blacklist');
 var React = require('react');
 
 module.exports = React.createClass({
@@ -7,14 +8,13 @@ module.exports = React.createClass({
   getDefaultProps() {
     return {
       horizontal: false
-    }
+    };
   },
 
   render() {
-    return (
-      <form {... this.props} className={cx('u-form', this.props.className)}>
-      {this.props.children}
-      </form>
-    );
+    var props = blacklist(this.props, 'className');
+    props.className = cx('u-form', this.props.className);
+
+    return <form {... props} />;
   }
 });
