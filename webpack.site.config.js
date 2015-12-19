@@ -5,7 +5,8 @@ var paths = [
   '/css',
   '/css/forms',
   '/css/avatars',
-  '/css/buttons'
+  '/css/buttons',
+  '/css/boxes'
 ];
 
 module.exports = {
@@ -36,7 +37,8 @@ module.exports = {
     'Button': '../../react/button',
     'Field': '../../react/field',
     'Form': '../../react/form',
-    'Checkbox': '../../react/checkbox'
+    'Checkbox': '../../react/checkbox',
+    'Box': '../../react/box'
   },
 
   /*

@@ -5,6 +5,7 @@ var Index = require('./site/index');
 var Avatars = require('./site/css-avatars');
 var Buttons = require('./site/css-buttons');
 var Forms = require('./site/css-forms');
+var Boxes = require('./site/css-boxes');
 
 var routes = (
   <Route path="/" component={App}>
@@ -12,6 +13,7 @@ var routes = (
     <Route path="/css/buttons" component={Buttons} />
     <Route path="/css/forms" component={Forms} />
     <Route path="/css/avatars" component={Avatars} />
+    <Route path="/css/boxes" component={Boxes} />
   </Route>
 );
 
