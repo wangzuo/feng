@@ -63,6 +63,7 @@
 .u-field-row {
   .label {
     padding-top: 8px;
+    text-align: right;
   }
 }
 
