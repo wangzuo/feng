@@ -1,17 +1,21 @@
 <Form horizontal>
-  <Field label="First Name">
+  <Field label="First Name" d={4}>
     <input type="text" placeholder="First Name"/>
   </Field>
-  <Field label="Last Name">
+
+  <Field label="Last Name" d={4}>
     <input type="text" placeholder="Last Name"/>
   </Field>
-  <Field label="About">
+
+  <Field label="About" d={4}>
     <textarea placeholder="About" rows={4}></textarea>
   </Field>
-  <Field>
+
+  <Field d={4}>
     <Checkbox>
       I agree to Terms and Conditions
     </Checkbox>
   </Field>
+
   <Button color="blue">Submit</Button>
 </Form>

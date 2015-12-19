@@ -1,10 +1,10 @@
-import React from 'react';
-import Gravatar from './avatars-gravatar.example';
-import Sqaure from './avatars-square.example';
-import Round from './avatars-round.example';
-import Circle from './avatars-circle.example';
+var React = require('react');
+var Gravatar = require('../examples/avatars/gravatar.example');
+var Sqaure = require('../examples/avatars/square.example');
+var Round = require('../examples/avatars/round.example');
+var Circle = require('../examples/avatars/circle.example');
 
-const Avatars = () => (
+module.exports = () => (
   <div>
     <h3>Gravatar</h3>
     <Gravatar/>
@@ -19,5 +19,3 @@ const Avatars = () => (
     <Circle/>
   </div>
 );
-
-export default Avatars

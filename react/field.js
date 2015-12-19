@@ -1,4 +1,5 @@
 var cx = require('classnames');
+var blacklist = require('blacklist');
 var React = require('react');
 
 module.exports = React.createClass({
@@ -6,8 +7,10 @@ module.exports = React.createClass({
 
   getDefaultProps() {
     return {
-      label: '',
-      horizontal: false
+      d: null,
+      t: null,
+      m: null,
+      label: ''
     }
   },
 
@@ -18,24 +21,37 @@ module.exports = React.createClass({
   },
 
   renderLabel() {
-    if(!this.props.label) return null;
+    var cn = cx('label', this.props.d ? `g-${this.props.d}` : null);
+
+    if(!this.props.label) {
+      return (
+        <label className={cn}>&nbsp;</label>
+      );
+    }
 
     return (
-      <label className="label">{this.props.label}</label>
+      <label className={cn}>
+        {this.props.label}
+      </label>
     );
   },
 
   render() {
-    var horizontal = this.props.horizontal;
-    var cn = cx('u-field', {
-      'u-field-x' : horizontal,
+    var props = blacklist(this.props, 'label', 'error', 'children', 'd', 't', 'm');
+    props.className = cx('u-field', {
+      'g-row': this.props.d,
+      'u-field-row': this.props.d,
       'u-field-err': this.props.error
     });
 
     return (
-      <div className={cn}>
+      <div {... props}>
         {this.renderLabel()}
-        {this.props.children}
+        {this.props.d ? (
+          <div className={`g-${24 - this.props.d}`}>
+            {this.props.children}
+          </div>
+        ) : this.props.children}
         {this.renderError()}
       </div>
     );

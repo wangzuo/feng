@@ -1,7 +1,7 @@
 var React = require('react');
-var Simple = require('./forms-simple.example');
-var ErrorField = require('./forms-error.example');
-var Horizontal = require('./forms-horizontal.example');
+var Simple = require('../examples/forms/simple.example');
+var ErrorField = require('../examples/forms/error.example');
+var Horizontal = require('../examples/forms/horizontal.example');
 
 module.exports = () => (
   <div>

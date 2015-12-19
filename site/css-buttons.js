@@ -1,14 +1,14 @@
-import React from 'react';
-import Basic from './basic.example';
-import States from './states.example';
-import Colors from './colors.example';
-import Sizes from './sizes.example';
-import Block from './block.example';
-import Icons from './icons.example';
-import Group from './group.example';
-import Loading from './loading.example';
+var React = require('react');
+var Basic = require('../examples/buttons/basic.example');
+var States = require('../examples/buttons/states.example');
+var Colors = require('../examples/buttons/colors.example');
+var Sizes = require('../examples/buttons/sizes.example');
+var Block = require('../examples/buttons/block.example');
+var Icons = require('../examples/buttons/icons.example');
+var Group = require('../examples/buttons/group.example');
+var Loading = require('../examples/buttons/loading.example');
 
-const Buttons = () => (
+module.exports = () => (
   <div>
     <h3>Basic</h3>
     <Basic/>
@@ -37,5 +37,3 @@ const Buttons = () => (
     <Loading/>
   </div>
 );
-
-export default Buttons

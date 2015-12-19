@@ -5,7 +5,7 @@ import Nav from './nav';
 import { Link } from 'react-router';
 import { Container, Row, Column } from '../react/grid';
 
-const App = (props) => (
+module.exports = (props) => (
   <div>
     <Header/>
 
@@ -27,5 +27,3 @@ const App = (props) => (
     <Footer/>
   </div>
 );
-
-export default App

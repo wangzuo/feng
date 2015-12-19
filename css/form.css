@@ -60,24 +60,9 @@
   }
 }
 
-.u-field-x {
-  position: relative;
-  display: table;
-  width: 100%;
-
+.u-field-row {
   .label {
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  & > input,
-  & > .input {
-    position: relative;
-    max-width: 50%;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: right;
+    padding-top: 8px;
   }
 }
 
@@ -90,4 +75,8 @@
 
 .u-slider-x {
   width: 100%;
+}
+
+.u-form-horizontal {
+
 }

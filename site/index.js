@@ -1,7 +1,7 @@
-import React from 'react';
-import Markdown from '../react/markdown';
+var React = require('react');
+var Markdown = require('../react/markdown');
 
-const Index = () => (
+module.exports = () => (
   <div>
     <Markdown>
 {`# feng-ui
@@ -32,5 +32,3 @@ ISC`}
     </Markdown>
   </div>
 );
-
-export default Index
