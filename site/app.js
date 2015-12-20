@@ -17,6 +17,7 @@ module.exports = (props) => (
             <Link to="/css/buttons">buttons</Link>
             <Link to="/css/forms">forms</Link>
             <Link to="/css/boxes">boxes</Link>
+            <Link to="/css/cards">cards</Link>
           </nav>
         </Column>
 
