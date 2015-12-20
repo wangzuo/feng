@@ -1,5 +1,7 @@
 @import '_variables';
 
+@custom-media --desktop (min-width: 992px);
+
 .u-form {
   max-width: 100%;
 }
@@ -60,10 +62,12 @@
   }
 }
 
-.u-field-row {
-  .label {
-    padding-top: 8px;
-    text-align: right;
+@media (--desktop) {
+  .u-field-row {
+    .label {
+      padding-top: 8px;
+      text-align: right;
+    }
   }
 }
 
