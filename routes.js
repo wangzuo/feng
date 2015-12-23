@@ -10,12 +10,13 @@ var Cards = require('./site/css-cards');
 
 var routes = (
   <Route path="/" component={App}>
-    <IndexRoute component={Index} />
-    <Route path="/css/buttons" component={Buttons} />
-    <Route path="/css/forms" component={Forms} />
-    <Route path="/css/avatars" component={Avatars} />
-    <Route path="/css/boxes" component={Boxes} />
-    <Route path="/css/cards" component={Cards} />
+    <IndexRoute component={Index}/>
+    <Route path="/css" component={Buttons}/>
+    <Route path="/css/buttons" component={Buttons}/>
+    <Route path="/css/forms" component={Forms}/>
+    <Route path="/css/avatars" component={Avatars}/>
+    <Route path="/css/boxes" component={Boxes}/>
+    <Route path="/css/cards" component={Cards}/>
   </Route>
 );
 

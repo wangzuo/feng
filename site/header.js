@@ -9,9 +9,9 @@ module.exports = () => (
       </h1>
 
       <nav className="f-fr">
-        <a className="is-active" href="/">Getting started</a>
-        <a href="/css/avatars">CSS</a>
-        <a href="#">React</a>
+        <Link activeClassName="is-active" to="/">Getting started</Link>
+        <Link activeClassName="is-active" to="/css">CSS</Link>
+        <Link activeClassName="is-active" to="#">React</Link>
         <a href="http://github.com/wangzuo/feng-ui">Github</a>
       </nav>
 

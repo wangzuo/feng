@@ -13,8 +13,8 @@ module.exports = (props) => (
       <Row>
         <Column d={6}>
           <nav className="u-nav u-nav-y">
-            <Link to="/css/avatars">avatars</Link>
             <Link to="/css/buttons">buttons</Link>
+            <Link to="/css/avatars">avatars</Link>
             <Link to="/css/forms">forms</Link>
             <Link to="/css/boxes">boxes</Link>
             <Link to="/css/cards">cards</Link>
