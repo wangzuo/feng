@@ -25,8 +25,6 @@
     "markdown-it": "^5.0.2"
   },
   "devDependencies": {
-    "history": "^1.13.1",
-    "react-router": "^1.0.2",
     "autoprefixer": "^6.1.2",
     "babel-core": "^6.1.2",
     "babel-loader": "^6.2.0",
@@ -36,7 +34,7 @@
     "cssnext": "^1.8.4",
     "cssnext-loader": "^1.0.1",
     "del": "^2.2.0",
-    "example-loader": "0.0.6",
+    "example-loader": "0.0.7",
     "github-pages-deploy": "0.0.3",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.0",
@@ -46,6 +44,7 @@
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.2.0",
+    "history": "^1.13.1",
     "js-beautify": "^1.5.10",
     "json-loader": "^0.5.3",
     "postcss-calc": "^5.0.0",
@@ -59,6 +58,7 @@
     "postcss-nested": "^1.0.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.1",
+    "react-router": "^1.0.2",
     "static-site-generator-webpack-plugin": "^2.0.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",

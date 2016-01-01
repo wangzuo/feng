@@ -7,16 +7,6 @@
   border: 1px solid var(--color-gray);
   border-radius: 3px;
   background-color: var(--color-white);
-
-  /*&:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-
-  &:after {
-    clear:both;
-  }*/
 }
 
 .u-box-center {
@@ -26,7 +16,7 @@
   margin-bottom: 50px;
 }
 
-.u-box-title {
+.u-box-header {
   padding: 10px 12px;
   border-bottom: 1px solid var(--color-gray);
   border-radius: 3px 3px 0 0;
@@ -43,6 +33,14 @@
   }
 }
 
-.u-box-inner {
+.u-box-content {
   padding: 11px 12px;
+}
+
+.u-box-footer {
+  padding: 8px;
+  border-top: 1px solid var(--color-gray);
+  border-radius: 0 0 3px 3px;
+  background-color: #f6f7f8;
+  color: #141823;
 }

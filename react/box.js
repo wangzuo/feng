@@ -1,7 +1,8 @@
 var cx = require('classnames');
+var blacklist = require('blacklist');
 var React = require('react');
 
-module.exports = React.createClass({
+exports.Box = React.createClass({
   displayName: 'Box',
 
   getDefaultProps() {
@@ -13,23 +14,44 @@ module.exports = React.createClass({
   renderTitle() {
     if(!this.props.title) return null;
 
-    return <div className="u-box-title"><h3>{this.props.title}</h3></div>;
+    return (
+      <div className="u-box-header f-clearfix">
+        <h3>{this.props.title}</h3>
+      </div>
+    );
   },
 
   render() {
-    var cn = cx(
+    var props = blacklist(this.props, 'className', 'center', 'title')
+    props.className = cx(
       this.props.className,
-      'u-box',
-      this.props.center ? 'u-box-center' : null
+      'u-box', 'f-clearfix',
+      { 'u-box-center': this.props.center }
     );
 
     return (
-      <div className={cn}>
+      <div {... props}>
         {this.renderTitle()}
-        <div className="u-box-inner">
-          {this.props.children}
-        </div>
+        {this.props.children}
       </div>
     );
   }
 });
+
+exports.BoxHeader = (props) => (
+  <div className="u-box-header">
+    {props.children}
+  </div>
+);
+
+exports.BoxContent = (props) => (
+  <div className="u-box-content">
+    {props.children}
+  </div>
+);
+
+exports.BoxFooter = (props) => (
+  <div className="u-box-footer f-clearfix">
+    {props.children}
+  </div>
+);

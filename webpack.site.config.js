@@ -39,7 +39,7 @@ module.exports = {
     'Field': '../../react/field',
     'Form': '../../react/form',
     'Checkbox': '../../react/checkbox',
-    'Box': '../../react/box',
+    'Box, BoxContent, BoxFooter': '../../react/box',
     'Card': '../../react/card'
   },
 
