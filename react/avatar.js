@@ -1,13 +1,8 @@
 import cx from 'classnames';
 import React from 'react';
 import md5 from 'blueimp-md5';
-// var _md5 = require('blueimp-md5');
-// var md5 = _md5.md5 || _md5;
 
-// module.exports = React.createClass({
-class Avatar extends React.component {
-  // displayName: 'Avatar',
-
+class Avatar extends React.Component {
   getStyle() {
     var name = this.props.name;
     var style = {};
