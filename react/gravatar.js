@@ -1,20 +1,21 @@
-var React = require('react');
-var _md5 = require('blueimp-md5');
-var md5 = _md5.md5 || _md5;
+import blacklist from 'blacklist';
+import React from 'react';
+import md5 from 'blueimp-md5';
 
-module.exports = React.createClass({
-  displayName: 'Gravatar',
-
+class Gravatar extends React.Component {
   render() {
     var email = this.props.email;
     var size = this.props.size;
+    var props = blacklist(this.props, 'email', 'size');
     var hash = md5(email);
 
     return (
       <img
-        {... this.props}
+        {... props}
         src={`http://www.gravatar.com/avatar/${hash}?s=${size}`}
       />
     );
   }
-});
+}
+
+module.exports = Gravatar;
