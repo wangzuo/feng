@@ -1,19 +1,8 @@
-var cx = require('classnames');
-var React = require('react');
-var _md5 = require('blueimp-md5');
-var md5 = _md5.md5 || _md5;
+import cx from 'classnames';
+import React from 'react';
+import md5 from 'blueimp-md5';
 
-module.exports = React.createClass({
-  displayName: 'Avatar',
-
-  getDefaultProps() {
-    return {
-      round: false,
-      circle: false,
-      src: null
-    };
-  },
-
+class Avatar extends React.Component {
   getStyle() {
     var name = this.props.name;
     var style = {};
@@ -27,7 +16,7 @@ module.exports = React.createClass({
     }
 
     return style;
-  },
+  }
 
   renderInner() {
     var name = this.props.name;
@@ -43,7 +32,7 @@ module.exports = React.createClass({
     }
 
     if(src) return <img src={src}/>;
-  },
+  }
 
   render() {
     var name = this.props.name;
@@ -67,7 +56,13 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+
+Avatar.defaultProps = {
+  round: false,
+  circle: false,
+  src: null
+};
 
 function backgroundColor(str) {
   var hash = 0;
@@ -85,3 +80,5 @@ function fontColor(hex) {
 
   return (yiq >= 128) ? 'black' : 'white';
 }
+
+module.exports = Avatar;

@@ -1,16 +1,8 @@
-var cx = require('classnames');
-var blacklist = require('blacklist');
-var React = require('react');
+import cx from 'classnames';
+import blacklist from 'blacklist';
+import React from 'react';
 
-exports.Box = React.createClass({
-  displayName: 'Box',
-
-  getDefaultProps() {
-    return {
-      center: false
-    };
-  },
-
+class Box extends React.Component {
   renderTitle() {
     if(!this.props.title) return null;
 
@@ -19,7 +11,7 @@ exports.Box = React.createClass({
         <h3>{this.props.title}</h3>
       </div>
     );
-  },
+  }
 
   render() {
     var props = blacklist(this.props, 'className', 'center', 'title')
@@ -36,7 +28,13 @@ exports.Box = React.createClass({
       </div>
     );
   }
-});
+}
+
+Box.defaultProps = {
+  center: false
+};
+
+exports.Box = Box;
 
 exports.BoxHeader = (props) => (
   <div className="u-box-header">

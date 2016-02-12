@@ -1,61 +1,41 @@
-var cx = require('classnames');
-var blacklist = require('blacklist');
-var React = require('react');
+import cx from 'classnames';
+import blacklist from 'blacklist';
+import React from 'react';
 
-exports.Container = React.createClass({
-  displayName: 'Container',
+exports.Container = (props) => {
+  var bProps = blacklist(props, 'className', 'children');
+  bProps.className = cx('g-c', props.className);
 
-  render() {
-    var props = blacklist(this.props, 'className', 'children');
-    props.className = cx('g-c', this.props.className);
+  return (
+    <div {... bProps}>
+      {props.children}
+    </div>
+  );
+};
 
-    return (
-      <div {... props}>
-        {this.props.children}
-      </div>
-    );
-  }
-});
+exports.Row = (props) => {
+  var bProps = blacklist(props, 'className', 'children');
+  bProps.className = cx('g-r', props.className);
 
-exports.Row = React.createClass({
-  displayName: 'Row',
+  return (
+    <div {... bProps}>
+      {props.children}
+    </div>
+  );
+};
 
-  render() {
-    var props = blacklist(this.props, 'className', 'children');
-    props.className = cx('g-r', this.props.className);
+exports.Column = (props) => {
+  var bProps = blacklist(props, 'className', 'children', 'd', 't', 'm');
+  bProps.className = cx(
+    `g-${props.d || 24}`,
+    `g-t-${props.t || 24}`,
+    `g-m-${props.m || 24}`,
+    props.className
+  );
 
-    return (
-      <div {... props}>
-        {this.props.children}
-      </div>
-    );
-  }
-});
-
-exports.Column = React.createClass({
-  displayName: 'Column',
-
-  getDefaultProps() {
-    return {
-      d: 24,
-      t: 24,
-      m: 24
-    }
-  },
-
-  render() {
-    var props = blacklist(this.props, 'className', 'children', 'd', 't', 'm');
-    props.className = cx(
-      `g-${this.props.d}`,
-      `g-t-${this.props.t}`,
-      `g-m-${this.props.m}`,
-      this.props.className
-    );
-
-    return (
-      <div {... props}>
-        {this.props.children}
-      </div>
-    );
-  }
-});
+  return (
+    <div {... bProps}>
+      {props.children}
+    </div>
+  );
+};

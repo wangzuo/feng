@@ -1,42 +1,20 @@
-var blacklist = require('blacklist');
-var cx = require('classnames');
-var React = require('react');
+import cx from 'classnames';
+import blacklist from 'blacklist';
+import React from 'react';
 var Spinner = require('./spinner');
 
-module.exports = React.createClass({
-  displayName: 'Button',
-
-  getDefaultProps() {
-    return {
-      block: false,
-      active: false,
-      hover: false,
-      disabled: false,
-      loading: false,
-      type: 'button'
-    };
-  },
-
+class Button extends React.Component {
   renderSpinner() {
     if(!this.props.loading) return null;
     var color = this.props.color;
     var inverted = ['yellow', 'red', 'blue'].indexOf(color) >= 0;
 
     return <Spinner className="spinner" inverted={inverted}/>;
-  },
+  }
 
   render() {
-    var color = this.props.color;
-    var size = this.props.size;
-    var block = this.props.block;
-    var icon = this.props.icon;
-    var active = this.props.active;
-    var hover = this.props.hover;
-    var disabled = this.props.disabled;
-    var loading = this.props.loading;
-    var href = this.props.href;
-    var type = this.props.type;
-
+    // todo: es6 assign
+    var { color, size, block, icon, active, hover, disabled, loading, href, type } = this.props;
     var props = blacklist(this.props,
       'children', 'color', 'size', 'block', 'type',
       'icon', 'active', 'hover', 'disabled', 'loading');
@@ -72,4 +50,15 @@ module.exports = React.createClass({
       </button>
     );
   }
-});
+}
+
+Button.defaultProps = {
+  block: false,
+  active: false,
+  hover: false,
+  disabled: false,
+  loading: false,
+  type: 'button'
+};
+
+module.exports = Button;

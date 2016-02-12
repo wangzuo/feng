@@ -1,9 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-module.exports = React.createClass({
-  displayName: 'Checkbox',
-
-  render: function () {
+class Checkbox extends React.Component {
+  render() {
     return (
       <span className="u-checkbox">
         <input type="checkbox"/>
@@ -13,4 +11,6 @@ module.exports = React.createClass({
       </span>
     );
   }
-});
+}
+
+module.exports = Checkbox;

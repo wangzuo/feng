@@ -1,21 +1,19 @@
-var React = require('react');
-var cx = require('classnames');
+import cx from 'classnames';
+import blacklist from 'blacklist';
+import React from 'react';
 
-module.exports = React.createClass({
-  displayName: 'Label',
+module.exports = (props) => {
+  var bProps = blacklist(props, 'color');
+  var color = props.color;
+  bProps.className = cx(
+    'u-label',
+    color ? `u-label-${color}` : null,
+    props.className
+  );
 
-  render() {
-    var color = this.props.color;
-    var cn = cx(
-      'u-label',
-      color ? `u-label-${color}` : null,
-      this.props.className
-    );
-
-    return (
-      <span {... this.props} className={cn}>
-        {this.props.children}
-      </span>
-    );
-  }
-});
+  return (
+    <span {... bProps}>
+      {props.children}
+    </span>
+  );
+};

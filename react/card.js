@@ -1,17 +1,9 @@
-var cx = require('classnames');
-var blacklist = require('blacklist');
-var React = require('react');
-var Gravatar = require('./gravatar.js');
+import cx from 'classnames';
+import blacklist from 'blacklist';
+import React from 'react';
+import Gravatar from './gravatar';
 
-module.exports = React.createClass({
-  displayName: 'Card',
-
-  getDefaultProps() {
-    return {
-      link: '#'
-    };
-  },
-
+class Card extends React.Component {
   renderAuthor() {
     if(this.props.authorEmail) {
       <Gravatar className="avatar" email={this.props.authorEmail} size={20}/>
@@ -20,14 +12,14 @@ module.exports = React.createClass({
     }
 
     return null;
-  },
+  }
 
   renderLabel() {
     if(this.props.label) {
       <span className="label">{this.props.label}</span>
     }
     return null;
-  },
+  }
 
   render() {
     var props = blacklist(this.props, 'className', 'image', 'title',
@@ -52,4 +44,10 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+
+Card.defaultProps = {
+  link: '#'
+};
+
+module.exports = Card;

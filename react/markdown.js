@@ -3,18 +3,14 @@ var MarkdownIt = require('markdown-it');
 
 var md = new MarkdownIt();
 
-module.exports = React.createClass({
-  displayName: 'Markdown',
+module.exports = (props) => {
+  var text = props.children;
+  var html = md.render(text);
 
-  render() {
-    var text = this.props.children;
-    var html = md.render(text);
-
-    return (
-      <div
-        className={this.props.className}
-        dangerouslySetInnerHTML={{__html: html}}
-      />
-    );
-  }
-});
+  return (
+    <div
+      className={props.className}
+      dangerouslySetInnerHTML={{__html: html}}
+    />
+  );
+};

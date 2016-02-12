@@ -1,13 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-module.exports = React.createClass({
-  displayName: 'ButtonGroup',
-
-  render() {
-    return (
-      <span className="u-btn-group">
-      {this.props.children}
-      </span>
-    );
-  }
-});
+module.exports = (props) => (
+  <span className="u-btn-group">
+    {props.children}
+  </span>
+);
