@@ -61,8 +61,8 @@ body {
 .g-container {
   position: relative;
   margin: 0 auto;
-  padding-left: var(--gutter-width);
-  padding-right: var(--gutter-width);
+  padding-left: calc(var(--gutter-width) / 2);
+  padding-right: calc(var(--gutter-width) / 2);
   width: var(--container-width);
   max-width: 100%;
   @mixin clearfix;
