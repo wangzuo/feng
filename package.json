@@ -29,7 +29,7 @@
     "babel-core": "^6.1.2",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.2",
-    "babel-preset-react": "^6.1.2",
+    "babel-preset-react": "^6.16.0",
     "css-loader": "^0.23.1",
     "cssnext": "^1.8.4",
     "cssnext-loader": "^1.0.1",
