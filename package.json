@@ -44,7 +44,7 @@
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.2.0",
-    "history": "^1.13.1",
+    "history": "^4.2.1",
     "js-beautify": "^1.5.10",
     "json-loader": "^0.5.3",
     "postcss-calc": "^5.0.0",
