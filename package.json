@@ -58,7 +58,7 @@
     "postcss-nested": "^1.0.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "react-router": "^1.0.2",
+    "react-router": "^2.8.1",
     "static-site-generator-webpack-plugin": "^2.0.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
