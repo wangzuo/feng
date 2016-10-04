@@ -57,7 +57,7 @@
     "postcss-mixins": "^3.0.2",
     "postcss-nested": "^1.0.0",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7",
+    "react-dom": "^15.3.2",
     "react-router": "^1.0.2",
     "static-site-generator-webpack-plugin": "^2.0.1",
     "style-loader": "^0.13.0",
