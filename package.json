@@ -22,7 +22,7 @@
     "blacklist": "^1.1.2",
     "blueimp-md5": "^2.1.0",
     "classnames": "^2.2.0",
-    "markdown-it": "^5.0.2"
+    "markdown-it": "^8.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.2",
