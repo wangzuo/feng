@@ -1,6 +1,6 @@
 {
-  "name": "feng-ui",
-  "version": "0.0.8",
+  "name": "feng",
+  "version": "0.1.0",
   "description": "feng-ui",
   "main": "index.js",
   "scripts": {

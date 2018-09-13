@@ -33,7 +33,7 @@
 
   &:disabled,
   &.disabled {
-    opacity: .6;
+    opacity: 0.6;
   }
 
   &.is-loading {
